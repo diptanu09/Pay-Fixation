@@ -1,0 +1,2036 @@
+[
+  {
+    "sheet": "PR",
+    "cell": "B2",
+    "formula": "IF(IPS!B1=\"LTA Pension\",\"PENSION REPORT(LTA)\",IF(IPS!B1=\"Regular Pension Case\",\"PENSION REPORT\",IF(IPS!B1=\"Family Pension Case\",\"FAMILY PENSION REPORT\",IF(IPS!B1=\"DRW Pension Case\",\"PENSION REPORT(DRW)\",IF(IPS!B1=\"Vol. Pension Case\",\"PENSION REPORT(VRS)\",IF(IPS!B1=\"DRW Family Pension Case\",\"Family Pension Case(DRW)\"))))))",
+    "cached_value": "PENSION REPORT"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F3",
+    "formula": "IPS!C5",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "PR",
+    "cell": "I3",
+    "formula": "IF(M11=\"\",\"\",\"Employee ID -\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "J3",
+    "formula": "IF(M11=\"\",\"\",M11)",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F4",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"Pen-2/Fam/\"&M2&\"/\"&IPS!C6&\"/\"&'Pay Scales'!F34,IF(IPS!B1=\"LTA Pension\",\"Pen-2/Sup/\"&M2&\"/\"&IPS!C6&\"/LTA/\"&'Pay Scales'!F34,\"Pen-2/Sup/\"&M2&\"/\"&IPS!C6&\"/\"&'Pay Scales'!F34))",
+    "cached_value": "Pen-2/Sup/GK//2026-27"
+  },
+  {
+    "sheet": "PR",
+    "cell": "I4",
+    "formula": "IF(M12=\"\",\"\",\"Beneficiary Code -\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "J4",
+    "formula": "IF(M12=\"\",\"\",M12)",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "L4",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"Form No.18 at Page No-\",\"Form No.7 at Page No-\")",
+    "cached_value": "Form No.7 at Page No-"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F5",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),IPS!C3&\" \"&IPS!D3&\"Ex.\"&IPS!C4,IF(OR(IPS!B1=\"LTA Pension\",IPS!C12=TRUE),IPS!C3&\" \"&IPS!D3&\"Retd.\"&IPS!C4&\"(Now Late)\",IPS!C3&\" \"&IPS!D3&\"Retd.\"&IPS!C4))",
+    "cached_value": "Shri Retd."
+  },
+  {
+    "sheet": "PR",
+    "cell": "L5",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"Form No.12 at Page No-\",\"Form No.5 at Page No-\")",
+    "cached_value": "Form No.5 at Page No-"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C6",
+    "formula": "\"Date of Birth, at P/\"&M4&\"\u1d9c\"",
+    "cached_value": "Date of Birth, at P/\u1d9c"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F6",
+    "formula": "IPS!C7",
+    "cached_value": "23935"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C7",
+    "formula": "\"Date of Appoinment, at P/\"&M4&\"\u1d9c\"",
+    "cached_value": "Date of Appoinment, at P/\u1d9c"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F7",
+    "formula": "IF(IPS!C8=IPS!C9,TEXT(IPS!C9,\"dd-mm-yyyy\")&\"(on Regular Scale)\",IF(OR(IPS!B1=\"DRW Pension Case\",IPS!B1=\"DRW Family Pension Case\"),TEXT(IPS!C8,\"dd-mm-yyyy\")&\"(as DRW), \"&TEXT(IPS!C9,\"dd-mm-yyyy\")&\"(as Regular)\",TEXT(IPS!C8,\"dd-mm-yyyy\")&\"(on Fixed Pay), \"&TEXT(IPS!C9,\"dd-mm-yyyy\")&\"(on Regular Scale)\"))",
+    "cached_value": "05-03-1987(on Regular Scale)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C8",
+    "formula": "IF(OR(IPS!B1=\"LTA Pension\",IPS!C12=TRUE),IPS!B10&\"/Death\",IF(IPS!B1=\"Vol. Pension Case\",IPS!B10&\"(VRS)\",IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),IPS!B11,IPS!B10)))&\", at P/\"&M4&\"\u1d9c\"",
+    "cached_value": "Date of Retirement, at P/\u1d9c"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F8",
+    "formula": "IF(OR(IPS!B1=\"LTA Pension\",IPS!C12=TRUE),TEXT(IPS!C10,\"dd-mm-yyyy\")&\"/\"&TEXT(IPS!C11,\"dd-mm-yyyy\"),IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),IPS!C11,IPS!C10))",
+    "cached_value": "45869"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C9",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"Residential Address\"&PR!M5,\"Address after Retirement, at P/\"&M5&\"\u1d9c\")",
+    "cached_value": "Address after Retirement, at P/\u1d9c"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F9",
+    "formula": "IF(AND(ISBLANK(M8),ISBLANK(M10)),M6&\", \"&M7,IF(ISBLANK(M8),M6&\", \"&M7&\", \"&L10&M10,IF(ISBLANK(M10),M6&\", \"&M7&\", \"&L8&M8,M6&\", \"&M7&\", \"&L8&M8&\", \"&L10&M10)))",
+    "cached_value": ", "
+  },
+  {
+    "sheet": "PR",
+    "cell": "F11",
+    "formula": "\"O/o The \"&VLOOKUP(M13,DDO!A2:B1272,2,0)",
+    "cached_value": "#N/A"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C13",
+    "formula": "IF(ISBLANK(M9),\"Treasury\",\"Treasury/Sub-Treasury\")",
+    "cached_value": "Treasury"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F13",
+    "formula": "IF(OR(M9='Pay Scales'!J26,M7='Pay Scales'!L26),\"Dharmanagar\",IF(OR(M9='Pay Scales'!J27,M7='Pay Scales'!L26),\"Dharmanagar\",IF(OR(M9='Pay Scales'!J28,M7='Pay Scales'!L28),\"Kailashahar\",IF(OR(M9='Pay Scales'!J29,M7='Pay Scales'!L29),\"Ambassa\",IF(OR(M9='Pay Scales'!J30,M7='Pay Scales'!L29),\"Ambassa\",IF(OR(M9='Pay Scales'!J31,M7='Pay Scales'!L29),\"Ambassa\",IF(OR(M9='Pay Scales'!J32,M7='Pay Scales'!L32),\"Khowai\",IF(OR(M9='Pay Scales'!J33,M7='Pay Scales'!L33),\"Agartala-1\",IF(OR(M9='Pay Scales'!J34,M7='Pay Scales'!L33),\"Agartala-1\",IF(OR(M9='Pay Scales'!J35,M7='Pay Scales'!L35),\"Bishalgarh\",IF(OR(M9='Pay Scales'!J36,M7='Pay Scales'!L36),\"Udaipur\",IF(OR(M9='Pay Scales'!J37,M7='Pay Scales'!L37),\"Belonia\",IF(OR(M9='Pay Scales'!J38,M7='Pay Scales'!L37),\"Belonia\",)))))))))))))&IF(ISBLANK(M9),\" \",\", Sub-Treasury - \")&IF(ISBLANK(M9),\" \",M9)",
+    "cached_value": "  "
+  },
+  {
+    "sheet": "PR",
+    "cell": "C14",
+    "formula": "\"Family Details:- \"&\"(Form-3 at P/\"&M14&\"\u1d9c)\"",
+    "cached_value": "Family Details:- (Form-3 at P/\u1d9c)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "L14",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"Form No.14 at Page No-\",\"Form No.3 at Page No-\")",
+    "cached_value": "Form No.3 at Page No-"
+  },
+  {
+    "sheet": "PR",
+    "cell": "L15",
+    "formula": "IF(OR(IPS!B3=\"Family Pension Case\",IPS!B3=\"DRW Family Pension Case\"),\"\",\"Form No.1(Nomination) at Page No-\")",
+    "cached_value": "Form No.1(Nomination) at Page No-"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C16",
+    "formula": "IF(ISBLANK(D16),\"\",IF(OR(IPS!C3=\"Shri\",IPS!C3=\"Late\"),\"Smt.\",IF(IPS!C3=\"Smt.\",\"Shri\",\"\")))",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "H16",
+    "formula": "IF(ISBLANK(D16),\"\",IF(OR(C16=\"Shri\",C16=\"Md.\"),\"Husband\",\"Wife\"))",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "L16",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"\",\"Commutation applied on-\")",
+    "cached_value": "Commutation applied on-"
+  },
+  {
+    "sheet": "PR",
+    "cell": "H17",
+    "formula": "IF(ISBLANK(C17),\"\",IF(OR(C17=\"Shri\",C17=\"Md.\"),\"Minor Son\",\"Minor Daughter\"))",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "L17",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"\",\"Commutation at Page No-\")",
+    "cached_value": "Commutation at Page No-"
+  },
+  {
+    "sheet": "PR",
+    "cell": "H18",
+    "formula": "IF(ISBLANK(C18),\"\",IF(OR(C18=\"Shri\",C18=\"Md.\"),\"Minor Son\",\"Minor Daughter\"))",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "L18",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"\",\"Fraction-\")",
+    "cached_value": "Fraction-"
+  },
+  {
+    "sheet": "PR",
+    "cell": "M18",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"\",\"40%\")",
+    "cached_value": "40%"
+  },
+  {
+    "sheet": "PR",
+    "cell": "H19",
+    "formula": "IF(ISBLANK(C19),\"\",IF(OR(C19=\"Shri\",C19=\"Md.\"),\"Minor Son\",\"Minor Daughter\"))",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "M19",
+    "formula": "IF(ISBLANK(PR!M16),\" \",DATEDIF(IPS!C7,PR!M16,\"y\")+1)",
+    "cached_value": "61"
+  },
+  {
+    "sheet": "PR",
+    "cell": "H20",
+    "formula": "IF(ISBLANK(C20),\"\",IF(OR(C20=\"Shri\",C20=\"Md.\"),\"Minor Son\",\"Minor Daughter\"))",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "M20",
+    "formula": "IF(ISBLANK(PR!M16),\" \",VLOOKUP(M19,'Pay Scales'!C4:D65,2,0))",
+    "cached_value": "8.1940000000000008"
+  },
+  {
+    "sheet": "PR",
+    "cell": "L21",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"Death Certificate-\",\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F22",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"From-\"&TEXT(IPS!C8,\"dd-mm-yyyy\")&\", to-\"&TEXT(IPS!C11,\"dd-mm-yyyy\"),\"From-\"&TEXT(IPS!C8,\"dd-mm-yyyy\")&\", to-\"&TEXT(IPS!C10,\"dd-mm-yyyy\"))&\" (\"&IF(OR(IPS!B1=\"Regular Pension Case\",IPS!B1=\"LTA Pension\"),TRIM(IF(IPS!I120>0,IPS!I120&\" Years, \",\"\")&IF(IPS!J120>0,IPS!J120&\" Months, \",\"\")&IF(IPS!K120>0,IPS!K120&\" Days\",\"\")),IF(IPS!B1=\"Family Pension Case\",TRIM(IF(IPS!I125>0,IPS!I125&\" Years, \",\"\")&IF(IPS!J125>0,IPS!J125&\" Months, \",\"\")&IF(IPS!K125>0,IPS!K125&\" Days\",\"\")),IF(IPS!B1=\"DRW Pension Case\",TRIM(IF(IPS!I132>0,IPS!I132&\" Years, \",\"\")&IF(IPS!J132>0,IPS!J132&\" Months, \",\"\")&IF(IPS!K132>0,IPS!K132&\" Days\",\"\")),IF(IPS!B1=\"Vol. Pension Case\",TRIM(IF(IPS!I152>0,IPS!I152&\" Years, \",\"\")&IF(IPS!J152>0,IPS!J152&\" Months, \",\"\")&IF(IPS!K152>0,IPS!K152&\" Days\",\"\")),IF(IPS!B1=\"DRW Family Pension Case\",TRIM(IF(IPS!I141>0,IPS!I141&\" Years, \",\"\")&IF(IPS!J141>0,IPS!J141&\" Months, \",\"\")&IF(IPS!K141>0,IPS!K141&\" Days\",\"\")))))))&\")\"",
+    "cached_value": "From-05-03-1987, to-31-07-2025 (38 Years, 4 Months, 28 Days)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "L22",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"Survival Certificate-\",\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F23",
+    "formula": "IF(IPS!I115=\"\",\"Nil\",\"From-\"&TEXT(IPS!I115,\"dd-mm-yyyy\")&\", to-\"&TEXT(IPS!I116,\"dd-mm-yyyy\")&\" (\"&TRIM(IF(IPS!M116>0, IPS!M116&\" Years, \",\"\")&IF(IPS!N116>0, IPS!N116&\" Months, \",\"\")&IF(IPS!O116>0, IPS!O116&\" Days\",\"\"))&\")\")",
+    "cached_value": "Nil"
+  },
+  {
+    "sheet": "PR",
+    "cell": "L23",
+    "formula": "TRIM(IF(IPS!M116>0, IPS!M116&\" Years \",\"\")&IF(IPS!N116>0, IPS!N116&\" Months \",\"\")&IF(IPS!O116>0, IPS!O116&\" Days\",\"\"))",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F24",
+    "formula": "IF(OR(IPS!B1=\"DRW Pension Case\",IPS!B1=\"DRW Family Pension Case\"),(\"From-\"&TEXT(IPS!I130,\"dd-mm-yyyy\")&\", to-\"&TEXT(IPS!I131,\"dd-mm-yyyy\"))&\" (\"&TRIM(IF(IPS!I133>0,IPS!I133&\" Years, \",\"\")&IF(IPS!J133>0,IPS!J133&\" Months, \",\"\")&IF(IPS!K133>0,IPS!K133&\" Days)\",\"\")),\"Nil\")",
+    "cached_value": "Nil"
+  },
+  {
+    "sheet": "PR",
+    "cell": "M24",
+    "formula": "F50",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F25",
+    "formula": "IF(OR(IPS!B1=\"DRW Pension Case\",IPS!B1=\"DRW Family Pension Case\"),TRIM(IF(IPS!I134>0,IPS!I134&\" Years, \",\"\")&IF(IPS!J134>0,IPS!J134&\" Months, \",\"\")&IF(IPS!K134>0,IPS!K134&\" Days\",\"\"))&\" (Half of total DRW Service)\",\"Nil\")",
+    "cached_value": "Nil"
+  },
+  {
+    "sheet": "PR",
+    "cell": "M25",
+    "formula": "F45",
+    "cached_value": "696163"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F26",
+    "formula": "IF(AND(ISBLANK(IPS!C111),IPS!I115=\"\"),\"Nil\",TRIM(IF(IPS!M118>0,IPS!M118&\" Years, \",\"\")&IF(IPS!N118>0,IPS!N118&\" Months, \",\"\")&IF(IPS!O118>0,IPS!O118&\" Days\",\"\")))",
+    "cached_value": "Nil"
+  },
+  {
+    "sheet": "PR",
+    "cell": "M26",
+    "formula": "IPS!J106",
+    "cached_value": "470820"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F27",
+    "formula": "IF(AND(IPS!I153=0,IPS!J153=0,IPS!K153=0),\"Nil\",IPS!I153&\" Years, \"&IPS!J153&\" Months, \"&IPS!K153&\" Days\")",
+    "cached_value": "Nil"
+  },
+  {
+    "sheet": "PR",
+    "cell": "M27",
+    "formula": "SUM(M24:M26)",
+    "cached_value": "1166983"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F28",
+    "formula": "IF(OR(IPS!B1=\"Regular Pension Case\",IPS!B1=\"LTA Pension\"),TRIM(IF(IPS!I121>0,IPS!I121&\" Years, \",\"\")&IF(IPS!J121>0,IPS!J121&\" Months, \",\"\")&IF(IPS!K121>0,IPS!K121&\" Days\",\"\")),IF(IPS!B1=\"Family Pension Case\",TRIM(IF(IPS!I126>0,IPS!I126&\" Years, \",\"\")&IF(IPS!J126>0,IPS!J126&\" Months, \",\"\")&IF(IPS!K126>0,IPS!K126&\" Days\",\"\")),IF(IPS!B1=\"DRW Pension Case\",TRIM(IF(IPS!I135>0,IPS!I135&\" Years, \",\"\")&IF(IPS!J135>0,IPS!J135&\" Months, \",\"\")&IF(IPS!K135>0,IPS!K135&\" Days\",\"\")),IF(IPS!B1=\"Vol. Pension Case\",TRIM(IF(IPS!I154>0,IPS!I154&\" Years, \",\"\")&IF(IPS!J154>0,IPS!J154&\" Months, \",\"\")&IF(IPS!K154>0,IPS!K154&\" Days\",\"\")),IF(IPS!B1=\"DRW Family Pension Case\",TRIM(IF(IPS!I144>0,IPS!I144&\" Years, \",\"\")&IF(IPS!J144>0,IPS!J144&\" Months, \",\"\")&IF(IPS!K144>0,IPS!K144&\" Days\",\"\")))))))",
+    "cached_value": "38 Years, 4 Months, 28 Days"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F29",
+    "formula": "IPS!J101&\" (Six monthly periods only)\"",
+    "cached_value": "66 (Six monthly periods only)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "L29",
+    "formula": "IPS!H105",
+    "cached_value": "D.A. Rate (w.e.f. 01-04-2025)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "M29",
+    "formula": "IPS!J105",
+    "cached_value": "0.33"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F30",
+    "formula": "TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" (LPC at P/\"&M3&\"\u1d9c, Level - \"&IPS!$R$88&\", Grade Pay = \"&TEXT(IPS!$O$71,\"\u20b9#,##0;\")&\")\"",
+    "cached_value": "\u20b9 35,400 (LPC at P/\u1d9c, Level - 4, Grade Pay = \u20b91,900)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "B31",
+    "formula": "IF(IPS!J100=\"\",\"\",\"14)\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "C31",
+    "formula": "IF(IPS!J100=\"\",\"\",\"Last pay after Notional Increment\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "E31",
+    "formula": "IF(IPS!J100=\"\",\"\",\":\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F31",
+    "formula": "IF(IPS!J100=\"\",\"\",TEXT(IPS!J100,\"\u20b9 #,##0;\")&\" (Level - \"&IPS!$R$88&\", Grade Pay = \"&TEXT(IPS!$O$71,\"\u20b9#,##0;\")&\")\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "M31",
+    "formula": "IF(IPS!J100=\"\",IF(F35=\"\",ROUNDUP(F34+F34*IPS!J105+M30,0),ROUNDUP(F35+F34*IPS!J105+M30,0)),IF(I35=\"\",ROUNDUP(I34+I34*IPS!J105+M30,0),ROUNDUP(I35+I34*IPS!J105+M30,0)))",
+    "cached_value": "16961"
+  },
+  {
+    "sheet": "PR",
+    "cell": "B33",
+    "formula": "IF(IPS!J100=\"\",\"14)\",\"15)\")",
+    "cached_value": "14)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C33",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"Family Pension\",\"Pension\")&\":-\"",
+    "cached_value": "Pension:-"
+  },
+  {
+    "sheet": "PR",
+    "cell": "I33",
+    "formula": "IF(IPS!J100=\"\",\"\",\"Pension after Notional increment\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F34",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"Nil\",IPS!J102)",
+    "cached_value": "17700"
+  },
+  {
+    "sheet": "PR",
+    "cell": "G34",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"\",\"w.e.f. \"&TEXT(IPS!C10+1,\"dd-mm-yyyy\"))",
+    "cached_value": "w.e.f. 01-08-2025"
+  },
+  {
+    "sheet": "PR",
+    "cell": "I34",
+    "formula": "IF(IPS!J100=\"\",IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"\",\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 \"&MIN(50,(SUM(IPS!J101)))&\"%)\"),TEXT(IPS!K102,\"\u20b9 #,##0;\"))",
+    "cached_value": "(\u20b9 35,400 \u00d7 50%)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F35",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",),\"Nil\",IF(ISBLANK(M16),\"\",SUM(IPS!J102-F44,0)))",
+    "cached_value": "10620"
+  },
+  {
+    "sheet": "PR",
+    "cell": "G35",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"\",IF(M16=\"\",\"\",\"(\"&TEXT(F34,\"\u20b9 #,##0;\")&\" - \"&TEXT(F44,\"\u20b9 #,##0;\")&\")\"))",
+    "cached_value": "(\u20b9 17,700 - \u20b9 7,080)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "I35",
+    "formula": "IF(IPS!J100=\"\",\"\",IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",),\"Nil\",IF(ISBLANK(M16),\"\",SUM(IPS!K102-F44,0))))",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F36",
+    "formula": "IF(OR(H16=\"Wife\",H16=\"Husband\"),IPS!J103,\"Nil\")",
+    "cached_value": "Nil"
+  },
+  {
+    "sheet": "PR",
+    "cell": "G36",
+    "formula": "IF(OR(H16=\"Wife\",H16=\"Husband\"),\"up to \"&TEXT(IPS!M103,\"dd-mm-yyyy\"),\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "I36",
+    "formula": "IF(IPS!J100=\"\",IF(IPS!J103=8000,\"(Minimum Pension)\",IF(F36=\"Nil\",\"\",I34)),IF(F36=\"Nil\",\"Nil\",I34))",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F37",
+    "formula": "IF(OR(H16=\"Wife\",H16=\"Husband\"),IPS!J104,\"Nil\")",
+    "cached_value": "Nil"
+  },
+  {
+    "sheet": "PR",
+    "cell": "G37",
+    "formula": "IF(OR(H16=\"Wife\",H16=\"Husband\"),\"w.e.f. \"&TEXT(IPS!M103+1,\"dd-mm-yyyy\"),\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "I37",
+    "formula": "IF(IPS!J100=\"\",IF(F37=\"Nil\",\"\",\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 \"&30&\"%)\"),IF(F37=\"Nil\",\"Nil\",TEXT(IPS!J100*30%,\"\u20b9 #,##0;\")))",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "C38",
+    "formula": "IF(OR(H16=\"Husband\",H16=\"Wife\"),\"\",\"Remarks:-No family member is eligible for Family Pension now.\")",
+    "cached_value": "Remarks:-No family member is eligible for Family Pension now."
+  },
+  {
+    "sheet": "PR",
+    "cell": "D40",
+    "formula": "IF(K41=FALSE,\"Sr.Acctt.\",\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F40",
+    "formula": "IF(K41=FALSE,\"A.A.O.\",\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "I40",
+    "formula": "IF(K41=FALSE,\"Sr.A.O.\",\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "B41",
+    "formula": "IF(IPS!J100=\"\",\"15)\",\"16)\")",
+    "cached_value": "15)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C41",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\"),\"\",IF(ISBLANK(M16),\"Commutation:-\",IF(AND(NOT(ISBLANK(M16)),N16=\"Heldup:-\"),\"Commutation Held-up:-\",\"Commutation:-\")))",
+    "cached_value": "Commutation:-"
+  },
+  {
+    "sheet": "PR",
+    "cell": "K41",
+    "formula": "IF(ISBLANK(M16),FALSE,TRUE)",
+    "cached_value": "1"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C42",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",),\"\",\"Date of Application\")",
+    "cached_value": "Date of Application"
+  },
+  {
+    "sheet": "PR",
+    "cell": "E42",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",),\"\",\":\")",
+    "cached_value": ":"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F42",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",ISBLANK(M16)),\"\",TEXT(M16,\"dd-mm-yyyy\")&\", at P/\"&M17&IF(M16-IPS!C10>=365,\"\u1d9c,(With Medical Certificate)\",\",(Without Medical Certificate)\"))",
+    "cached_value": "01-08-2025, at P/,(Without Medical Certificate)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C43",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",),\"\",\"Age as on Next Birth Day\")",
+    "cached_value": "Age as on Next Birth Day"
+  },
+  {
+    "sheet": "PR",
+    "cell": "E43",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",),\"\",\":\")",
+    "cached_value": ":"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F43",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",ISBLANK(PR!M16)),\"\",M19&IF(F42=\" \",\" \",\" Years\"))",
+    "cached_value": "61 Years"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C44",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",),\"\",\"Commuted Pension\")",
+    "cached_value": "Commuted Pension"
+  },
+  {
+    "sheet": "PR",
+    "cell": "E44",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",),\"\",\":\")",
+    "cached_value": ":"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F44",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",ISBLANK(PR!M16)),\"\",IF(N16=\"Heldup\",\"\",ROUNDDOWN(IPS!J102*PR!M18,0)))",
+    "cached_value": "7080"
+  },
+  {
+    "sheet": "PR",
+    "cell": "G44",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",ISBLANK(PR!M16)),\"\",IF(ISBLANK(PR!M16),\" \",IF(N16=\"Heldup\",\"\",IF(F42=\" \",\" \",\"(\"&TEXT(F34,\"\u20b9 #,##0;\")&\" \u00d7 \")&IF(F42=\" \",\" \",PR!M18*100&\"%\")&IF(F42=\" \",\" \",\")\"))))",
+    "cached_value": "(\u20b9 17,700 \u00d7 40%)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C45",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",),\"\",\"Total Commutation\")",
+    "cached_value": "Total Commutation"
+  },
+  {
+    "sheet": "PR",
+    "cell": "E45",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",),\"\",\":\")",
+    "cached_value": ":"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F45",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",ISBLANK(PR!M16),N16=\"Heldup\"),\"\",ROUNDUP(F44*12*M20,0))",
+    "cached_value": "696163"
+  },
+  {
+    "sheet": "PR",
+    "cell": "G45",
+    "formula": "IF(OR(IPS!B1=\"Family Pension Case\",IPS!B1=\"DRW Family Pension Case\",ISBLANK(PR!M16)),\"\",IF(N16=\"Heldup\",\"\",IF(F42=\" \",\" \",\"(\"&TEXT(F44,\"\u20b9 #,##0;\")&\" \u00d7 12 \u00d7 \")&IF(F42=\" \",\" \",PR!M20)&IF(F42=\" \",\" \",\")\")))",
+    "cached_value": "(\u20b9 7,080 \u00d7 12 \u00d7 8.194)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "B46",
+    "formula": "IF(OR(IPS!B1=\"LTA Pension\",IPS!C12=TRUE),\"#LTA of Sup. Pension, DCRG & Commutation will be issued to admissible family members as per Sub-Rule (1)(a), Sub-Rule (1)(b)(i) of Rule 51 & Sub-Rule (6) of Rule 50 of CCS (Pension) Rules 1972.\",\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "D48",
+    "formula": "IF(AND(K33=TRUE,K41=TRUE,K49=TRUE),\"\",\"Sr.Acctt.\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "F48",
+    "formula": "IF(AND(K33=TRUE,K41=TRUE,K49=TRUE),\"\",\"A.A.O.\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "I48",
+    "formula": "IF(AND(K33=TRUE,K41=TRUE,K49=TRUE),\"\",\"Sr.A.O.\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "B49",
+    "formula": "IF(IPS!J100=\"\",\"16)\",\"17)\")",
+    "cached_value": "16)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "C49",
+    "formula": "IF(K49=TRUE,\"DCRG\",\"DCRG (Held-up)\")&\":- [\"&IF(ISBLANK(M15),\"Form-1(Nomination for DCRG) hasn't been received\",\"Form-1(Nomination for DCRG) at P/\"&M15&\"\u1d9c\")&\"]\"",
+    "cached_value": "DCRG:- [Form-1(Nomination for DCRG) hasn't been received]"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F50",
+    "formula": "IF(IPS!K108=TRUE,IPS!J107,\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "PR",
+    "cell": "G50",
+    "formula": "IF(IPS!J107=1000000,\"(Max.) \",\" \")&IF(IPS!B1=\"Family Pension Case\",(IF(IPS!I126<1,\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 2)\",IF(AND(IPS!I126>=1,IPS!I126<5),\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 6)\",IF(AND(IPS!I126>=5,IPS!I126<20),\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 12)\",IF(IPS!I126>=20,\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 \"&IPS!J101&\" \u00f7 2)\"))))),IF(IPS!B1=\"DRW Family Pension Case\",(IF(IPS!I144<1,\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 2)\",IF(AND(IPS!I144>=1,IPS!I144<5),\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 6)\",IF(AND(IPS!I144>=5,IPS!I144<20),\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 12)\",IF(IPS!I144>=20,\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 \"&IPS!J101&\" \u00f7 2)\"))))),\"(\"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\" \u00d7 \"&IPS!J101&\" \u00f7 4)\"))",
+    "cached_value": " (\u20b9 35,400 \u00d7 66 \u00f7 4)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F51",
+    "formula": "IPS!J109",
+    "cached_value": "438075"
+  },
+  {
+    "sheet": "PR",
+    "cell": "G51",
+    "formula": "IF(IPS!N108=1,IPS!L108,IPS!L109)",
+    "cached_value": "Flag-A\u1d9c at Service Book"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F53",
+    "formula": "IF(K49=FALSE,\"\",IPS!J110)",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F54",
+    "formula": "IF(K49=FALSE,\"\",IPS!J111)",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F55",
+    "formula": "IF(K49=FALSE,\"\",IPS!J112)",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F56",
+    "formula": "IF(K49=FALSE,\"\",IF(ISTEXT(F51),F53+F54+F55,F51+F53+F54+F55))",
+    "cached_value": "438075"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F57",
+    "formula": "IF(K49=FALSE,\"\",F50-F56)",
+    "cached_value": "#VALUE!"
+  },
+  {
+    "sheet": "PR",
+    "cell": "D59",
+    "formula": "IF(K49=TRUE,\"Acctt.\",\"\")",
+    "cached_value": "Acctt."
+  },
+  {
+    "sheet": "PR",
+    "cell": "F59",
+    "formula": "IF(K49=TRUE,\"A.A.O.\",\"\")",
+    "cached_value": "A.A.O."
+  },
+  {
+    "sheet": "PR",
+    "cell": "I59",
+    "formula": "IF(K49=TRUE,\"Sr.A.O.\",\"\")",
+    "cached_value": "Sr.A.O."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "L4",
+    "formula": "IPS!C5",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C5",
+    "formula": "\"No.\"&PR!F4",
+    "cached_value": "No.Pen-2/Sup/GK//2026-27"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H5",
+    "formula": "\"Date-\"&TEXT(TODAY(),\"dd/mm/yyyy\")",
+    "cached_value": "Date-17/08/2026"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C6",
+    "formula": "\"PPO No.\"&L5",
+    "cached_value": "PPO No."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H6",
+    "formula": "\"Application No.\"&L4",
+    "cached_value": "Application No.0"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "L6",
+    "formula": "IF(OR(PR!M9='Pay Scales'!J26,PR!M7='Pay Scales'!L26),\"Dharmanagar\",IF(OR(PR!M9='Pay Scales'!J27,PR!M7='Pay Scales'!L26),\"Dharmanagar\",IF(OR(PR!M9='Pay Scales'!J28,PR!M7='Pay Scales'!L28),\"Kailashahar\",IF(OR(PR!M9='Pay Scales'!J29,PR!M7='Pay Scales'!L29),\"Ambassa\",IF(OR(PR!M9='Pay Scales'!J30,PR!M7='Pay Scales'!L29),\"Ambassa\",IF(OR(PR!M9='Pay Scales'!J31,PR!M7='Pay Scales'!L29),\"Ambassa\",IF(OR(PR!M9='Pay Scales'!J32,PR!M7='Pay Scales'!L32),\"Khowai\",IF(OR(PR!M9='Pay Scales'!J33,PR!M7='Pay Scales'!L33),\"Agartala-1\",IF(OR(PR!M9='Pay Scales'!J34,PR!M7='Pay Scales'!L33),\"Agartala-1\",IF(OR(PR!M9='Pay Scales'!J35,PR!M7='Pay Scales'!L35),\"Bishalgarh\",IF(OR(PR!M9='Pay Scales'!J36,PR!M7='Pay Scales'!L36),\"Udaipur\",IF(OR(PR!M9='Pay Scales'!J37,PR!M7='Pay Scales'!L37),\"Belonia\",IF(OR(PR!M9='Pay Scales'!J38,PR!M7='Pay Scales'!L37),\"Belonia\",)))))))))))))",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C10",
+    "formula": "L6&\" Treasury, \"&IF(L6='Pay Scales'!K33,\"Agartala\",L6)",
+    "cached_value": "0 Treasury, 0"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D12",
+    "formula": "IF(ISBLANK(PR!M16),\"Payment of Life Time Arrear (LTA) of Superannuation pension and Gratuity of Late \"&IPS!D3&\" Ex.\"&IPS!C4&\" vide PPO No.\"&L5,\"Payment of Life Time Arrear (LTA) of Superannuation pension, Commutation and Gratuity of Late \"&IPS!D3&\" Ex.\"&IPS!C4&\" vide PPO No.\"&L5)",
+    "cached_value": "Payment of Life Time Arrear (LTA) of Superannuation pension, Commutation and Gratuity of Late  Ex. vide PPO No."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D16",
+    "formula": "\"Consequent upon the death of Shri \"&IPS!D3&\" Retd.\"&IPS!C4&\" on \"&TEXT(IPS!C11,\"dd-mm-yyyy\")&\" after retiring on \"&TEXT(IPS!C10,\"dd-mm-yyyy\")&\" following pensionary benefits are admissible as mentioned below:-\"",
+    "cached_value": "Consequent upon the death of Shri  Retd. on 00-01-1900 after retiring on 31-07-2025 following pensionary benefits are admissible as mentioned below:-"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C19",
+    "formula": "IF(ISBLANK(PR!M16),\"Details of LTA of Superannuation Pension:-\",\"Details of LTA of Superannuation Pension & Commutation:-\")",
+    "cached_value": "Details of LTA of Superannuation Pension & Commutation:-"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C20",
+    "formula": "\"1) LTA of Sup. Pension :- \"&TEXT(L20,\"\u20b9#,##0;\")&\"/- per month from \"&TEXT(IPS!C10+1,\"dd-mm-yyyy\")&\", to \"&TEXT(IPS!C11,\"dd-mm-yyyy\")&\".\"",
+    "cached_value": "1) LTA of Sup. Pension :- \u20b917,700/- per month from 01-08-2025, to 00-01-1900."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "L20",
+    "formula": "IPS!J102",
+    "cached_value": "17700"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "M20",
+    "formula": "\"(Rupees \"&CHOOSE(MID(TEXT(L20,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(L20,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(L20,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(L20,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(L20,\"00000000.00\"))+MID(TEXT(L20,\"00000000.00\"),2,1)+MID(TEXT(L20,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(L20,\"00000000.00\"),4,1)+MID(TEXT(L20,\"00000000.00\"),5,1)+MID(TEXT(L20,\"00000000.00\"),6,1)+MID(TEXT(L20,\"00000000.00\"),7,1))=0,(--MID(TEXT(L20,\"00000000.00\"),8,1)+RIGHT(TEXT(L20,\"00000000.00\")))>0),\" lakhs and \",\" lakh\"))&CHOOSE(MID(TEXT(L20,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(L20,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(L20,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(L20,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(L20,\"000000000.00\"),4,1)+MID(TEXT(L20,\"000000000.00\"),5,1)+MID(TEXT(L20,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(L20,\"000000000.00\"),7,1)+MID(TEXT(L20,\"000000000.00\"),8,1)+MID(TEXT(L20,\"000000000.00\"),9,1))=0,--MID(TEXT(L20,\"000000000.00\"),7,1)<>0),\" thousand \",\" thousand and \"))&CHOOSE(MID(TEXT(L20,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(L20,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(L20,\"000000000.00\"),8,1)=0,--MID(TEXT(L20,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(L20,\"000000000.00\"),8,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(L20,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(L20,\"000000000.00\"),9,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(L20,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\"",
+    "cached_value": "(Rupees  seventeen thousand  seven hundred only)"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C21",
+    "formula": "IF(ISBLANK(PR!M16),\"\",\"2) Commutation :- \"&TEXT(L21,\"\u20b9#,##0;\")&\"/- \"&M21&\".\")",
+    "cached_value": "2) Commutation :- \u20b96,96,163/- (Rupees six lakh ninety six thousand one hundred and sixty three only)."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "L21",
+    "formula": "PR!M25",
+    "cached_value": "696163"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "M21",
+    "formula": "\"(Rupees \"&CHOOSE(MID(TEXT(L21,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(L21,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(L21,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(L21,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(L21,\"00000000.00\"))+MID(TEXT(L21,\"00000000.00\"),2,1)+MID(TEXT(L21,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(L21,\"00000000.00\"),4,1)+MID(TEXT(L21,\"00000000.00\"),5,1)+MID(TEXT(L21,\"00000000.00\"),6,1)+MID(TEXT(L21,\"00000000.00\"),7,1))=0,(--MID(TEXT(L21,\"00000000.00\"),8,1)+RIGHT(TEXT(L21,\"00000000.00\")))>0),\" lakhs and \",\" lakh\"))&CHOOSE(MID(TEXT(L21,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(L21,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(L21,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(L21,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(L21,\"000000000.00\"),4,1)+MID(TEXT(L21,\"000000000.00\"),5,1)+MID(TEXT(L21,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(L21,\"000000000.00\"),7,1)+MID(TEXT(L21,\"000000000.00\"),8,1)+MID(TEXT(L21,\"000000000.00\"),9,1))=0,--MID(TEXT(L21,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(L21,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(L21,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(L21,\"000000000.00\"),8,1)=0,--MID(TEXT(L21,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(L21,\"000000000.00\"),8,1)+1,,,\"twenty\",\"thirty\",\"forty\",\"fifty\",\"sixty\",\"seventy\",\"eighty\",\"ninety\")&IF(--MID(TEXT(L21,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(L21,\"000000000.00\"),9,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(L21,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\"",
+    "cached_value": "(Rupees six lakh ninety six thousand one hundred and sixty three only)"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "L22",
+    "formula": "IPS!J107-IPS!J109",
+    "cached_value": "146025"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "M22",
+    "formula": "\"(Rupees \"&CHOOSE(MID(TEXT(L22,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(L22,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(L22,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(L22,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(L22,\"00000000.00\"))+MID(TEXT(L22,\"00000000.00\"),2,1)+MID(TEXT(L22,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(L22,\"00000000.00\"),4,1)+MID(TEXT(L22,\"00000000.00\"),5,1)+MID(TEXT(L22,\"00000000.00\"),6,1)+MID(TEXT(L22,\"00000000.00\"),7,1))=0,(--MID(TEXT(L22,\"00000000.00\"),8,1)+RIGHT(TEXT(L22,\"00000000.00\")))>0),\" lakhs and \",\" lakh\"))&CHOOSE(MID(TEXT(L22,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(L22,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(L22,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(L22,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(L22,\"000000000.00\"),4,1)+MID(TEXT(L22,\"000000000.00\"),5,1)+MID(TEXT(L22,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(L22,\"000000000.00\"),7,1)+MID(TEXT(L22,\"000000000.00\"),8,1)+MID(TEXT(L22,\"000000000.00\"),9,1))=0,--MID(TEXT(L22,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(L22,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(L22,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(L22,\"000000000.00\"),8,1)=0,--MID(TEXT(L22,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(L22,\"000000000.00\"),8,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(L22,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(L22,\"000000000.00\"),9,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(L22,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\"",
+    "cached_value": "(Rupees one lakh forty six thousand and twenty  five only)"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C24",
+    "formula": "IF(ISBLANK(PR!M16),\"Details of family members eligible for LTA of Superannuation Pension :-\",\"Details of family members eligible for LTA of Superannuation Pension & Commutation :-\")",
+    "cached_value": "Details of family members eligible for LTA of Superannuation Pension & Commutation :-"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D27",
+    "formula": "PR!C16&PR!D16",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "G27",
+    "formula": "PR!G16",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H27",
+    "formula": "PR!H16",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D28",
+    "formula": "PR!C17&PR!D17",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "G28",
+    "formula": "PR!G17",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H28",
+    "formula": "PR!H17",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D29",
+    "formula": "PR!C18&PR!D18",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "G29",
+    "formula": "PR!G18",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H29",
+    "formula": "PR!H18",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C32",
+    "formula": "\"1) D.C.R.G. :- \"&TEXT(L22,\"\u20b9#,##0;\")&\"/- \"&M22&\".\"",
+    "cached_value": "1) D.C.R.G. :- \u20b91,46,025/- (Rupees one lakh forty six thousand and twenty  five only)."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C33",
+    "formula": "IF(K38=TRUE,\"As per Sub-Rule (1)(a) of Rule 51 of CCS (Pension) Rules 1972\",\"As per Sub-Rule (1)(b)(i) of Rule 51 & Sub-Rule (6) of Rule 50 of CCS (Pension) Rules 1972\")",
+    "cached_value": "As per Sub-Rule (1)(a) of Rule 51 of CCS (Pension) Rules 1972"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D37",
+    "formula": "D26",
+    "cached_value": "Name of family members"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "G37",
+    "formula": "G26",
+    "cached_value": "Date of Birth"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H37",
+    "formula": "H26",
+    "cached_value": "Relationship"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D38",
+    "formula": "PR!C16&PR!D16",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "G38",
+    "formula": "PR!G16",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H38",
+    "formula": "PR!H16",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D39",
+    "formula": "PR!C17&PR!D17",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "G39",
+    "formula": "PR!G17",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H39",
+    "formula": "PR!H17",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D40",
+    "formula": "PR!C18&PR!D18",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "G40",
+    "formula": "PR!G18",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H40",
+    "formula": "PR!H18",
+    "cached_value": null
+  },
+  {
+    "sheet": "LTA",
+    "cell": "F49",
+    "formula": "\"-2 -\"",
+    "cached_value": "-2 -"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C51",
+    "formula": "C5",
+    "cached_value": "No.Pen-2/Sup/GK//2026-27"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H51",
+    "formula": "H5",
+    "cached_value": "Date-17/08/2026"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C53",
+    "formula": "1&\".\"",
+    "cached_value": "1."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D53",
+    "formula": "VLOOKUP(PR!M13,DDO!A2:B1272,2,0)",
+    "cached_value": "#N/A"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C56",
+    "formula": "2&\".\"",
+    "cached_value": "2."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D56",
+    "formula": "D38&\",\"",
+    "cached_value": ","
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D57",
+    "formula": "H38&\" of \"&PR!F5&\",\"",
+    "cached_value": " of Shri Retd.,"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D58",
+    "formula": "PR!F9",
+    "cached_value": ", "
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C61",
+    "formula": "3&\".\"",
+    "cached_value": "3."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D61",
+    "formula": "D39&\",\"",
+    "cached_value": ","
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H61",
+    "formula": "H56",
+    "cached_value": "He/She is requested to appear before the Treasury/Sub-Treasury officer for further necessary action."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D62",
+    "formula": "H39&\" of \"&PR!F5&\",\"",
+    "cached_value": " of Shri Retd.,"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D63",
+    "formula": "PR!F9",
+    "cached_value": ", "
+  },
+  {
+    "sheet": "LTA",
+    "cell": "C66",
+    "formula": "4&\".\"",
+    "cached_value": "4."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D66",
+    "formula": "D40&\",\"",
+    "cached_value": ","
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H66",
+    "formula": "H61",
+    "cached_value": "He/She is requested to appear before the Treasury/Sub-Treasury officer for further necessary action."
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D67",
+    "formula": "H40&\" of \"&PR!F5&\",\"",
+    "cached_value": " of Shri Retd.,"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D68",
+    "formula": "PR!F9",
+    "cached_value": ", "
+  },
+  {
+    "sheet": "LTA",
+    "cell": "H73",
+    "formula": "LTA!H45",
+    "cached_value": "Sr. Accounts Officer"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H4",
+    "formula": "\"No.\"&PR!F4",
+    "cached_value": "No.Pen-2/Sup/GK//2026-27"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "N4",
+    "formula": "\"Date-\"&TEXT(TODAY(),\"dd/mm/yyyy\")",
+    "cached_value": "Date-17/08/2026"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H5",
+    "formula": "PR!C3&S13",
+    "cached_value": "Application No."
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H6",
+    "formula": "\"GPO No.\"&S14",
+    "cached_value": "GPO No."
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H7",
+    "formula": "\"Treasury - \"&PR!F13",
+    "cached_value": "Treasury -   "
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H9",
+    "formula": "\"Emp. Name & Designation - \"&PR!F5",
+    "cached_value": "Emp. Name & Designation - Shri Retd."
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H10",
+    "formula": "PR!C6&\" - \"&TEXT(PR!F6,\"dd/mm/yyyy\")&\",\"",
+    "cached_value": "Date of Birth, at P/\u1d9c - 12/07/1965,"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "J10",
+    "formula": "IPS!B8&\" - \"&TEXT(IPS!C8,\"dd/mm/yyyy\")&\",\"",
+    "cached_value": "Date of Joining - 05/03/1987,"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "L10",
+    "formula": "PR!C8&\" - \"&TEXT(PR!F8,\"dd/mm/yyyy\")",
+    "cached_value": "Date of Retirement, at P/\u1d9c - 31/07/2025"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H11",
+    "formula": "\"Qualifying Service - \"&PR!O23&\".\"",
+    "cached_value": "Qualifying Service - ."
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "L11",
+    "formula": "IPS!H99&\" - \"&TEXT(IPS!J99,\"\u20b9 #,##0;\")&\"/- \"&\"(Level\"&\" - \"&IPS!R85&\")\"",
+    "cached_value": "Last Pay - \u20b9 35,400/- (Level - 4)"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "S15",
+    "formula": "IF(OR(PR!M9='Pay Scales'!J26,PR!M7='Pay Scales'!L26),\"Dharmanagar\",IF(OR(PR!M9='Pay Scales'!J27,PR!M7='Pay Scales'!L26),\"Dharmanagar\",IF(OR(PR!M9='Pay Scales'!J28,PR!M7='Pay Scales'!L28),\"Kailashahar\",IF(OR(PR!M9='Pay Scales'!J29,PR!M7='Pay Scales'!L29),\"Ambassa\",IF(OR(PR!M9='Pay Scales'!J30,PR!M7='Pay Scales'!L29),\"Ambassa\",IF(OR(PR!M9='Pay Scales'!J31,PR!M7='Pay Scales'!L29),\"Ambassa\",IF(OR(PR!M9='Pay Scales'!J32,PR!M7='Pay Scales'!L32),\"Khowai\",IF(OR(PR!M9='Pay Scales'!J33,PR!M7='Pay Scales'!L33),\"Agartala-1\",IF(OR(PR!M9='Pay Scales'!J34,PR!M7='Pay Scales'!L33),\"Agartala-1\",IF(OR(PR!M9='Pay Scales'!J35,PR!M7='Pay Scales'!L35),\"Bishalgarh\",IF(OR(PR!M9='Pay Scales'!J36,PR!M7='Pay Scales'!L36),\"Udaipur\",IF(OR(PR!M9='Pay Scales'!J37,PR!M7='Pay Scales'!L37),\"Belonia\",IF(OR(PR!M9='Pay Scales'!J38,PR!M7='Pay Scales'!L37),\"Belonia\",)))))))))))))",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "J17",
+    "formula": "PR!F50",
+    "cached_value": null
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "K17",
+    "formula": "IPS!H109&\" -\"",
+    "cached_value": "Provisional DCRG Paid -"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "N17",
+    "formula": "PR!F51",
+    "cached_value": "438075"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "K18",
+    "formula": "PR!C54&\" -\"",
+    "cached_value": "Pay & Allowances Overdrawn -"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "N18",
+    "formula": "PR!F54",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H19",
+    "formula": "PR!C56&\" -\"",
+    "cached_value": "Total Recovery -"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "J19",
+    "formula": "PR!F56",
+    "cached_value": "438075"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "K19",
+    "formula": "PR!C53&\" -\"",
+    "cached_value": "Leave Salary Overdrawn -"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "N19",
+    "formula": "PR!F53",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "J20",
+    "formula": "PR!F57",
+    "cached_value": "#VALUE!"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "K20",
+    "formula": "\"(Rupees \"&CHOOSE(MID(TEXT(J20,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(J20,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(J20,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(J20,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(J20,\"00000000.00\"))+MID(TEXT(J20,\"00000000.00\"),2,1)+MID(TEXT(J20,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(J20,\"00000000.00\"),4,1)+MID(TEXT(J20,\"00000000.00\"),5,1)+MID(TEXT(J20,\"00000000.00\"),6,1)+MID(TEXT(J20,\"00000000.00\"),7,1))=0,(--MID(TEXT(J20,\"00000000.00\"),8,1)+RIGHT(TEXT(J20,\"00000000.00\")))>0),\" lac and \",\" lac\"))&CHOOSE(MID(TEXT(J20,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(J20,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(J20,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(J20,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(J20,\"000000000.00\"),4,1)+MID(TEXT(J20,\"000000000.00\"),5,1)+MID(TEXT(J20,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(J20,\"000000000.00\"),7,1)+MID(TEXT(J20,\"000000000.00\"),8,1)+MID(TEXT(J20,\"000000000.00\"),9,1))=0,--MID(TEXT(J20,\"000000000.00\"),7,1)<>0),\" thousand \",\" thousand and \"))&CHOOSE(MID(TEXT(J20,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(J20,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(J20,\"000000000.00\"),8,1)=0,--MID(TEXT(J20,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(J20,\"000000000.00\"),8,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(J20,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(J20,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(J20,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\"",
+    "cached_value": "#VALUE!"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I23",
+    "formula": "PR!C16&\" \"&PR!D16",
+    "cached_value": " "
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "N23",
+    "formula": "PR!G16",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "O23",
+    "formula": "PR!H16",
+    "cached_value": null
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I24",
+    "formula": "PR!C17&\" \"&PR!D17",
+    "cached_value": " "
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "N24",
+    "formula": "PR!G17",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "O24",
+    "formula": "PR!H17",
+    "cached_value": null
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I25",
+    "formula": "PR!C18&\" \"&PR!D18",
+    "cached_value": " "
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "N25",
+    "formula": "PR!G18",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "O25",
+    "formula": "PR!H18",
+    "cached_value": null
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H29",
+    "formula": "H4",
+    "cached_value": "No.Pen-2/Sup/GK//2026-27"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "N29",
+    "formula": "N4",
+    "cached_value": "Date-17/08/2026"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H31",
+    "formula": "1&\".\"",
+    "cached_value": "1."
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I32",
+    "formula": "S15&\" Treasury, \"&IF(S15='Pay Scales'!K33,\"Agartala\",S15)",
+    "cached_value": "0 Treasury, 0"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H34",
+    "formula": "2&\".\"",
+    "cached_value": "2."
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I34",
+    "formula": "\"The \"&VLOOKUP(PR!M13,#REF!,6,0)",
+    "cached_value": "#REF!"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H37",
+    "formula": "3&\".\"",
+    "cached_value": "3."
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I37",
+    "formula": "I23&\",\"",
+    "cached_value": " ,"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I38",
+    "formula": "O23&\" of \"&PR!F5&\",\"",
+    "cached_value": " of Shri Retd.,"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I39",
+    "formula": "PR!F9",
+    "cached_value": ", "
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H42",
+    "formula": "4&\".\"",
+    "cached_value": "4."
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I42",
+    "formula": "I24&\",\"",
+    "cached_value": " ,"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I43",
+    "formula": "O24&\" of \"&PR!F5&\",\"",
+    "cached_value": " of Shri Retd.,"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I44",
+    "formula": "PR!F9",
+    "cached_value": ", "
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "H47",
+    "formula": "5&\".\"",
+    "cached_value": "5."
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I47",
+    "formula": "I25&\",\"",
+    "cached_value": " ,"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I48",
+    "formula": "O25&\" of \"&PR!F5&\",\"",
+    "cached_value": " of Shri Retd.,"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I49",
+    "formula": "PR!F9",
+    "cached_value": ", "
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "N53",
+    "formula": "'FAM DCRG'!N28",
+    "cached_value": "Sr. Accounts Officer"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C3",
+    "formula": "H3",
+    "cached_value": "Revision Type"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E3",
+    "formula": "I3",
+    "cached_value": "Change of Last pay due to notional increment"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C4",
+    "formula": "H4",
+    "cached_value": "Case/Application No."
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E4",
+    "formula": "I4",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I4",
+    "formula": "IPS!C5",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C5",
+    "formula": "H5",
+    "cached_value": "PPO No."
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E5",
+    "formula": "I5",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C6",
+    "formula": "H6",
+    "cached_value": "PR No."
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E6",
+    "formula": "PR!F4",
+    "cached_value": "Pen-2/Sup/GK//2026-27"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C7",
+    "formula": "H7",
+    "cached_value": "Employee Name"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E7",
+    "formula": "PR!F5",
+    "cached_value": "Shri Retd."
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I7",
+    "formula": "IPS!C3",
+    "cached_value": "Shri"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "J7",
+    "formula": "IPS!D3",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C8",
+    "formula": "H17",
+    "cached_value": "Revised Last Pay"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E8",
+    "formula": "I17",
+    "cached_value": "35400"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I8",
+    "formula": "IF('Rev PR'!I7=\"Late\",\"Ex.\",\"Retd.\")",
+    "cached_value": "Retd."
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "J8",
+    "formula": "IPS!C4",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C9",
+    "formula": "H15",
+    "cached_value": "Qualifying Service"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E9",
+    "formula": "I16&\" Years,\"&J16&\" Months,\"&K16&\" Days\"",
+    "cached_value": " Years, Months, Days"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I9",
+    "formula": "IF(OR(PR!H16=\"Wife\",PR!H16=\"Husband\"),IF(OR(I7=\"Shri\",I7=\"Late\"),\"Smt.\",\"Shri\"),\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "J9",
+    "formula": "IF(OR(PR!H16=\"Wife\",PR!H16=\"Husband\"),PR!D16,\"\")",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C10",
+    "formula": "H9",
+    "cached_value": "Spouse"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E10",
+    "formula": "I9&\" \"&J9",
+    "cached_value": " "
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C11",
+    "formula": "IF(ISBLANK(I10),\"Treasury\",\"Treasury/Sub-Treasury\")",
+    "cached_value": "Treasury"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E11",
+    "formula": "IF(ISBLANK(I10),I11,I11&\"/\"&I10)",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I11",
+    "formula": "IF(OR(I10='Pay Scales'!J26),\"Dharmanagar\",IF(OR(I10='Pay Scales'!J27),\"Dharmanagar\",IF(OR(I10='Pay Scales'!J28),\"Kailashahar\",IF(OR(I10='Pay Scales'!J29),\"Ambassa\",IF(OR(I10='Pay Scales'!J30),\"Ambassa\",IF(OR(I10='Pay Scales'!J31),\"Ambassa\",IF(OR(I10='Pay Scales'!J32),\"Khowai\",IF(OR(I10='Pay Scales'!J33),\"Agartala-1\",IF(OR(I10='Pay Scales'!J34),\"Agartala-1\",IF(OR(I10='Pay Scales'!J35),\"Bishalgarh\",IF(OR(I10='Pay Scales'!J36),\"Udaipur\",IF(OR(I10='Pay Scales'!J37),\"Belonia\",IF(OR(I10='Pay Scales'!J38),\"Belonia\",)))))))))))))",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I12",
+    "formula": "IPS!C7",
+    "cached_value": "23935"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E13",
+    "formula": "IF(I19=\"\",\"Not admissible\",I19)",
+    "cached_value": "17700"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "F13",
+    "formula": "IF(K19=\"\",\"\",\"w.e.f. \"&TEXT(K19,\"dd-mm-yyyy\"))",
+    "cached_value": "w.e.f. 01-08-2025"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I13",
+    "formula": "IPS!C8",
+    "cached_value": "31841"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C14",
+    "formula": "H26",
+    "cached_value": "Commuted Pension"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E14",
+    "formula": "IF(I26=\"\",0,IF(I19=\"\",\"Not admissible\",I26))",
+    "cached_value": "7080"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "F14",
+    "formula": "IF(I25=\"\",\"\",\"vide CPO NO.\"&I25)",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "H14",
+    "formula": "IF('Rev PR'!I7=\"Late\",\"Date of Death\",\"Date of Retirement\")",
+    "cached_value": "Date of Retirement"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I14",
+    "formula": "IPS!C10",
+    "cached_value": "45869"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C15",
+    "formula": "IF(I3=\"Change of Last pay\",\"Revised Reduced Pension\",\"Reduced Pension\")",
+    "cached_value": "Reduced Pension"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E15",
+    "formula": "IF(I19=\"\",\"Not admissible\",E13-E14)",
+    "cached_value": "10620"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E16",
+    "formula": "I20",
+    "cached_value": "Not admissible"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "F16",
+    "formula": "IF(K20=\"\",\"\",\"upto \"&TEXT(K20,\"dd-mm-yyyy\"))",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E17",
+    "formula": "I21",
+    "cached_value": "Not admissible"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "F17",
+    "formula": "IF(K21=\"\",\"\",\"w.e.f. \"&TEXT(K21,\"dd-mm-yyyy\"))",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I17",
+    "formula": "IPS!J99",
+    "cached_value": "35400"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I18",
+    "formula": "IF(I7=\"Late\",\"\",MAX(8000,SUM(I17*50%,0),IF('Rev Auth'!N15>19,SUM(I17*MIN(50,(SUM('Rev Auth'!N15)))%,0),0)))",
+    "cached_value": "17700"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E19",
+    "formula": "I23",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I19",
+    "formula": "IF(I7=\"Late\",\"\",MAX(8000,SUM('Rev PR'!I17*50%,0),IF('Rev Auth'!N16>19,SUM('Rev PR'!I17*MIN(50,(SUM('Rev Auth'!N16)))%,0),0)))",
+    "cached_value": "17700"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "K19",
+    "formula": "IF(I19=\"\",\"\",'Rev PR'!I14+1)",
+    "cached_value": "45870"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E20",
+    "formula": "I24",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "F20",
+    "formula": "IF(I22=\"\",\"\",\"vide GPO NO.\"&I22)",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I20",
+    "formula": "IF(J9=\"\",\"Not admissible\",I19)",
+    "cached_value": "Not admissible"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "K20",
+    "formula": "IF(J9=\"\",\"\",IF('Rev PR'!I7=\"Late\",MIN((EDATE('Rev PR'!I12,12*67)-1),(EDATE('Rev PR'!I14,12*10))),EDATE('Rev PR'!I12,12*67)-1))",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E21",
+    "formula": "IF($I$3=\"Change of Last pay due to notional increment\",\"Not admissble now\",IF(E19=E20,\"Nil\",E19-E20))",
+    "cached_value": "Not admissble now"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I21",
+    "formula": "IF(J9=\"\",\"Not admissible\",I17*30%)",
+    "cached_value": "Not admissible"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "K21",
+    "formula": "IF(J9=\"\",\"\",K20+1)",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "C23",
+    "formula": "H27",
+    "cached_value": "Total Commutation"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E23",
+    "formula": "IF(I27=\"\",\"Not admissible\",I27)",
+    "cached_value": "696163"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I23",
+    "formula": "IF('Rev PR'!I7=\"Late\",MIN(1000000,(IF('Rev PR'!I16<1,'Rev PR'!I17*2,IF(AND('Rev PR'!I16>=1,'Rev PR'!I16<5),'Rev PR'!I17*6,IF(AND('Rev PR'!I16>=5,'Rev PR'!I16<20),'Rev PR'!I17*12,IF('Rev PR'!I16>=20,SUM('Rev PR'!I17*'Rev Auth'!N16/2,0))))))),MIN(1000000,(IF('Rev PR'!I16>19,SUM('Rev PR'!I17*'Rev Auth'!N16/4,0),SUM('Rev PR'!I17*'Rev Auth'!N16/2,0)))))",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E24",
+    "formula": "IF(I28=\"\",\"Not admissible\",I28)",
+    "cached_value": "Not admissible"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "F24",
+    "formula": "F14",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "E25",
+    "formula": "IF($I$3=\"Change of Last pay due to notional increment\",\"Not admissble now\",IF(E23=E24,\"Nil\",E23-E24))",
+    "cached_value": "Not admissble now"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "H26",
+    "formula": "IF(I3=\"Change of Last pay\",\"Revised Commuted Pension\",\"Commuted Pension\")",
+    "cached_value": "Commuted Pension"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I26",
+    "formula": "PR!F44",
+    "cached_value": "7080"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "H27",
+    "formula": "IF(I3=\"Change of Last pay\",\"Revised Total Commutation\",\"Total Commutation\")",
+    "cached_value": "Total Commutation"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I27",
+    "formula": "PR!F45",
+    "cached_value": "696163"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "B30",
+    "formula": "\"Remarks 3) Less the amount already drawn vide PPO No.\"&I5",
+    "cached_value": "Remarks 3) Less the amount already drawn vide PPO No."
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I36",
+    "formula": "I12",
+    "cached_value": "23935"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "J38",
+    "formula": "CEILING(J37*2.25,10)",
+    "cached_value": "14580"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "J39",
+    "formula": "ROUND(J38*2.57/2.25,-2)",
+    "cached_value": "16700"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "K39",
+    "formula": "J39+J39*25%+500",
+    "cached_value": "21375"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "I40",
+    "formula": "EDATE(I36,12*80)",
+    "cached_value": "53155"
+  },
+  {
+    "sheet": "Rev PR",
+    "cell": "J40",
+    "formula": "J39+J39*20%",
+    "cached_value": "20040"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C4",
+    "formula": "\"No.Pen-1/Sup/ND/Rev/\"&'Rev PR'!I6&\"/\"&'Rev PR'!J6&\"/\"",
+    "cached_value": "No.Pen-1/Sup/ND/Rev//2025-26/"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "I4",
+    "formula": "\"Date-\"&TEXT(TODAY(),\"dd/mm/yyyy\")",
+    "cached_value": "Date-17/08/2026"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N5",
+    "formula": "'Rev PR'!E15",
+    "cached_value": "10620"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "O5",
+    "formula": "IF(N5=\"Not admissible\",\"Not admissible\",\"(Rupees \"&CHOOSE(MID(TEXT(N5,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(N5,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(N5,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N5,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(N5,\"00000000.00\"))+MID(TEXT(N5,\"00000000.00\"),2,1)+MID(TEXT(N5,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(N5,\"00000000.00\"),4,1)+MID(TEXT(N5,\"00000000.00\"),5,1)+MID(TEXT(N5,\"00000000.00\"),6,1)+MID(TEXT(N5,\"00000000.00\"),7,1))=0,(--MID(TEXT(N5,\"00000000.00\"),8,1)+RIGHT(TEXT(N5,\"00000000.00\")))>0),\" lakh and \",\" lakhs\"))&CHOOSE(MID(TEXT(N5,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(N5,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(N5,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(N5,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(N5,\"000000000.00\"),4,1)+MID(TEXT(N5,\"000000000.00\"),5,1)+MID(TEXT(N5,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(N5,\"000000000.00\"),7,1)+MID(TEXT(N5,\"000000000.00\"),8,1)+MID(TEXT(N5,\"000000000.00\"),9,1))=0,--MID(TEXT(N5,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(N5,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(N5,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(N5,\"000000000.00\"),8,1)=0,--MID(TEXT(N5,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(N5,\"000000000.00\"),8,1)+1,,,\"twenty\",\"thirty\",\"forty\",\"fifty\",\"sixty\",\"seventy\",\"eighty\",\"ninety\")&IF(--MID(TEXT(N5,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(N5,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N5,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\")",
+    "cached_value": "(Rupees  ten thousand six hundred and twenty only)"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N6",
+    "formula": "'Rev PR'!K19",
+    "cached_value": "45870"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C7",
+    "formula": "\"Reference:-\"&'Rev PR'!H5&'Rev PR'!I5&\" issued in favour of \"&'Rev PR'!I7&\" \"&'Rev PR'!J7&\", Retd.\"&'Rev PR'!J8",
+    "cached_value": "Reference:-PPO No. issued in favour of Shri 0, Retd.0"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "M7",
+    "formula": "'Rev PR'!C15",
+    "cached_value": "Reduced Pension"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N7",
+    "formula": "'Rev PR'!E15",
+    "cached_value": "10620"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "O7",
+    "formula": "IF(N7=\"Not admissible\",\"Not admissible\",\"(Rupees \"&CHOOSE(MID(TEXT(N7,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(N7,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(N7,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N7,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(N7,\"00000000.00\"))+MID(TEXT(N7,\"00000000.00\"),2,1)+MID(TEXT(N7,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(N7,\"00000000.00\"),4,1)+MID(TEXT(N7,\"00000000.00\"),5,1)+MID(TEXT(N7,\"00000000.00\"),6,1)+MID(TEXT(N7,\"00000000.00\"),7,1))=0,(--MID(TEXT(N7,\"00000000.00\"),8,1)+RIGHT(TEXT(N7,\"00000000.00\")))>0),\" lakh and \",\" lakhs\"))&CHOOSE(MID(TEXT(N7,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(N7,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(N7,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(N7,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(N7,\"000000000.00\"),4,1)+MID(TEXT(N7,\"000000000.00\"),5,1)+MID(TEXT(N7,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(N7,\"000000000.00\"),7,1)+MID(TEXT(N7,\"000000000.00\"),8,1)+MID(TEXT(N7,\"000000000.00\"),9,1))=0,--MID(TEXT(N7,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(N7,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(N7,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(N7,\"000000000.00\"),8,1)=0,--MID(TEXT(N7,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(N7,\"000000000.00\"),8,1)+1,,,\"twenty\",\"thirty\",\"forty\",\"fifty\",\"sixty\",\"seventy\",\"eighty\",\"ninety\")&IF(--MID(TEXT(N7,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(N7,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N7,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\")",
+    "cached_value": "(Rupees  ten thousand six hundred and twenty only)"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C8",
+    "formula": "\"          Due to \"&'Rev PR'!I3&\" the rate of Pension/Family Pension as incorporated in the above mentioned PPO stands revised as under subject to adjustment of amount already drawn.\"",
+    "cached_value": "          Due to Change of Last pay due to notional increment the rate of Pension/Family Pension as incorporated in the above mentioned PPO stands revised as under subject to adjustment of amount already drawn."
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N8",
+    "formula": "'Rev PR'!E14",
+    "cached_value": "7080"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "O8",
+    "formula": "\"(Rupees \"&CHOOSE(MID(TEXT(N8,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(N8,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(N8,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N8,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(N8,\"00000000.00\"))+MID(TEXT(N8,\"00000000.00\"),2,1)+MID(TEXT(N8,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(N8,\"00000000.00\"),4,1)+MID(TEXT(N8,\"00000000.00\"),5,1)+MID(TEXT(N8,\"00000000.00\"),6,1)+MID(TEXT(N8,\"00000000.00\"),7,1))=0,(--MID(TEXT(N8,\"00000000.00\"),8,1)+RIGHT(TEXT(N8,\"00000000.00\")))>0),\" lakh and \",\" lakhs\"))&CHOOSE(MID(TEXT(N8,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(N8,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(N8,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(N8,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(N8,\"000000000.00\"),4,1)+MID(TEXT(N8,\"000000000.00\"),5,1)+MID(TEXT(N8,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(N8,\"000000000.00\"),7,1)+MID(TEXT(N8,\"000000000.00\"),8,1)+MID(TEXT(N8,\"000000000.00\"),9,1))=0,--MID(TEXT(N8,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(N8,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(N8,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(N8,\"000000000.00\"),8,1)=0,--MID(TEXT(N8,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(N8,\"000000000.00\"),8,1)+1,,,\"twenty\",\"thirty\",\"forty\",\"fifty\",\"sixty\",\"seventy\",\"eighty\",\"ninety\")&IF(--MID(TEXT(N8,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(N8,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N8,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\"",
+    "cached_value": "(Rupees  seven thousand and eighty only)"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "M9",
+    "formula": "'Rev PR'!C19",
+    "cached_value": "Revised DCRG"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N9",
+    "formula": "'Rev PR'!E19",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "O9",
+    "formula": "\"(Rupees \"&CHOOSE(MID(TEXT(N9,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(N9,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(N9,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N9,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(N9,\"00000000.00\"))+MID(TEXT(N9,\"00000000.00\"),2,1)+MID(TEXT(N9,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(N9,\"00000000.00\"),4,1)+MID(TEXT(N9,\"00000000.00\"),5,1)+MID(TEXT(N9,\"00000000.00\"),6,1)+MID(TEXT(N9,\"00000000.00\"),7,1))=0,(--MID(TEXT(N9,\"00000000.00\"),8,1)+RIGHT(TEXT(N9,\"00000000.00\")))>0),\" lakh and \",\" lakhs\"))&CHOOSE(MID(TEXT(N9,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(N9,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(N9,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(N9,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(N9,\"000000000.00\"),4,1)+MID(TEXT(N9,\"000000000.00\"),5,1)+MID(TEXT(N9,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(N9,\"000000000.00\"),7,1)+MID(TEXT(N9,\"000000000.00\"),8,1)+MID(TEXT(N9,\"000000000.00\"),9,1))=0,--MID(TEXT(N9,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(N9,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(N9,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(N9,\"000000000.00\"),8,1)=0,--MID(TEXT(N9,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(N9,\"000000000.00\"),8,1)+1,,,\"twenty\",\"thirty\",\"forty\",\"fifty\",\"sixty\",\"seventy\",\"eighty\",\"ninety\")&IF(--MID(TEXT(N9,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(N9,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N9,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\"",
+    "cached_value": "(Rupees  only)"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "M10",
+    "formula": "'Rev PR'!C20",
+    "cached_value": "Paid DCRG"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N10",
+    "formula": "'Rev PR'!E20",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "O10",
+    "formula": "\"(Rupees \"&CHOOSE(MID(TEXT(N10,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(N10,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(N10,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N10,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(N10,\"00000000.00\"))+MID(TEXT(N10,\"00000000.00\"),2,1)+MID(TEXT(N10,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(N10,\"00000000.00\"),4,1)+MID(TEXT(N10,\"00000000.00\"),5,1)+MID(TEXT(N10,\"00000000.00\"),6,1)+MID(TEXT(N10,\"00000000.00\"),7,1))=0,(--MID(TEXT(N10,\"00000000.00\"),8,1)+RIGHT(TEXT(N10,\"00000000.00\")))>0),\" lakh and \",\" lakhs\"))&CHOOSE(MID(TEXT(N10,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(N10,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(N10,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(N10,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(N10,\"000000000.00\"),4,1)+MID(TEXT(N10,\"000000000.00\"),5,1)+MID(TEXT(N10,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(N10,\"000000000.00\"),7,1)+MID(TEXT(N10,\"000000000.00\"),8,1)+MID(TEXT(N10,\"000000000.00\"),9,1))=0,--MID(TEXT(N10,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(N10,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(N10,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(N10,\"000000000.00\"),8,1)=0,--MID(TEXT(N10,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(N10,\"000000000.00\"),8,1)+1,,,\"twenty\",\"thirty\",\"forty\",\"fifty\",\"sixty\",\"seventy\",\"eighty\",\"ninety\")&IF(--MID(TEXT(N10,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(N10,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N10,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\"",
+    "cached_value": "(Rupees  only)"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C11",
+    "formula": "\"          Revised Superannuation Pension \"&TEXT('Rev PR'!E13,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O5&\" per month w.e.f. \"&TEXT('Rev PR'!K19,\"dd/mm/yyyy\")&\" per month and reduced pension payable \"&TEXT('Rev PR'!E15,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O7&\" from the date following the date of C.V.P. due to commutation of pension of \"&TEXT('Rev PR'!E14,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O8&\" vide No.\"&'Rev PR'!I25&\" plus dearness relief and medical allowance as admissible from time to time.\"",
+    "cached_value": "          Revised Superannuation Pension \u20b9 17,700/-(Rupees  ten thousand six hundred and twenty only) per month w.e.f. 01/08/2025 per month and reduced pension payable \u20b9 10,620/-(Rupees  ten thousand six hundred and twenty only) from the date following the date of C.V.P. due to commutation of pension of \u20b9 7,080/-(Rupees  seven thousand and eighty only) vide No. plus dearness relief and medical allowance as admissible from time to time."
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "M11",
+    "formula": "'Rev PR'!C21",
+    "cached_value": "Revised Payable DCRG"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N11",
+    "formula": "IF('Rev PR'!E21=\"Nil\",0)",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "O11",
+    "formula": "\"(Rupees \"&CHOOSE(MID(TEXT(N11,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(N11,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(N11,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N11,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(N11,\"00000000.00\"))+MID(TEXT(N11,\"00000000.00\"),2,1)+MID(TEXT(N11,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(N11,\"00000000.00\"),4,1)+MID(TEXT(N11,\"00000000.00\"),5,1)+MID(TEXT(N11,\"00000000.00\"),6,1)+MID(TEXT(N11,\"00000000.00\"),7,1))=0,(--MID(TEXT(N11,\"00000000.00\"),8,1)+RIGHT(TEXT(N11,\"00000000.00\")))>0),\" lakh and \",\" lakhs\"))&CHOOSE(MID(TEXT(N11,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(N11,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(N11,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(N11,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(N11,\"000000000.00\"),4,1)+MID(TEXT(N11,\"000000000.00\"),5,1)+MID(TEXT(N11,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(N11,\"000000000.00\"),7,1)+MID(TEXT(N11,\"000000000.00\"),8,1)+MID(TEXT(N11,\"000000000.00\"),9,1))=0,--MID(TEXT(N11,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(N11,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(N11,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(N11,\"000000000.00\"),8,1)=0,--MID(TEXT(N11,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(N11,\"000000000.00\"),8,1)+1,,,\"twenty\",\"thirty\",\"forty\",\"fifty\",\"sixty\",\"seventy\",\"eighty\",\"ninety\")&IF(--MID(TEXT(N11,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(N11,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N11,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\"",
+    "cached_value": "#VALUE!"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N12",
+    "formula": "'Rev PR'!E16",
+    "cached_value": "Not admissible"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "O12",
+    "formula": "IF(N12=\"Not admissible\",\"Not admissible\",\"(Rupees \"&CHOOSE(MID(TEXT(N12,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(N12,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(N12,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N12,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(N12,\"00000000.00\"))+MID(TEXT(N12,\"00000000.00\"),2,1)+MID(TEXT(N12,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(N12,\"00000000.00\"),4,1)+MID(TEXT(N12,\"00000000.00\"),5,1)+MID(TEXT(N12,\"00000000.00\"),6,1)+MID(TEXT(N12,\"00000000.00\"),7,1))=0,(--MID(TEXT(N12,\"00000000.00\"),8,1)+RIGHT(TEXT(N12,\"00000000.00\")))>0),\" lakh and \",\" lakhs\"))&CHOOSE(MID(TEXT(N12,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(N12,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(N12,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(N12,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(N12,\"000000000.00\"),4,1)+MID(TEXT(N12,\"000000000.00\"),5,1)+MID(TEXT(N12,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(N12,\"000000000.00\"),7,1)+MID(TEXT(N12,\"000000000.00\"),8,1)+MID(TEXT(N12,\"000000000.00\"),9,1))=0,--MID(TEXT(N12,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(N12,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(N12,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(N12,\"000000000.00\"),8,1)=0,--MID(TEXT(N12,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(N12,\"000000000.00\"),8,1)+1,,,\"twenty\",\"thirty\",\"forty\",\"fifty\",\"sixty\",\"seventy\",\"eighty\",\"ninety\")&IF(--MID(TEXT(N12,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(N12,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N12,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\")",
+    "cached_value": "Not admissible"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N13",
+    "formula": "'Rev PR'!K20",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N14",
+    "formula": "'Rev PR'!E17",
+    "cached_value": "Not admissible"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "O14",
+    "formula": "IF(N14=\"Not admissible\",\"Not admissible\",\"(Rupees \"&CHOOSE(MID(TEXT(N14,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(N14,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(N14,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N14,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(N14,\"00000000.00\"))+MID(TEXT(N14,\"00000000.00\"),2,1)+MID(TEXT(N14,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(N14,\"00000000.00\"),4,1)+MID(TEXT(N14,\"00000000.00\"),5,1)+MID(TEXT(N14,\"00000000.00\"),6,1)+MID(TEXT(N14,\"00000000.00\"),7,1))=0,(--MID(TEXT(N14,\"00000000.00\"),8,1)+RIGHT(TEXT(N14,\"00000000.00\")))>0),\" lakh and \",\" lakhs\"))&CHOOSE(MID(TEXT(N14,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(N14,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(N14,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(N14,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(N14,\"000000000.00\"),4,1)+MID(TEXT(N14,\"000000000.00\"),5,1)+MID(TEXT(N14,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(N14,\"000000000.00\"),7,1)+MID(TEXT(N14,\"000000000.00\"),8,1)+MID(TEXT(N14,\"000000000.00\"),9,1))=0,--MID(TEXT(N14,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(N14,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(N14,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(N14,\"000000000.00\"),8,1)=0,--MID(TEXT(N14,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(N14,\"000000000.00\"),8,1)+1,,,\"twenty\",\"thirty\",\"forty\",\"fifty\",\"sixty\",\"seventy\",\"eighty\",\"ninety\")&IF(--MID(TEXT(N14,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(N14,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N14,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\")",
+    "cached_value": "Not admissible"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N15",
+    "formula": "'Rev PR'!K21",
+    "cached_value": null
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C16",
+    "formula": "\"          Revised D.C.R.G. payable \"&TEXT('Rev PR'!E19,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O9&\" in lump subject to adjustment of amount of \"&TEXT('Rev PR'!E20,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O10&\" already drawn vide GPO No.\"&'Rev PR'!I22&\". Net amount of D.C.R.G. now payable \"&TEXT('Rev PR'!E21,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O11&\" in lump.\"",
+    "cached_value": "#VALUE!"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "N16",
+    "formula": "MIN(66,(SUM('Rev PR'!I16*2+IF('Rev PR'!J16<3,\"0\",IF(AND('Rev PR'!J16>=3,'Rev PR'!J16<9),\"1\",IF(AND('Rev PR'!J16>=9),\"2\"))))))",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C19",
+    "formula": "\"          Revised enhanced Family Pension \"&TEXT('Rev PR'!E16,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O12&\" per month upto \"&TEXT('Rev PR'!K20,\"dd/mm/yyyy\")&\" and thereafter \"&TEXT('Rev PR'!E17,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O14&\" per month from \"&TEXT('Rev PR'!K21,\"dd/mm/yyyy\")&\" payable to \"&'Rev PR'!I9&\" \"&'Rev PR'!J9&\",W/o \"&'Rev PR'!I7&\" \"&'Rev PR'!J7&\", Retd. \"&'Rev PR'!J8&\" plus dearness relief and medical allowance as admissible from time to time till his/her death or remarriage or divorce whichever is earlier.\"",
+    "cached_value": "          Revised enhanced Family Pension Not admissible/-Not admissible per month upto  and thereafter Not admissible/-Not admissible per month from  payable to  ,W/o Shri 0, Retd. 0 plus dearness relief and medical allowance as admissible from time to time till his/her death or remarriage or divorce whichever is earlier."
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C28",
+    "formula": "\"Remarks:-Less the amount already drawn vide PPO No.\"&'Rev PR'!I5",
+    "cached_value": "Remarks:-Less the amount already drawn vide PPO No."
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C32",
+    "formula": "C4",
+    "cached_value": "No.Pen-1/Sup/ND/Rev//2025-26/"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "I32",
+    "formula": "I4",
+    "cached_value": "Date-17/08/2026"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C34",
+    "formula": "1&\".\"",
+    "cached_value": "1."
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "D35",
+    "formula": "'Rev PR'!I11&\" Treasury, \"&IF('Rev PR'!I11='Pay Scales'!J34,\"Agartala\",'Rev PR'!I11)",
+    "cached_value": "0 Treasury, 0"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C36",
+    "formula": "2&\".\"",
+    "cached_value": "2."
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "D36",
+    "formula": "VLOOKUP(N17,#REF!,6,0)",
+    "cached_value": "#REF!"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C38",
+    "formula": "3&\".\"",
+    "cached_value": "3."
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "D38",
+    "formula": "'Rev PR'!I9&\" \"&'Rev PR'!J9&\",\"",
+    "cached_value": " ,"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "D39",
+    "formula": "'Rev PR'!H9&\" of \"&'Rev PR'!I7&\" \"&'Rev PR'!J7&\",\"&'Rev PR'!I8&'Rev PR'!J8",
+    "cached_value": "Spouse of Shri 0,Retd.0"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "D40",
+    "formula": "N18",
+    "cached_value": "0"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "I43",
+    "formula": "I31",
+    "cached_value": "Sr. Accounts Officer"
+  }
+]

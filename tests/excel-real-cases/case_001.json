@@ -1,0 +1,66 @@
+{
+  "case_id": "EXCEL-REAL-001",
+  "case_no": "Pen-2/Sup/GK//2026-27",
+  "case_type": "Superannuation",
+  "employee": {
+    "id": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    "name": "Shri Retd. Employee",
+    "designation": "Sr. Accountant",
+    "group_class": "Group-B",
+    "dob": "1965-07-12",
+    "doj": "1987-03-05",
+    "date_regularization": "1987-03-05",
+    "date_retirement_or_death": "2025-07-31",
+    "pr_no": "Pen-2/Sup/GK//2026-27",
+    "application_no": "CAS-1",
+    "ddo_code": "DDO-001"
+  },
+  "service_history": [
+    {
+      "id": "b1eebc99-9c0b-4ef8-bb6d-6bb9bd380a22",
+      "event_type": "Appointment",
+      "effective_date": "1987-03-05",
+      "designation": "Junior Accountant",
+      "remarks": "Initial regular joining"
+    },
+    {
+      "id": "b2eebc99-9c0b-4ef8-bb6d-6bb9bd380a33",
+      "event_type": "CAS-1",
+      "effective_date": "1997-03-05",
+      "designation": "Sr. Accountant",
+      "remarks": "10-year career advancement scale"
+    }
+  ],
+  "pay_history": [
+    {
+      "id": "c1eebc99-9c0b-4ef8-bb6d-6bb9bd380a44",
+      "effective_date": "2018-10-01",
+      "pay_revision": "Rop2018",
+      "pay_scale": "5700-24000",
+      "grade_pay": "4200.00",
+      "basic_pay": "53200.00",
+      "pay_level": "Level 10",
+      "reason": "ROP 2018 Revision"
+    }
+  ],
+  "recovery_details": {
+    "house_building_advance": "0.00",
+    "motor_car_advance": "0.00",
+    "overpayment_recovery": "0.00",
+    "other_deductions": "0.00"
+  },
+  "non_qualifying_days": 0,
+  "commutation_percentage": "40.00",
+  "age_next_birthday": 61,
+  "expected_output": {
+    "qualifying_years": 38,
+    "qualifying_months": 4,
+    "qualifying_days": 27,
+    "half_year_periods": 66,
+    "gross_pension": "26600.00",
+    "family_pension_normal": "15960.00",
+    "dcrg_gross": "877800.00",
+    "commuted_value": "1046210.00",
+    "reduced_pension": "15960.00"
+  }
+}

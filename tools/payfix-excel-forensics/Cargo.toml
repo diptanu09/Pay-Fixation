@@ -1,0 +1,13 @@
+[package]
+name = "payfix-excel-forensics"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+calamine = "0.26"
+serde.workspace = true
+serde_json.workspace = true
+rust_decimal.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+anyhow.workspace = true

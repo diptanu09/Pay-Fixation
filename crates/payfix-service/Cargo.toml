@@ -1,0 +1,10 @@
+[package]
+name = "payfix-service"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+payfix-domain = { path = "../payfix-domain" }
+serde.workspace = true
+chrono.workspace = true
+thiserror.workspace = true

@@ -1,0 +1,70 @@
+{
+  "certificate": {
+    "certification_date": "2026-08-24T07:49:49.181075600+00:00",
+    "certification_status": "PRODUCTION RELEASE 1.0 — LIVE PRODUCTION OPERATIONAL ✓",
+    "certified_by": "PAYFIX_RELEASE_CERTIFIER_ENGINE",
+    "gates": [
+      {
+        "name": "1. Workspace Compilation & Unit Tests",
+        "passed": true
+      },
+      {
+        "name": "2. Golden 20 Regression Test Suite",
+        "passed": true
+      },
+      {
+        "name": "3. 12-Component Legacy Excel Parity Matrix",
+        "passed": true
+      },
+      {
+        "name": "4. RBAC & Role Permissions Security Matrix",
+        "passed": true
+      },
+      {
+        "name": "5. Maker-Checker / Separation of Duties Invariants",
+        "passed": true
+      },
+      {
+        "name": "6. SHA-256 Tamper-Evident Audit Log Chaining",
+        "passed": true
+      },
+      {
+        "name": "7. Official Case Snapshot Locking",
+        "passed": true
+      },
+      {
+        "name": "8. Document Template SHA-256 Digest Sealing",
+        "passed": true
+      },
+      {
+        "name": "9. Official Archival Package Manifest Builder",
+        "passed": true
+      },
+      {
+        "name": "10. Public QR Verification Service",
+        "passed": true
+      },
+      {
+        "name": "11. Revision Chain & Arrear Calculation Engine",
+        "passed": true
+      },
+      {
+        "name": "12. Encrypted Backup Snapshot Subsystem",
+        "passed": true
+      },
+      {
+        "name": "13. Disaster Recovery Restoration Drill (RPO=0s, RTO<1s)",
+        "passed": true
+      },
+      {
+        "name": "14. Frontend Production Vite Build Bundle",
+        "passed": true
+      }
+    ],
+    "gates_passed": 14,
+    "gates_total": 14,
+    "release_candidate_tag": "PAYFIX-0.1.0",
+    "sample_calculation_hash": "41eb202e2e093cf9f997c56d4f084f750138d6aa5302754743729c7f8cf07344"
+  },
+  "certification_signature_sha256": "316b8f3f71a0cb805f69c695ecec8ab13175914f6fb53e2ea99c877de95df685"
+}

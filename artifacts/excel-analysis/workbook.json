@@ -1,0 +1,76 @@
+{
+  "file": "Pay Fixation.xlsm",
+  "sheets_count": 14,
+  "sheets": [
+    {
+      "name": "1982",
+      "sheet_id": "20",
+      "state": "visible"
+    },
+    {
+      "name": "1988",
+      "sheet_id": "10",
+      "state": "visible"
+    },
+    {
+      "name": "1999",
+      "sheet_id": "9",
+      "state": "visible"
+    },
+    {
+      "name": "2017",
+      "sheet_id": "2",
+      "state": "visible"
+    },
+    {
+      "name": "2018",
+      "sheet_id": "3",
+      "state": "visible"
+    },
+    {
+      "name": "IPS",
+      "sheet_id": "5",
+      "state": "visible"
+    },
+    {
+      "name": "PR",
+      "sheet_id": "7",
+      "state": "visible"
+    },
+    {
+      "name": "LTA",
+      "sheet_id": "29",
+      "state": "hidden"
+    },
+    {
+      "name": "FAM DCRG",
+      "sheet_id": "23",
+      "state": "hidden"
+    },
+    {
+      "name": "Special Pension",
+      "sheet_id": "22",
+      "state": "hidden"
+    },
+    {
+      "name": "Rev PR",
+      "sheet_id": "27",
+      "state": "visible"
+    },
+    {
+      "name": "Rev Auth",
+      "sheet_id": "26",
+      "state": "hidden"
+    },
+    {
+      "name": "Pay Scales",
+      "sheet_id": "8",
+      "state": "visible"
+    },
+    {
+      "name": "DDO",
+      "sheet_id": "28",
+      "state": "visible"
+    }
+  ]
+}

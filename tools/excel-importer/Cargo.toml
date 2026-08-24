@@ -1,0 +1,16 @@
+[package]
+name = "excel-importer"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+payfix-domain = { path = "../../crates/payfix-domain" }
+payfix-calculation = { path = "../../crates/payfix-calculation" }
+calamine = "0.26"
+serde.workspace = true
+serde_json.workspace = true
+rust_decimal.workspace = true
+rust_decimal_macros.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+anyhow.workspace = true

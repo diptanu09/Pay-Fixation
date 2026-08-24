@@ -1,0 +1,23 @@
+[package]
+name = "payfix-calculation"
+version.workspace = true
+edition.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full"] }
+anyhow.workspace = true
+serde_json.workspace = true
+
+[dependencies]
+payfix-domain = { path = "../payfix-domain" }
+payfix-rules = { path = "../payfix-rules" }
+payfix-pension = { path = "../payfix-pension" }
+payfix-dcrg = { path = "../payfix-dcrg" }
+payfix-commutation = { path = "../payfix-commutation" }
+payfix-service = { path = "../payfix-service" }
+serde.workspace = true
+rust_decimal.workspace = true
+rust_decimal_macros.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+thiserror.workspace = true

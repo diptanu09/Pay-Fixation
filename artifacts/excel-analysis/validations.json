@@ -1,0 +1,20 @@
+[
+  {
+    "sheet": "IPS",
+    "sqref": "P20 B62 P12",
+    "type": null,
+    "formula1": null
+  },
+  {
+    "sheet": "IPS",
+    "sqref": "C14",
+    "type": null,
+    "formula1": null
+  },
+  {
+    "sheet": "PR",
+    "sqref": "F50",
+    "type": null,
+    "formula1": null
+  }
+]

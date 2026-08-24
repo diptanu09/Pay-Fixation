@@ -1,0 +1,37 @@
+[package]
+name = "payfix-api"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+payfix-domain = { path = "../../crates/payfix-domain" }
+payfix-rules = { path = "../../crates/payfix-rules" }
+payfix-calculation = { path = "../../crates/payfix-calculation" }
+payfix-pension = { path = "../../crates/payfix-pension" }
+payfix-dcrg = { path = "../../crates/payfix-dcrg" }
+payfix-commutation = { path = "../../crates/payfix-commutation" }
+payfix-pay-fixation = { path = "../../crates/payfix-pay-fixation" }
+payfix-revision = { path = "../../crates/payfix-revision" }
+payfix-reports = { path = "../../crates/payfix-reports" }
+
+axum = "0.7"
+tokio = { workspace = true, features = ["full"] }
+serde = { workspace = true, features = ["derive"] }
+serde_json.workspace = true
+rust_decimal.workspace = true
+rust_decimal_macros.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+tracing.workspace = true
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+tower = "0.5"
+jsonwebtoken = "9.3"
+argon2 = "0.5"
+thiserror.workspace = true
+anyhow.workspace = true
+
+[dev-dependencies]
+reqwest = { version = "0.12", features = ["json"] }
+axum-test = "16.0"

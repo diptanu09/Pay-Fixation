@@ -1,0 +1,363 @@
+[
+  {
+    "sheet": "PR",
+    "cell": "F11",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#N/A",
+    "formula": "\"O/o The \"&VLOOKUP(M13,DDO!A2:B1272,2,0)"
+  },
+  {
+    "sheet": "PR",
+    "cell": "F57",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#VALUE!",
+    "formula": "IF(K49=FALSE,\"\",F50-F56)"
+  },
+  {
+    "sheet": "LTA",
+    "cell": "D53",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#N/A",
+    "formula": "VLOOKUP(PR!M13,DDO!A2:B1272,2,0)"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "J20",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#VALUE!",
+    "formula": "PR!F57"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "K20",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#VALUE!",
+    "formula": "\"(Rupees \"&CHOOSE(MID(TEXT(J20,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(J20,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(J20,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(J20,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(J20,\"00000000.00\"))+MID(TEXT(J20,\"00000000.00\"),2,1)+MID(TEXT(J20,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(J20,\"00000000.00\"),4,1)+MID(TEXT(J20,\"00000000.00\"),5,1)+MID(TEXT(J20,\"00000000.00\"),6,1)+MID(TEXT(J20,\"00000000.00\"),7,1))=0,(--MID(TEXT(J20,\"00000000.00\"),8,1)+RIGHT(TEXT(J20,\"00000000.00\")))>0),\" lac and \",\" lac\"))&CHOOSE(MID(TEXT(J20,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(J20,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(J20,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(J20,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(J20,\"000000000.00\"),4,1)+MID(TEXT(J20,\"000000000.00\"),5,1)+MID(TEXT(J20,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(J20,\"000000000.00\"),7,1)+MID(TEXT(J20,\"000000000.00\"),8,1)+MID(TEXT(J20,\"000000000.00\"),9,1))=0,--MID(TEXT(J20,\"000000000.00\"),7,1)<>0),\" thousand \",\" thousand and \"))&CHOOSE(MID(TEXT(J20,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(J20,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(J20,\"000000000.00\"),8,1)=0,--MID(TEXT(J20,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(J20,\"000000000.00\"),8,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(J20,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(J20,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(J20,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\""
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I34",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "\"The \"&VLOOKUP(PR!M13,#REF!,6,0)"
+  },
+  {
+    "sheet": "FAM DCRG",
+    "cell": "I34",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "\"The \"&VLOOKUP(PR!M13,#REF!,6,0)"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "O11",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#VALUE!",
+    "formula": "\"(Rupees \"&CHOOSE(MID(TEXT(N11,\"00000000.00\"),2,1)+1,,,\"twenty \",\"thirty \",\"forty \",\"fifty \",\"sixty \",\"seventy \",\"eighty \",\"ninety \")&IF(--MID(TEXT(N11,\"00000000.00\"),2,1)<>1,CHOOSE(MID(TEXT(N11,\"00000000.00\"),3,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N11,\"00000000.00\"),3,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&IF((--LEFT(TEXT(N11,\"00000000.00\"))+MID(TEXT(N11,\"00000000.00\"),2,1)+MID(TEXT(N11,\"00000000.00\"),3,1))=0,,IF(AND((--MID(TEXT(N11,\"00000000.00\"),4,1)+MID(TEXT(N11,\"00000000.00\"),5,1)+MID(TEXT(N11,\"00000000.00\"),6,1)+MID(TEXT(N11,\"00000000.00\"),7,1))=0,(--MID(TEXT(N11,\"00000000.00\"),8,1)+RIGHT(TEXT(N11,\"00000000.00\")))>0),\" lakh and \",\" lakhs\"))&CHOOSE(MID(TEXT(N11,\"000000000.00\"),5,1)+1,,,\" twenty\",\" thirty\",\" forty\",\" fifty\",\" sixty\",\" seventy\",\" eighty\",\" ninety\")&IF(--MID(TEXT(N11,\"000000000.00\"),5,1)<>1,CHOOSE(MID(TEXT(N11,\"000000000.00\"),6,1)+1,,\" one\",\" two\",\" three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\"),CHOOSE(MID(TEXT(N11,\"000000000.00\"),6,1)+1,\" ten\",\" eleven\",\" twelve\",\" thirteen\",\" fourteen\",\" fifteen\",\" sixteen\",\" seventeen\",\" eighteen\",\" nineteen\"))&IF((--MID(TEXT(N11,\"000000000.00\"),4,1)+MID(TEXT(N11,\"000000000.00\"),5,1)+MID(TEXT(N11,\"000000000.00\"),6,1))=0,,IF(OR((--MID(TEXT(N11,\"000000000.00\"),7,1)+MID(TEXT(N11,\"000000000.00\"),8,1)+MID(TEXT(N11,\"000000000.00\"),9,1))=0,--MID(TEXT(N11,\"000000000.00\"),7,1)<>0),\" thousand\",\" thousand and \"))&CHOOSE(MID(TEXT(N11,\"000000000.00\"),7,1)+1,,\" one\",\" two\",\" Three\",\" four\",\" five\",\" six\",\" seven\",\" eight\",\" nine\")&IF(--MID(TEXT(N11,\"000000000.00\"),7,1)=0,,IF(AND(--MID(TEXT(N11,\"000000000.00\"),8,1)=0,--MID(TEXT(N11,\"000000000.00\"),9,1)=0),\" hundred\",\" hundred and \"))&CHOOSE(MID(TEXT(N11,\"000000000.00\"),8,1)+1,,,\"twenty\",\"thirty\",\"forty\",\"fifty\",\"sixty\",\"seventy\",\"eighty\",\"ninety\")&IF(--MID(TEXT(N11,\"000000000.00\"),8,1)<>1,CHOOSE(MID(TEXT(N11,\"000000000.00\"),9,1)+1,,\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\"),CHOOSE(MID(TEXT(N11,\"000000000.00\"),9,1)+1,\"ten\",\"eleven\",\"twelve\",\"thirteen\",\"fourteen\",\"fifteen\",\"sixteen\",\"seventeen\",\"eighteen\",\"nineteen\"))&\" only)\""
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "C16",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#VALUE!",
+    "formula": "\"          Revised D.C.R.G. payable \"&TEXT('Rev PR'!E19,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O9&\" in lump subject to adjustment of amount of \"&TEXT('Rev PR'!E20,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O10&\" already drawn vide GPO No.\"&'Rev PR'!I22&\". Net amount of D.C.R.G. now payable \"&TEXT('Rev PR'!E21,\"\u20b9 #,##0;\")&\"/-\"&'Rev Auth'!O11&\" in lump.\""
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "D36",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "VLOOKUP(N17,#REF!,6,0)"
+  },
+  {
+    "sheet": "Rev Auth",
+    "cell": "D36",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "VLOOKUP(N17,#REF!,6,0)"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G5",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G5",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G6",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G6",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G7",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G7",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G8",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G8",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G9",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G9",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G10",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G10",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G11",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G11",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G12",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G12",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G13",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G13",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G14",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G14",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G15",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G15",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G18",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G18",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G19",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G19",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G20",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G20",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G21",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G21",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G22",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G22",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G23",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G23",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G24",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G24",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G25",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G25",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G26",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G26",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G27",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G27",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G28",
+    "type": "EXCEL_ERROR_CACHED",
+    "error": "#REF!",
+    "formula": "#REF!"
+  },
+  {
+    "sheet": "Pay Scales",
+    "cell": "G28",
+    "type": "EXCEL_ERROR_FORMULA",
+    "formula": "#REF!"
+  }
+]

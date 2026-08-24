@@ -1,0 +1,9 @@
+pub mod audit_repository;
+pub mod calculation_repository;
+pub mod case_repository;
+pub mod document_repository;
+pub mod migration_repository;
+pub mod revision_repository;
+pub mod user_repository;
+pub mod discrepancy_repository;
+pub mod incident_repository;

@@ -1,0 +1,14 @@
+[package]
+name = "payfix-pay-fixation"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+payfix-domain = { path = "../payfix-domain" }
+payfix-rules = { path = "../payfix-rules" }
+serde.workspace = true
+rust_decimal.workspace = true
+rust_decimal_macros.workspace = true
+chrono.workspace = true
+thiserror.workspace = true
+sha2 = "0.10"

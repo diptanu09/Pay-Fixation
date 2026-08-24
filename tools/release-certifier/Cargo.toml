@@ -1,0 +1,16 @@
+[package]
+name = "release-certifier"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+payfix-domain = { path = "../../crates/payfix-domain" }
+payfix-calculation = { path = "../../crates/payfix-calculation" }
+payfix-reports = { path = "../../crates/payfix-reports" }
+serde.workspace = true
+serde_json.workspace = true
+rust_decimal.workspace = true
+rust_decimal_macros.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+anyhow.workspace = true

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "_xlnm._FilterDatabase",
+    "refers_to": "'1999'!$C$4:$U$40",
+    "local_sheet_id": "2"
+  },
+  {
+    "name": "_xlnm._FilterDatabase",
+    "refers_to": "DDO!$A$1:$D$1",
+    "local_sheet_id": "13"
+  },
+  {
+    "name": "_xlpm.Days",
+    "refers_to": "#NAME?",
+    "local_sheet_id": null
+  },
+  {
+    "name": "_xlpm.M",
+    "refers_to": "#NAME?",
+    "local_sheet_id": null
+  },
+  {
+    "name": "_xlpm.Months",
+    "refers_to": "#NAME?",
+    "local_sheet_id": null
+  },
+  {
+    "name": "_xlpm.NetDays",
+    "refers_to": "#NAME?",
+    "local_sheet_id": null
+  },
+  {
+    "name": "_xlpm.RemDays",
+    "refers_to": "#NAME?",
+    "local_sheet_id": null
+  },
+  {
+    "name": "_xlpm.Y",
+    "refers_to": "#NAME?",
+    "local_sheet_id": null
+  },
+  {
+    "name": "_xlpm.Years",
+    "refers_to": "#NAME?",
+    "local_sheet_id": null
+  },
+  {
+    "name": "_xlnm.Print_Area",
+    "refers_to": "PR!$B$2:$J$59",
+    "local_sheet_id": "6"
+  }
+]
