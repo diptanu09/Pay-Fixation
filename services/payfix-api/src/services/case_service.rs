@@ -21,6 +21,12 @@ impl CaseService {
             .ok_or_else(|| ApiError::NotFound(format!("Case {}", id)))
     }
 
+    pub fn get_case_by_string(&self, id_or_case_no: &str) -> Result<PersistentCaseRecord, ApiError> {
+        self.case_repo
+            .find_by_string(id_or_case_no)
+            .ok_or_else(|| ApiError::NotFound(format!("Case {}", id_or_case_no)))
+    }
+
     pub fn update_case(
         &self,
         id: Uuid,

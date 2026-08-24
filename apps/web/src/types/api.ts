@@ -142,6 +142,22 @@ export interface PayHistoryEntry {
   reason: string;
 }
 
+export interface RecoveryDetails {
+  house_building_advance: number;
+  motor_car_advance: number;
+  overpayment_recovery: number;
+  other_deductions: number;
+}
+
+export interface CalculationContext {
+  case_id: string;
+  employee_id: string;
+  calculation_date: string;
+  rule_version: string;
+  engine_version: string;
+  rop_version: string;
+}
+
 export interface PayFixationCase {
   case_id: string;
   case_no: string;
@@ -149,6 +165,8 @@ export interface PayFixationCase {
   employee: Employee;
   service_history: ServiceEvent[];
   pay_history: PayHistoryEntry[];
+  recovery_details?: RecoveryDetails;
+  calculation_context?: CalculationContext;
   non_qualifying_days: number;
   commutation_percentage: number;
   age_next_birthday: number;

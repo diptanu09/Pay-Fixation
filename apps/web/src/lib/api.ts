@@ -52,17 +52,33 @@ import type {
 
 const API_BASE = '/api/v1';
 
+async function safeJsonFetch<T>(res: Response, defaultError = 'API request failed'): Promise<T> {
+  const contentType = res.headers.get('content-type') || '';
+  if (contentType.includes('application/json')) {
+    const json = await res.json();
+    if (!res.ok || json.success === false) {
+      throw new Error(json.error?.message || json.message || defaultError);
+    }
+    return json.data !== undefined ? json.data : json;
+  }
+  const text = await res.text();
+  if (!res.ok) {
+    throw new Error(text || `${defaultError} (Status ${res.status})`);
+  }
+  try {
+    return JSON.parse(text);
+  } catch {
+    throw new Error(text || defaultError);
+  }
+}
+
 export async function loginApi(username: string, password: string): Promise<{ token: string; user: User }> {
   const res = await fetch(`${API_BASE}/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
   });
-  const json: ApiResponse<{ token: string; user: User }> = await res.json();
-  if (!res.ok || !json.success) {
-    throw new Error((json as any).error?.message || 'Authentication failed');
-  }
-  return json.data;
+  return safeJsonFetch<{ token: string; user: User }>(res, 'Authentication failed');
 }
 
 export async function fetchSystemDiagnosticsApi(): Promise<SystemHealthStatus> {
@@ -709,11 +725,7 @@ export async function fetchCaseByIdApi(id: string): Promise<PersistentCaseRecord
   if (token) headers['Authorization'] = `Bearer ${token}`;
 
   const res = await fetch(`${API_BASE}/cases/${id}`, { headers });
-  const json: ApiResponse<PersistentCaseRecord> = await res.json();
-  if (!res.ok || !json.success) {
-    throw new Error((json as any).error?.message || 'Case not found');
-  }
-  return json.data;
+  return safeJsonFetch<PersistentCaseRecord>(res, 'Case not found');
 }
 
 export async function createCaseApi(caseData: Partial<PayFixationCase>): Promise<PersistentCaseRecord> {

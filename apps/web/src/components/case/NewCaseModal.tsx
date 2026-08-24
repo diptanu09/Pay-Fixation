@@ -34,7 +34,9 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
       const caseNo = `PEN-2026-${Math.floor(100000 + Math.random() * 900000)}`;
       const empId = window.crypto.randomUUID();
 
+      const caseId = window.crypto.randomUUID();
       const newCase = await createCaseApi({
+        case_id: caseId,
         case_no: caseNo,
         case_type: selectedType,
         employee: {
@@ -51,9 +53,23 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
         },
         service_history: [],
         pay_history: [],
+        recovery_details: {
+          house_building_advance: 0,
+          motor_car_advance: 0,
+          overpayment_recovery: 0,
+          other_deductions: 0,
+        },
         non_qualifying_days: 0,
         commutation_percentage: 40,
         age_next_birthday: 61,
+        calculation_context: {
+          case_id: caseId,
+          employee_id: empId,
+          calculation_date: '2026-03-31',
+          rule_version: 'ROP 2017 v1.0',
+          engine_version: '1.0.0',
+          rop_version: 'Rop2017',
+        },
       });
 
       onCreated(newCase.case.case_id);

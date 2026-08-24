@@ -1,0 +1,12 @@
+FROM rust:latest as builder
+WORKDIR /app
+COPY . .
+RUN cargo build --release --bin payfix-api
+
+FROM debian:bookworm-slim
+RUN apt-get update && apt-get install -y ca-certificates libssl-dev && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+COPY --from=builder /app/target/release/payfix-api /app/payfix-api
+EXPOSE 8085
+ENV PORT=8085
+CMD ["/app/payfix-api"]

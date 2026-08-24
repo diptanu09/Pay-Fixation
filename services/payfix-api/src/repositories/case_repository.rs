@@ -58,6 +58,19 @@ impl CaseRepository {
         store.get(&id).cloned()
     }
 
+    pub fn find_by_string(&self, s: &str) -> Option<PersistentCaseRecord> {
+        if let Ok(id) = Uuid::parse_str(s) {
+            if let Some(r) = self.find_by_id(id) {
+                return Some(r);
+            }
+        }
+        let store = self.records.read().ok()?;
+        store
+            .values()
+            .find(|r| r.case.case_no == s || r.case.case_id.to_string() == s)
+            .cloned()
+    }
+
     pub fn update_case(
         &self,
         id: Uuid,

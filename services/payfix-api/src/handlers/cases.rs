@@ -33,18 +33,19 @@ pub async fn create_case_handler(
 
 pub async fn get_case_handler(
     State(state): State<AppState>,
-    Path(id): Path<Uuid>,
+    Path(id): Path<String>,
 ) -> Result<Json<ApiResponse<PersistentCaseRecord>>, ApiError> {
-    let record = state.case_service.get_case(id)?;
+    let record = state.case_service.get_case_by_string(&id)?;
     Ok(Json(ApiResponse::success(record, None)))
 }
 
 pub async fn update_case_handler(
     State(state): State<AppState>,
-    Path(id): Path<Uuid>,
+    Path(id_str): Path<String>,
     Json(case): Json<PayFixationCase>,
 ) -> Result<Json<ApiResponse<PersistentCaseRecord>>, ApiError> {
-    let current = state.case_service.get_case(id)?;
+    let current = state.case_service.get_case_by_string(&id_str)?;
+    let id = current.case.case_id;
     let record = state.case_service.update_case(id, current.version, case)?;
 
     state.audit_service.log_action(
