@@ -29,6 +29,11 @@ use crate::handlers::{
         dry_run_migration_handler, get_migration_batch_handler, get_migration_records_handler,
         list_migration_batches_handler, rollback_migration_batch_handler,
     },
+    mis::{
+        export_mis_report_handler, get_mis_aging_handler, get_mis_financial_handler,
+        get_mis_migration_handler, get_mis_overview_handler, get_mis_revisions_handler,
+        get_mis_workflow_handler,
+    },
     pilot::{
         create_discrepancy_handler, create_incident_handler, execute_go_no_go_handler,
         get_pilot_metrics_handler, get_pilot_operations_handler, get_pilot_readiness_handler,
@@ -42,6 +47,11 @@ use crate::handlers::{
     production::{
         execute_cutover_handler, get_production_manifest_handler,
         run_production_smoke_test_handler, trigger_emergency_rollback_handler,
+    },
+    rule_governance::{
+        activate_rule_handler, approve_rule_proposal_handler, create_rule_proposal_handler,
+        get_rule_details_handler, list_rule_registry_handler, run_impact_analysis_handler,
+        run_rule_regression_handler, simulate_rule_change_handler,
     },
     system::{
         execute_dr_drill_handler, get_feature_flags_handler, get_system_diagnostics_handler,
@@ -185,6 +195,24 @@ pub fn create_router(state: AppState) -> Router {
         .route("/api/v1/operations/daily-report", get(get_daily_operations_report_handler))
         .route("/api/v1/operations/users", get(list_user_access_records_handler))
         .route("/api/v1/operations/users/:id/status", post(update_user_status_handler))
+
+        // Rule Governance & Simulator Endpoints
+        .route("/api/v1/rule-registry", get(list_rule_registry_handler).post(create_rule_proposal_handler))
+        .route("/api/v1/rule-registry/:id", get(get_rule_details_handler))
+        .route("/api/v1/rule-registry/:id/impact-analysis", post(run_impact_analysis_handler))
+        .route("/api/v1/rule-changes/:id/run-tests", post(run_rule_regression_handler))
+        .route("/api/v1/rule-changes/:id/approve", post(approve_rule_proposal_handler))
+        .route("/api/v1/rule-changes/:id/activate", post(activate_rule_handler))
+        .route("/api/v1/rules/simulate", post(simulate_rule_change_handler))
+
+        // MIS & Management Intelligence Endpoints
+        .route("/api/v1/mis/overview", get(get_mis_overview_handler))
+        .route("/api/v1/mis/workflow", get(get_mis_workflow_handler))
+        .route("/api/v1/mis/aging", get(get_mis_aging_handler))
+        .route("/api/v1/mis/financial", get(get_mis_financial_handler))
+        .route("/api/v1/mis/revisions", get(get_mis_revisions_handler))
+        .route("/api/v1/mis/migration", get(get_mis_migration_handler))
+        .route("/api/v1/mis/reports/export", post(export_mis_report_handler))
 
         // Rule Inspection Endpoints
         .route("/api/v1/rules", get(list_rules_handler))

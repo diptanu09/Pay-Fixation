@@ -1,6 +1,6 @@
 {
   "certificate": {
-    "certification_date": "2026-08-24T07:49:49.181075600+00:00",
+    "certification_date": "2026-08-24T10:16:56.165673700+00:00",
     "certification_status": "PRODUCTION RELEASE 1.0 — LIVE PRODUCTION OPERATIONAL ✓",
     "certified_by": "PAYFIX_RELEASE_CERTIFIER_ENGINE",
     "gates": [
@@ -64,7 +64,7 @@
     "gates_passed": 14,
     "gates_total": 14,
     "release_candidate_tag": "PAYFIX-0.1.0",
-    "sample_calculation_hash": "41eb202e2e093cf9f997c56d4f084f750138d6aa5302754743729c7f8cf07344"
+    "sample_calculation_hash": "72b5231f56736e447e0cd02f704de6b7edfac8c0a5e13251b32b57f9feb80b10"
   },
-  "certification_signature_sha256": "316b8f3f71a0cb805f69c695ecec8ab13175914f6fb53e2ea99c877de95df685"
+  "certification_signature_sha256": "6ff29aae3a626474558ef2e8f8621ff604d4ffe0ff6a5bbbfe36c0253e068655"
 }

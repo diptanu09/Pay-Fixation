@@ -10,6 +10,8 @@ import { PilotDashboardPage } from './pages/PilotDashboardPage';
 import { PilotOperationsPage } from './pages/PilotOperationsPage';
 import { ProductionOperationsPage } from './pages/ProductionOperationsPage';
 import { OperationsDashboardPage } from './pages/OperationsDashboardPage';
+import { RuleRegistryPage } from './pages/RuleRegistryPage';
+import { MISDashboardPage } from './pages/MISDashboardPage';
 import type { User } from './types/api';
 
 export function App() {
@@ -69,6 +71,8 @@ export function App() {
       {currentTab === 'pilot' && <PilotDashboardPage />}
       {currentTab === 'golive' && <PilotOperationsPage />}
       {currentTab === 'production' && <OperationsDashboardPage />}
+      {currentTab === 'mis' && <MISDashboardPage />}
+      {currentTab === 'ruleregistry' && <RuleRegistryPage />}
       {currentTab === 'cutover' && <ProductionOperationsPage />}
       {currentTab === 'workspace' && (
         <CaseWorkspace caseId={activeCaseId || 'PEN-2026-000123'} />

@@ -848,3 +848,151 @@ pub struct ContinuousMonitoringSummary {
     pub alerts: Vec<OperationalAlert>,
     pub user_records: Vec<UserAccessRecord>,
 }
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RuleRegistryEntry {
+    pub rule_id: Uuid,
+    pub rule_code: String,
+    pub rule_name: String,
+    pub category: String,
+    pub authority: String,
+    pub source_order_no: String,
+    pub source_order_date: String,
+    pub source_document_hash: String,
+    pub active_version_tag: String,
+    pub effective_from: String,
+    pub effective_to: Option<String>,
+    pub created_at: chrono::DateTime<chrono::Utc>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RuleVersionDetail {
+    pub version_id: Uuid,
+    pub rule_id: Uuid,
+    pub version_tag: String,
+    pub status: String,
+    pub effective_from: String,
+    pub effective_to: Option<String>,
+    pub value_json: String,
+    pub content_hash: String,
+    pub created_by: String,
+    pub approved_by: Option<String>,
+    pub approved_at: Option<chrono::DateTime<chrono::Utc>>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RuleImpactAnalysis {
+    pub proposal_id: Uuid,
+    pub rule_code: String,
+    pub proposed_version_tag: String,
+    pub affected_engines: Vec<String>,
+    pub affected_test_count: usize,
+    pub affected_rule_paths_count: usize,
+    pub potential_historical_cases_count: usize,
+    pub impact_summary: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RuleRegressionReport {
+    pub proposal_id: Uuid,
+    pub total_tests: usize,
+    pub passed_tests: usize,
+    pub failed_tests: usize,
+    pub status: String,
+    pub executed_at: chrono::DateTime<chrono::Utc>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RuleSimulationRequest {
+    pub case_id: Uuid,
+    pub current_version_tag: String,
+    pub proposed_version_tag: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RuleSimulationResult {
+    pub case_id: Uuid,
+    pub current_pension: Decimal,
+    pub proposed_pension: Decimal,
+    pub current_dcrg: Decimal,
+    pub proposed_dcrg: Decimal,
+    pub current_commutation: Decimal,
+    pub proposed_commutation: Decimal,
+    pub financial_delta_pension: Decimal,
+    pub financial_delta_commutation: Decimal,
+    pub simulation_summary: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct MisOverviewMetrics {
+    pub total_cases: usize,
+    pub authorized_cases: usize,
+    pub pending_cases: usize,
+    pub revision_cases: usize,
+    pub avg_processing_days: f64,
+    pub pension_authorized: Decimal,
+    pub dcrg_authorized: Decimal,
+    pub commutation_authorized: Decimal,
+    pub arrears_authorized: Decimal,
+    pub critical_incidents: usize,
+    pub audit_integrity_status: String,
+    pub backup_status: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct WorkflowPipelineStage {
+    pub stage_name: String,
+    pub pending_count: usize,
+    pub avg_days_in_stage: f64,
+    pub oldest_case_no: String,
+    pub oldest_days: f64,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct AgingBucket {
+    pub bucket_range: String,
+    pub count: usize,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct FinancialLiabilitySummary {
+    pub period_name: String,
+    pub financial_year: String,
+    pub pension_authorized: Decimal,
+    pub family_pension_authorized: Decimal,
+    pub dcrg_authorized: Decimal,
+    pub commutation_authorized: Decimal,
+    pub arrears_authorized: Decimal,
+    pub pending_pension_liability: Decimal,
+    pub pending_dcrg_liability: Decimal,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct RevisionAnalyticsSummary {
+    pub total_revisions: usize,
+    pub pay_revision_count: usize,
+    pub service_correction_count: usize,
+    pub pension_revision_count: usize,
+    pub additional_pension_liability: Decimal,
+    pub total_arrears_authorized: Decimal,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct MigrationAnalyticsSummary {
+    pub imported_cases: usize,
+    pub exact_matches: usize,
+    pub warnings: usize,
+    pub material_differences: usize,
+    pub match_percentage: f64,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ReportExportRecord {
+    pub export_id: Uuid,
+    pub report_type: String,
+    pub financial_year: String,
+    pub exported_by: String,
+    pub exported_at: chrono::DateTime<chrono::Utc>,
+    pub record_count: usize,
+    pub export_hash: String,
+}

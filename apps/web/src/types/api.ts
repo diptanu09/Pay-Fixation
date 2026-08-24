@@ -390,6 +390,141 @@ export interface ContinuousMonitoringSummary {
   user_records: UserAccessRecord[];
 }
 
+export interface RuleRegistryEntry {
+  rule_id: string;
+  rule_code: string;
+  rule_name: string;
+  category: string;
+  authority: string;
+  source_order_no: string;
+  source_order_date: string;
+  source_document_hash: string;
+  active_version_tag: string;
+  effective_from: string;
+  effective_to?: string;
+  created_at: string;
+}
+
+export interface RuleVersionDetail {
+  version_id: string;
+  rule_id: string;
+  version_tag: string;
+  status: string;
+  effective_from: string;
+  effective_to?: string;
+  value_json: string;
+  content_hash: string;
+  created_by: string;
+  approved_by?: string;
+  approved_at?: string;
+}
+
+export interface RuleImpactAnalysis {
+  proposal_id: string;
+  rule_code: string;
+  proposed_version_tag: string;
+  affected_engines: string[];
+  affected_test_count: number;
+  affected_rule_paths_count: number;
+  potential_historical_cases_count: number;
+  impact_summary: string;
+}
+
+export interface RuleRegressionReport {
+  proposal_id: string;
+  total_tests: number;
+  passed_tests: number;
+  failed_tests: number;
+  status: string;
+  executed_at: string;
+}
+
+export interface RuleSimulationRequest {
+  case_id: string;
+  current_version_tag: string;
+  proposed_version_tag: string;
+}
+
+export interface RuleSimulationResult {
+  case_id: string;
+  current_pension: number;
+  proposed_pension: number;
+  current_dcrg: number;
+  proposed_dcrg: number;
+  current_commutation: number;
+  proposed_commutation: number;
+  financial_delta_pension: number;
+  financial_delta_commutation: number;
+  simulation_summary: string;
+}
+
+export interface MisOverviewMetrics {
+  total_cases: number;
+  authorized_cases: number;
+  pending_cases: number;
+  revision_cases: number;
+  avg_processing_days: number;
+  pension_authorized: number;
+  dcrg_authorized: number;
+  commutation_authorized: number;
+  arrears_authorized: number;
+  critical_incidents: number;
+  audit_integrity_status: string;
+  backup_status: string;
+}
+
+export interface WorkflowPipelineStage {
+  stage_name: string;
+  pending_count: number;
+  avg_days_in_stage: number;
+  oldest_case_no: string;
+  oldest_days: number;
+}
+
+export interface AgingBucket {
+  bucket_range: string;
+  count: number;
+}
+
+export interface FinancialLiabilitySummary {
+  period_name: string;
+  financial_year: string;
+  pension_authorized: number;
+  family_pension_authorized: number;
+  dcrg_authorized: number;
+  commutation_authorized: number;
+  arrears_authorized: number;
+  pending_pension_liability: number;
+  pending_dcrg_liability: number;
+}
+
+export interface RevisionAnalyticsSummary {
+  total_revisions: number;
+  pay_revision_count: number;
+  service_correction_count: number;
+  pension_revision_count: number;
+  additional_pension_liability: number;
+  total_arrears_authorized: number;
+}
+
+export interface MigrationAnalyticsSummary {
+  imported_cases: number;
+  exact_matches: number;
+  warnings: number;
+  material_differences: number;
+  match_percentage: number;
+}
+
+export interface ReportExportRecord {
+  export_id: string;
+  report_type: string;
+  financial_year: string;
+  exported_by: string;
+  exported_at: string;
+  record_count: number;
+  export_hash: string;
+}
+
 export interface RevisionCase {
   revision_id: string;
   original_case_id: string;

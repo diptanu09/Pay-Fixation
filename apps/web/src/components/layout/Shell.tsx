@@ -10,6 +10,8 @@ import {
   Command,
   Database,
   Activity,
+  BookOpen,
+  BarChart3,
 } from 'lucide-react';
 
 interface ShellProps {
@@ -42,9 +44,11 @@ export const Shell: React.FC<ShellProps> = ({
 
   const navItems = [
     { id: 'search', label: 'Case Search', icon: Search },
+    { id: 'mis', label: 'MIS & Analytics', icon: BarChart3 },
     { id: 'queues', label: 'Work Queues', icon: ShieldCheck },
     { id: 'workspace', label: 'Case Workspace', icon: FileText },
     { id: 'production', label: 'Production Operations', icon: ShieldCheck },
+    { id: 'ruleregistry', label: 'Rule Registry & Governance', icon: BookOpen },
     { id: 'golive', label: 'Go-Live Control Center', icon: ShieldCheck },
     { id: 'pilot', label: 'Pilot & Certification', icon: Award },
     { id: 'migration', label: 'Legacy Migration', icon: Database },

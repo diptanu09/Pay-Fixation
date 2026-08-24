@@ -36,6 +36,18 @@ import type {
   DailyOperationsReport,
   UserAccessRecord,
   ContinuousMonitoringSummary,
+  RuleRegistryEntry,
+  RuleVersionDetail,
+  RuleImpactAnalysis,
+  RuleRegressionReport,
+  RuleSimulationResult,
+  MisOverviewMetrics,
+  WorkflowPipelineStage,
+  AgingBucket,
+  FinancialLiabilitySummary,
+  RevisionAnalyticsSummary,
+  MigrationAnalyticsSummary,
+  ReportExportRecord,
 } from '../types/api';
 
 const API_BASE = '/api/v1';
@@ -364,6 +376,229 @@ export async function updateUserStatusApi(id: string, status: string): Promise<U
   const json: ApiResponse<UserAccessRecord> = await res.json();
   if (!res.ok || !json.success) {
     throw new Error((json as any).error?.message || 'Failed to update user status');
+  }
+  return json.data;
+}
+
+export async function fetchRuleRegistryApi(): Promise<RuleRegistryEntry[]> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = {};
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/rule-registry`, { headers });
+  const json: ApiResponse<RuleRegistryEntry[]> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to fetch rule registry');
+  }
+  return json.data;
+}
+
+export async function fetchRuleDetailsApi(ruleId: string): Promise<RuleVersionDetail[]> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = {};
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/rule-registry/${ruleId}`, { headers });
+  const json: ApiResponse<RuleVersionDetail[]> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to fetch rule version details');
+  }
+  return json.data;
+}
+
+export async function createRuleProposalApi(payload: any): Promise<RuleRegistryEntry> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/rule-registry`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(payload),
+  });
+  const json: ApiResponse<RuleRegistryEntry> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to create rule proposal');
+  }
+  return json.data;
+}
+
+export async function runImpactAnalysisApi(ruleId: string): Promise<RuleImpactAnalysis> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/rule-registry/${ruleId}/impact-analysis`, {
+    method: 'POST',
+    headers,
+  });
+  const json: ApiResponse<RuleImpactAnalysis> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to run impact analysis');
+  }
+  return json.data;
+}
+
+export async function runRuleRegressionApi(proposalId: string): Promise<RuleRegressionReport> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/rule-changes/${proposalId}/run-tests`, {
+    method: 'POST',
+    headers,
+  });
+  const json: ApiResponse<RuleRegressionReport> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to run rule regression suite');
+  }
+  return json.data;
+}
+
+export async function approveRuleProposalApi(proposalId: string): Promise<string> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/rule-changes/${proposalId}/approve`, {
+    method: 'POST',
+    headers,
+  });
+  const json: ApiResponse<string> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to approve rule proposal');
+  }
+  return json.data;
+}
+
+export async function activateRuleApi(proposalId: string): Promise<string> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/rule-changes/${proposalId}/activate`, {
+    method: 'POST',
+    headers,
+  });
+  const json: ApiResponse<string> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to activate rule version');
+  }
+  return json.data;
+}
+
+export async function simulateRuleChangeApi(caseId: string): Promise<RuleSimulationResult> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/rules/simulate`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({
+      case_id: caseId,
+      current_version_tag: '2026.01',
+      proposed_version_tag: '2027.01-PROPOSED',
+    }),
+  });
+  const json: ApiResponse<RuleSimulationResult> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to simulate rule change');
+  }
+  return json.data;
+}
+
+export async function fetchMisOverviewApi(): Promise<MisOverviewMetrics> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = {};
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/mis/overview`, { headers });
+  const json: ApiResponse<MisOverviewMetrics> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to fetch MIS overview metrics');
+  }
+  return json.data;
+}
+
+export async function fetchMisWorkflowApi(): Promise<WorkflowPipelineStage[]> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = {};
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/mis/workflow`, { headers });
+  const json: ApiResponse<WorkflowPipelineStage[]> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to fetch MIS workflow pipeline');
+  }
+  return json.data;
+}
+
+export async function fetchMisAgingApi(): Promise<AgingBucket[]> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = {};
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/mis/aging`, { headers });
+  const json: ApiResponse<AgingBucket[]> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to fetch MIS aging buckets');
+  }
+  return json.data;
+}
+
+export async function fetchMisFinancialApi(): Promise<FinancialLiabilitySummary> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = {};
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/mis/financial`, { headers });
+  const json: ApiResponse<FinancialLiabilitySummary> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to fetch MIS financial liabilities');
+  }
+  return json.data;
+}
+
+export async function fetchMisRevisionsApi(): Promise<RevisionAnalyticsSummary> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = {};
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/mis/revisions`, { headers });
+  const json: ApiResponse<RevisionAnalyticsSummary> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to fetch MIS revision analytics');
+  }
+  return json.data;
+}
+
+export async function fetchMisMigrationApi(): Promise<MigrationAnalyticsSummary> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = {};
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/mis/migration`, { headers });
+  const json: ApiResponse<MigrationAnalyticsSummary> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to fetch MIS migration analytics');
+  }
+  return json.data;
+}
+
+export async function exportMisReportApi(reportType: string, financialYear: string, format: string): Promise<ReportExportRecord> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/mis/reports/export`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ report_type: reportType, financial_year: financialYear, format }),
+  });
+  const json: ApiResponse<ReportExportRecord> = await res.json();
+  if (!res.ok || !json.success) {
+    throw new Error((json as any).error?.message || 'Failed to export MIS report');
   }
   return json.data;
 }
