@@ -58,3 +58,5 @@ docker/.env
 tmp/
 temp/
 scratch/
+
+README.md
