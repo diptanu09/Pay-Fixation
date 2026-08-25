@@ -89,6 +89,10 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
       const finalAppNo = applicationNo.trim() || '10260665007';
       const finalPrNo = prNo.trim() || handleGeneratePrNo();
 
+      const empDoj = doj || '1997-03-05';
+      const empDor = dateRetirement || '2026-03-31';
+      const empDesg = designation || 'Officer';
+
       const newCase = await createCaseApi({
         case_id: caseId,
         case_no: caseNo,
@@ -96,17 +100,38 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
         employee: {
           id: empId,
           name: name || 'NEW EMPLOYEE',
-          designation: designation || 'Officer',
+          designation: empDesg,
           group_class: groupClass || 'Group C',
           dob: dob || '1966-03-05',
-          doj: doj || '1997-03-05',
-          date_retirement_or_death: dateRetirement || '2026-03-31',
+          doj: empDoj,
+          date_retirement_or_death: empDor,
           pr_no: finalPrNo,
           application_no: finalAppNo,
           ddo_code: ddoCode || 'DDO-08122',
         },
-        service_history: [],
-        pay_history: [],
+        service_history: [
+          {
+            id: window.crypto.randomUUID(),
+            from_date: empDoj,
+            to_date: empDor,
+            designation: empDesg,
+            nature_of_service: 'Regular',
+            excluded_days: 0,
+            remarks: 'Regular Service Period (SAI Pension Record)',
+          },
+        ],
+        pay_history: [
+          {
+            id: window.crypto.randomUUID(),
+            effective_date: empDoj,
+            pay_revision: 'Rop2017',
+            pay_scale: 'Level 8',
+            grade_pay: 2400,
+            basic_pay: 53200,
+            pay_level: 'Level 8',
+            reason: `Initial Appointment as ${empDesg}`,
+          },
+        ],
         recovery_details: {
           house_building_advance: 0,
           motor_car_advance: 0,

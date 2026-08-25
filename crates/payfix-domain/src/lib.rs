@@ -35,10 +35,15 @@ pub enum CaseType {
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub enum PayRevisionRule {
+    #[serde(alias = "ROP 1982", alias = "ROP1982", alias = "1982")]
     Rop1982,
+    #[serde(alias = "ROP 1988", alias = "ROP1988", alias = "1988")]
     Rop1988,
+    #[serde(alias = "ROP 1999", alias = "ROP1999", alias = "1999")]
     Rop1999,
+    #[serde(alias = "ROP 2017", alias = "ROP2017", alias = "2017")]
     Rop2017,
+    #[serde(alias = "ROP 2018", alias = "ROP2018", alias = "2018")]
     Rop2018,
 }
 
@@ -81,16 +86,27 @@ pub struct PayFixationResult {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Employee {
+    #[serde(default = "Uuid::new_v4")]
     pub id: Uuid,
+    #[serde(default)]
     pub name: String,
+    #[serde(default)]
     pub designation: String,
+    #[serde(default)]
     pub group_class: String,
+    #[serde(default = "default_naive_date")]
     pub dob: NaiveDate,
+    #[serde(default = "default_naive_date")]
     pub doj: NaiveDate,
+    #[serde(default)]
     pub date_regularization: Option<NaiveDate>,
+    #[serde(default = "default_naive_date")]
     pub date_retirement_or_death: NaiveDate,
+    #[serde(default)]
     pub pr_no: String,
+    #[serde(default)]
     pub application_no: String,
+    #[serde(default)]
     pub ddo_code: String,
 }
 
@@ -128,6 +144,15 @@ fn default_naive_date() -> NaiveDate {
 fn default_pay_revision() -> PayRevisionRule {
     PayRevisionRule::Rop2017
 }
+fn default_case_type() -> CaseType {
+    CaseType::Superannuation
+}
+fn default_commutation_percentage() -> Decimal {
+    rust_decimal_macros::dec!(40.0)
+}
+fn default_age_next_birthday() -> u32 {
+    61
+}
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct PayHistoryEntry {
@@ -162,11 +187,15 @@ pub struct FamilyDetails {
     pub is_eligible_for_family_pension: bool,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct RecoveryDetails {
+    #[serde(default)]
     pub house_building_advance: Decimal,
+    #[serde(default)]
     pub motor_car_advance: Decimal,
+    #[serde(default)]
     pub overpayment_recovery: Decimal,
+    #[serde(default)]
     pub other_deductions: Decimal,
 }
 
@@ -179,18 +208,29 @@ impl RecoveryDetails {
 /// Canonical Unified Case Model for PAYFIX
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct PayFixationCase {
+    #[serde(default = "Uuid::new_v4")]
     pub case_id: Uuid,
+    #[serde(default)]
     pub case_no: String,
+    #[serde(default = "default_case_type")]
     pub case_type: CaseType,
     pub employee: Employee,
+    #[serde(default)]
     pub service_history: Vec<ServiceEvent>,
+    #[serde(default)]
     pub pay_history: Vec<PayHistoryEntry>,
+    #[serde(default)]
     pub family_details: Option<FamilyDetails>,
-    pub recovery_details: RecoveryDetails,
+    #[serde(default)]
+    pub recovery_details: Option<RecoveryDetails>,
+    #[serde(default)]
     pub non_qualifying_days: u32,
+    #[serde(default = "default_commutation_percentage")]
     pub commutation_percentage: Decimal,
+    #[serde(default = "default_age_next_birthday")]
     pub age_next_birthday: u32,
-    pub calculation_context: CalculationContext,
+    #[serde(default)]
+    pub calculation_context: Option<CalculationContext>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
