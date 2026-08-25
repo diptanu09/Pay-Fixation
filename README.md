@@ -11,7 +11,7 @@
 | **Frontend Web App** | React 18, Vite, TypeScript, Tailwind CSS, Lucide Icons | Responsive UI with Live Oracle 12c search, Case Workspace, Service History Timeline, and Pay Fixation Workspace |
 | **Backend API Service** | Rust (Axum, Tokio, Serde, Rust Decimal, Chrono, Uuid) | High-concurrency async REST API for pension calculations, case persistence, and workflow operations |
 | **Domain & Calculation Engine** | Rust Workspace Crates (`payfix-*`) | Government pay fixation, qualifying service calculation, pension rules engine, DCRG, and CVP commutation |
-| **Database Integration Layer** | Python 3, `oracledb` Driver | Direct live interface to Oracle 12c Database (`sai_agartala` schema @ `192.168.0.140:1521/orcl`) |
+| **Database Integration Layer** | Python 3, `oracledb` Driver | Direct live interface to Oracle 12c Database |
 | **Container & Orchestration** | Docker, Docker Compose, Nginx | Multi-stage production container builds and automated deployment scripts |
 
 ---
@@ -80,17 +80,10 @@ Pay-Fixation/
 
 ## 🛢️ Live Oracle 12c Database Integration (`sai_agartala`)
 
-The system queries live Government pensioner data directly from the Oracle 12c server (`192.168.0.140:1521/orcl`, Schema: `sai_agartala`) using `tools/oracle_fetch.py`.
+The system queries live Government pensioner data directly from the Oracle 12c server using `tools/oracle_fetch.py`.
 
-### Primary Tables & Schema Joins
 
-- **`T_APPLICATION_HDR` (`h`)**: Master application header (`APPLN_NO`, `APPLN_PK`, `APPLN_DDO_NAME`, `APPLN_DDO_PK`).
-- **`T_APPLN_PENSIONER` (`p`)**: Pensioner details (`APEN_DOB`, `APEN_DOA`, `APEN_DOR`, `APEN_DOD`, `APEN_AR_ADDR1..3`, `APEN_SPOUSE_NAME`).
-- **`M_DESIGNATION` (`d`)**: Office designation (`DESG_NAME`).
-- **`M_LOV` (`q`, `ct`)**: Lookups for relation and case classification.
-- **`M_ADDR_BOOK` (`b`)**: State DDO Code lookup (`ADBK_ID`).
-
-> ⚠️ **Data Integrity Note**: All queries use `LEFT JOIN` syntax to ensure pensioner records with optional or missing fields (e.g. `APEN_RELATION`) are retrieved cleanly without dropping rows.
+> ⚠️ **Data Integrity Note**: All queries use `LEFT JOIN` syntax to ensure pensioner records with optional or missing fields are retrieved cleanly without dropping rows.
 
 ---
 
@@ -129,8 +122,8 @@ npm run dev
 ## ⚙️ Key Workflows & Features
 
 1. **Live Oracle Pensioner Lookup**:
-   - Type an Application No (e.g. `10260665007`, `1026065279`) or APPLN_PK (e.g. `65218`, `65490`) in the search modal.
-   - Automatically auto-fills Name, Designation, Date of Birth (`DOB`), Date of Joining (`DOA`), Date of Retirement (`DOR`), and State DDO Code.
+   - Type an Application No or APPLN PK in the search modal.
+   - Automatically auto-fills Name, Designation, Date of Birth, Date of Joining Date of Retirement, and State DDO Code.
 
 2. **Interactive Service History Timeline**:
    - Click `+ Add Period` to launch an interactive modal form.
