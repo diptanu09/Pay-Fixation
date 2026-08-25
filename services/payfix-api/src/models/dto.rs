@@ -34,7 +34,7 @@ pub struct AuditLogDto {
     pub current_audit_hash: Option<String>,
 }
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Deserialize, Default)]
 #[allow(dead_code)]
 pub struct CaseQueryFilter {
     pub page: Option<u32>,

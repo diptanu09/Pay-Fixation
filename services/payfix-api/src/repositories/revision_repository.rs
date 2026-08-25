@@ -37,4 +37,9 @@ impl RevisionRepository {
         list.sort_by(|a, b| a.requested_at.cmp(&b.requested_at));
         list
     }
+
+    pub fn list_all(&self) -> Vec<RevisionCase> {
+        let guard = self.store.read().unwrap();
+        guard.values().cloned().collect()
+    }
 }

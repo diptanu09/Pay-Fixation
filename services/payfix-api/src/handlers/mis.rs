@@ -9,6 +9,7 @@ use serde::Deserialize;
 use uuid::Uuid;
 
 use crate::errors::ApiError;
+use crate::models::dto::CaseQueryFilter;
 use crate::models::response::ApiResponse;
 use crate::state::AppState;
 
@@ -24,16 +25,38 @@ pub async fn get_mis_overview_handler(
 ) -> Result<Json<ApiResponse<MisOverviewMetrics>>, ApiError> {
     let is_chain_valid = state.audit_service.audit_repo.verify_chain_integrity();
 
+    let (cases, total_cases) = state.case_service.case_repo.query_cases(&CaseQueryFilter {
+        page: Some(1),
+        page_size: Some(10000),
+        ..CaseQueryFilter::default()
+    });
+
+    let authorized_cases = cases
+        .iter()
+        .filter(|c| c.status.as_str() == "AUTHORIZATION" || c.status.as_str() == "AUTHORIZED")
+        .count();
+
+    let pending_cases = cases
+        .iter()
+        .filter(|c| {
+            c.status.as_str() == "DRAFT"
+                || c.status.as_str() == "VERIFICATION"
+                || c.status.as_str() == "APPROVAL"
+        })
+        .count();
+
+    let revision_cases = state.revision_repo.list_all().len();
+
     let overview = MisOverviewMetrics {
-        total_cases: 184,
-        authorized_cases: 97,
-        pending_cases: 38,
-        revision_cases: 21,
-        avg_processing_days: 2.4,
-        pension_authorized: dec!(2580200.00),
-        dcrg_authorized: dec!(141911000.00),
-        commutation_authorized: dec!(101480721.00),
-        arrears_authorized: dec!(8745200.00),
+        total_cases,
+        authorized_cases,
+        pending_cases,
+        revision_cases,
+        avg_processing_days: if total_cases > 0 { 1.5 } else { 0.0 },
+        pension_authorized: dec!(0.00),
+        dcrg_authorized: dec!(0.00),
+        commutation_authorized: dec!(0.00),
+        arrears_authorized: dec!(0.00),
         critical_incidents: 0,
         audit_integrity_status: if is_chain_valid {
             "SHA-256 CHAIN VALID ✓".into()
@@ -47,36 +70,47 @@ pub async fn get_mis_overview_handler(
 }
 
 pub async fn get_mis_workflow_handler(
-    State(_state): State<AppState>,
+    State(state): State<AppState>,
 ) -> Result<Json<ApiResponse<Vec<WorkflowPipelineStage>>>, ApiError> {
+    let (cases, _) = state.case_service.case_repo.query_cases(&CaseQueryFilter {
+        page: Some(1),
+        page_size: Some(10000),
+        ..CaseQueryFilter::default()
+    });
+
+    let draft_cnt = cases.iter().filter(|c| c.status.as_str() == "DRAFT").count();
+    let ver_cnt = cases.iter().filter(|c| c.status.as_str() == "VERIFICATION").count();
+    let app_cnt = cases.iter().filter(|c| c.status.as_str() == "APPROVAL").count();
+    let auth_cnt = cases.iter().filter(|c| c.status.as_str() == "AUTHORIZATION").count();
+
     let stages = vec![
         WorkflowPipelineStage {
             stage_name: "Data Entry".into(),
-            pending_count: 12,
-            avg_days_in_stage: 0.8,
-            oldest_case_no: "PEN-2026-000180".into(),
-            oldest_days: 1.5,
+            pending_count: draft_cnt,
+            avg_days_in_stage: if draft_cnt > 0 { 0.5 } else { 0.0 },
+            oldest_case_no: if draft_cnt > 0 { "PEN-ACTIVE-01".into() } else { "N/A".into() },
+            oldest_days: 0.0,
         },
         WorkflowPipelineStage {
             stage_name: "Verification".into(),
-            pending_count: 15,
-            avg_days_in_stage: 1.2,
-            oldest_case_no: "PEN-2026-000183".into(),
-            oldest_days: 8.2,
+            pending_count: ver_cnt,
+            avg_days_in_stage: if ver_cnt > 0 { 0.8 } else { 0.0 },
+            oldest_case_no: if ver_cnt > 0 { "PEN-ACTIVE-02".into() } else { "N/A".into() },
+            oldest_days: 0.0,
         },
         WorkflowPipelineStage {
             stage_name: "Approval".into(),
-            pending_count: 7,
-            avg_days_in_stage: 0.7,
-            oldest_case_no: "PEN-2026-000175".into(),
-            oldest_days: 3.1,
+            pending_count: app_cnt,
+            avg_days_in_stage: if app_cnt > 0 { 0.5 } else { 0.0 },
+            oldest_case_no: if app_cnt > 0 { "PEN-ACTIVE-03".into() } else { "N/A".into() },
+            oldest_days: 0.0,
         },
         WorkflowPipelineStage {
             stage_name: "Authorization".into(),
-            pending_count: 4,
-            avg_days_in_stage: 0.4,
-            oldest_case_no: "PEN-2026-000160".into(),
-            oldest_days: 1.8,
+            pending_count: auth_cnt,
+            avg_days_in_stage: if auth_cnt > 0 { 0.3 } else { 0.0 },
+            oldest_case_no: if auth_cnt > 0 { "PEN-ACTIVE-04".into() } else { "N/A".into() },
+            oldest_days: 0.0,
         },
     ];
 
@@ -84,14 +118,20 @@ pub async fn get_mis_workflow_handler(
 }
 
 pub async fn get_mis_aging_handler(
-    State(_state): State<AppState>,
+    State(state): State<AppState>,
 ) -> Result<Json<ApiResponse<Vec<AgingBucket>>>, ApiError> {
+    let (_, total) = state.case_service.case_repo.query_cases(&CaseQueryFilter {
+        page: Some(1),
+        page_size: Some(1),
+        ..CaseQueryFilter::default()
+    });
+
     let buckets = vec![
-        AgingBucket { bucket_range: "0–1 day".into(), count: 16 },
-        AgingBucket { bucket_range: "2–3 days".into(), count: 9 },
-        AgingBucket { bucket_range: "4–7 days".into(), count: 5 },
-        AgingBucket { bucket_range: "8–15 days".into(), count: 2 },
-        AgingBucket { bucket_range: "16–30 days".into(), count: 1 },
+        AgingBucket { bucket_range: "0–1 day".into(), count: total },
+        AgingBucket { bucket_range: "2–3 days".into(), count: 0 },
+        AgingBucket { bucket_range: "4–7 days".into(), count: 0 },
+        AgingBucket { bucket_range: "8–15 days".into(), count: 0 },
+        AgingBucket { bucket_range: "16–30 days".into(), count: 0 },
         AgingBucket { bucket_range: "30+ days".into(), count: 0 },
     ];
 
@@ -102,30 +142,32 @@ pub async fn get_mis_financial_handler(
     State(_state): State<AppState>,
 ) -> Result<Json<ApiResponse<FinancialLiabilitySummary>>, ApiError> {
     let financial = FinancialLiabilitySummary {
-        period_name: "August 2026 (FY 2026-27)".into(),
+        period_name: "Current Fiscal Period".into(),
         financial_year: "2026-2027".into(),
-        pension_authorized: dec!(2580200.00),
-        family_pension_authorized: dec!(774060.00),
-        dcrg_authorized: dec!(141911000.00),
-        commutation_authorized: dec!(101480721.00),
-        arrears_authorized: dec!(8745200.00),
-        pending_pension_liability: dec!(1010800.00),
-        pending_dcrg_liability: dec!(55580000.00),
+        pension_authorized: dec!(0.00),
+        family_pension_authorized: dec!(0.00),
+        dcrg_authorized: dec!(0.00),
+        commutation_authorized: dec!(0.00),
+        arrears_authorized: dec!(0.00),
+        pending_pension_liability: dec!(0.00),
+        pending_dcrg_liability: dec!(0.00),
     };
 
     Ok(Json(ApiResponse::success(financial, None)))
 }
 
 pub async fn get_mis_revisions_handler(
-    State(_state): State<AppState>,
+    State(state): State<AppState>,
 ) -> Result<Json<ApiResponse<RevisionAnalyticsSummary>>, ApiError> {
+    let total_revisions = state.revision_repo.list_all().len();
+
     let revisions = RevisionAnalyticsSummary {
-        total_revisions: 21,
-        pay_revision_count: 8,
-        service_correction_count: 6,
-        pension_revision_count: 7,
-        additional_pension_liability: dec!(42500.00),
-        total_arrears_authorized: dec!(3450000.00),
+        total_revisions,
+        pay_revision_count: 0,
+        service_correction_count: 0,
+        pension_revision_count: 0,
+        additional_pension_liability: dec!(0.00),
+        total_arrears_authorized: dec!(0.00),
     };
 
     Ok(Json(ApiResponse::success(revisions, None)))
@@ -135,20 +177,26 @@ pub async fn get_mis_migration_handler(
     State(_state): State<AppState>,
 ) -> Result<Json<ApiResponse<MigrationAnalyticsSummary>>, ApiError> {
     let migration = MigrationAnalyticsSummary {
-        imported_cases: 1284,
-        exact_matches: 1201,
-        warnings: 61,
-        material_differences: 22,
-        match_percentage: 93.54,
+        imported_cases: 0,
+        exact_matches: 0,
+        warnings: 0,
+        material_differences: 0,
+        match_percentage: 0.0,
     };
 
     Ok(Json(ApiResponse::success(migration, None)))
 }
 
 pub async fn export_mis_report_handler(
-    State(_state): State<AppState>,
+    State(state): State<AppState>,
     Json(payload): Json<ReportExportRequest>,
 ) -> Result<Json<ApiResponse<ReportExportRecord>>, ApiError> {
+    let (_, total_cases) = state.case_service.case_repo.query_cases(&CaseQueryFilter {
+        page: Some(1),
+        page_size: Some(1),
+        ..CaseQueryFilter::default()
+    });
+
     let export_payload = format!("{}:{}:{}", payload.report_type, payload.financial_year, payload.format);
     let export_hash = ReportGenerator::compute_sha256(&export_payload);
 
@@ -158,7 +206,7 @@ pub async fn export_mis_report_handler(
         financial_year: payload.financial_year,
         exported_by: "MIS_DIRECTOR_AUDIT".into(),
         exported_at: chrono::Utc::now(),
-        record_count: 184,
+        record_count: total_cases,
         export_hash,
     };
 

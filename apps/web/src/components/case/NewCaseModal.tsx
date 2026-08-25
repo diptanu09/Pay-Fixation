@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { CaseType } from '../../types/api';
 import { createCaseApi, lookupSaiPensionApi, type SaiPensionRecord } from '../../lib/api';
-import { Shield, X, ArrowRight, Search, CheckCircle2, Database, RefreshCw } from 'lucide-react';
+import { Shield, X, ArrowRight, Search, CheckCircle2, Database, RefreshCw, Sparkles } from 'lucide-react';
 
 interface NewCaseModalProps {
   isOpen: boolean;
@@ -19,7 +19,9 @@ const CASE_TYPES: { type: CaseType; label: string; desc: string }[] = [
 ];
 
 const SAMPLE_APPLICATIONS = [
-  { appNo: 'APP-2026-8812', name: 'GOUTAM KUMAR PAL' },
+  { appNo: '10260665007', name: '10260665007 (PK: 65218)' },
+  { appNo: '65218', name: 'APPLN_PK: 65218' },
+  { appNo: 'APP-2026-8812', name: 'APP-2026-8812' },
   { appNo: 'APP-2026-1042', name: 'BIMAL CHANDRA DEBBARMA' },
   { appNo: 'APP-2026-3091', name: 'ANITA DAS GUPTA' },
   { appNo: 'APP-2026-7715', name: 'SUBHASH ROY' },
@@ -43,21 +45,28 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
 
   if (!isOpen) return null;
 
+  const handleGeneratePrNo = () => {
+    const randomDigits = Math.floor(100000 + Math.random() * 900000);
+    const newPr = `PR-2026-${randomDigits}`;
+    setPrNo(newPr);
+    return newPr;
+  };
+
   const handleFetchSaiPension = async (appNoToLookup?: string) => {
-    const targetAppNo = appNoToLookup || applicationNo;
-    if (!targetAppNo.trim()) {
-      alert('Please enter an Application No to search in SAI Pension (Oracle 12c)');
+    const rawTarget = (appNoToLookup || applicationNo).trim();
+    if (!rawTarget) {
+      alert('Please enter an Application No or APPLN_PK to search in SAI Pension (Oracle 12c)');
       return;
     }
 
     setFetchingSai(true);
     try {
-      const record = await lookupSaiPensionApi(targetAppNo);
+      const record = await lookupSaiPensionApi(rawTarget);
       setSaiRecord(record);
       setApplicationNo(record.application_no);
       setName(record.name);
       setDesignation(record.designation);
-      setPrNo(record.pr_no);
+      setPrNo(record.pr_no || handleGeneratePrNo());
       setGroupClass(record.group_class);
       setDob(record.dob);
       setDoj(record.doj);
@@ -75,8 +84,10 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
     setLoading(true);
     try {
       const caseNo = `PEN-2026-${Math.floor(100000 + Math.random() * 900000)}`;
-      const empId = window.crypto.randomUUID();
       const caseId = window.crypto.randomUUID();
+      const empId = window.crypto.randomUUID();
+      const finalAppNo = applicationNo.trim() || '10260665007';
+      const finalPrNo = prNo.trim() || handleGeneratePrNo();
 
       const newCase = await createCaseApi({
         case_id: caseId,
@@ -90,8 +101,8 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
           dob: dob || '1966-03-05',
           doj: doj || '1997-03-05',
           date_retirement_or_death: dateRetirement || '2026-03-31',
-          pr_no: prNo || `PR-${Math.floor(100000 + Math.random() * 900000)}`,
-          application_no: applicationNo || `APP-2026-${Math.floor(1000 + Math.random() * 9000)}`,
+          pr_no: finalPrNo,
+          application_no: finalAppNo,
           ddo_code: ddoCode || 'DDO-08122',
         },
         service_history: [],
@@ -155,7 +166,7 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
                 type="text"
                 value={applicationNo}
                 onChange={(e) => setApplicationNo(e.target.value)}
-                placeholder="e.g. APP-2026-8812"
+                placeholder="e.g. 10260665007 or 65218"
                 required
                 className="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 font-mono text-slate-100 focus:outline-none focus:border-blue-500 text-xs"
               />
@@ -194,9 +205,14 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
 
             {/* Status indicator when record fetched */}
             {saiRecord && (
-              <div className="flex items-center space-x-1.5 text-[11px] text-emerald-400 pt-1 font-medium bg-emerald-950/40 p-2 rounded-lg border border-emerald-900/50">
-                <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-400" />
-                <span>Autofilled from Oracle 12c: <strong className="text-slate-100">{saiRecord.name}</strong> ({saiRecord.designation})</span>
+              <div className="space-y-1 text-[11px] text-emerald-400 font-medium bg-emerald-950/40 p-2.5 rounded-lg border border-emerald-900/50">
+                <div className="flex items-center space-x-1.5">
+                  <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-400" />
+                  <span>Autofilled from Oracle 12c (APPLN_PK: <span className="font-mono font-bold text-slate-100">{saiRecord.appln_pk}</span>): <strong className="text-slate-100">{saiRecord.name}</strong> ({saiRecord.designation})</span>
+                </div>
+                {saiRecord.spouse && (
+                  <p className="text-[10px] text-slate-300 pl-5">Spouse: <span className="text-slate-100 font-semibold">{saiRecord.spouse}</span> ({saiRecord.spouse_rel || 'SPOUSE'}) · Address: <span className="text-slate-300">{saiRecord.pensioner_address}</span></p>
+                )}
               </div>
             )}
           </div>
@@ -249,12 +265,22 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="block text-slate-400 mb-1 font-semibold">PPO / PR Number</label>
+              <div className="flex items-center justify-between mb-1">
+                <label className="block text-slate-400 font-semibold">PR Number</label>
+                <button
+                  type="button"
+                  onClick={handleGeneratePrNo}
+                  className="text-[10px] text-blue-400 hover:text-blue-300 font-mono flex items-center space-x-1"
+                >
+                  <Sparkles className="w-3 h-3 text-blue-400" />
+                  <span>Auto-Generate</span>
+                </button>
+              </div>
               <input
                 type="text"
                 value={prNo}
                 onChange={(e) => setPrNo(e.target.value)}
-                placeholder="e.g. PR-8820192"
+                placeholder="e.g. PR-2026-882019"
                 required
                 className="w-full bg-slate-950 border border-slate-800 rounded-md px-3 py-2 font-mono text-slate-100 focus:outline-none focus:border-blue-500"
               />
@@ -295,4 +321,3 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
     </div>
   );
 };
-

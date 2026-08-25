@@ -41,14 +41,24 @@ pub async fn get_operations_probes_handler(
         },
     ];
 
+    let (all_cases, total_created) = state.case_service.case_repo.query_cases(&crate::models::dto::CaseQueryFilter {
+        page: Some(1),
+        page_size: Some(10000),
+        ..Default::default()
+    });
+
+    let cases_verified = all_cases.iter().filter(|c| c.status.as_str() == "VERIFICATION").count();
+    let cases_approved = all_cases.iter().filter(|c| c.status.as_str() == "APPROVAL").count();
+    let cases_authorized = all_cases.iter().filter(|c| c.status.as_str() == "AUTHORIZATION" || c.status.as_str() == "AUTHORIZED").count();
+
     let daily_report = DailyOperationsReport {
         report_date: chrono::Utc::now().format("%Y-%m-%d").to_string(),
-        cases_created: 14,
-        cases_calculated: 11,
-        cases_verified: 8,
-        cases_approved: 5,
-        cases_authorized: 3,
-        documents_issued: 3,
+        cases_created: total_created,
+        cases_calculated: total_created,
+        cases_verified,
+        cases_approved,
+        cases_authorized,
+        documents_issued: cases_authorized,
         calculation_errors: 0,
         security_incidents: 0,
         system_health: "OPERATIONAL / HEALTHY ✓".into(),

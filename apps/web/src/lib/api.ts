@@ -1047,6 +1047,7 @@ export async function transitionWorkflowApi(caseId: string, action: string, vers
 }
 
 export interface SaiPensionRecord {
+  appln_pk: string;
   application_no: string;
   name: string;
   designation: string;
@@ -1056,6 +1057,12 @@ export interface SaiPensionRecord {
   doj: string;
   date_retirement_or_death: string;
   ddo_code: string;
+  ddo_name?: string;
+  spouse?: string;
+  spouse_rel?: string;
+  case_type?: string;
+  pensioner_address?: string;
+  phone_mobile?: string;
   source: string;
 }
 

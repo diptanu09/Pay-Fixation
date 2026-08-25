@@ -188,10 +188,27 @@ export const CaseWorkspace: React.FC<CaseWorkspaceProps> = ({ caseId }) => {
     }
   };
 
-  if (loading || !record) {
+  if (loading) {
     return (
-      <div className="flex items-center justify-center h-64 text-slate-500 text-xs">
-        Loading case workspace...
+      <div className="flex items-center justify-center h-64 text-slate-400 text-xs font-mono">
+        <div className="flex items-center space-x-2">
+          <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+          <span>Loading case workspace...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (!record) {
+    return (
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-12 text-center space-y-4 max-w-xl mx-auto my-12 shadow-xl">
+        <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mx-auto text-slate-400">
+          <FileCheck className="w-6 h-6" />
+        </div>
+        <div>
+          <h2 className="text-base font-bold text-slate-200">No Active Case Selected</h2>
+          <p className="text-xs text-slate-400 mt-1">Select an existing case from the Case Search workspace or click "+ New Case" to create a fresh case with live lookup from SAI Pension (Oracle 12c).</p>
+        </div>
       </div>
     );
   }

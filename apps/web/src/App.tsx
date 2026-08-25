@@ -75,7 +75,7 @@ export function App() {
       {currentTab === 'ruleregistry' && <RuleRegistryPage />}
       {currentTab === 'cutover' && <ProductionOperationsPage />}
       {currentTab === 'workspace' && (
-        <CaseWorkspace caseId={activeCaseId || 'PEN-2026-000123'} />
+        <CaseWorkspace caseId={activeCaseId || ''} />
       )}
       {currentTab === 'payfix' && (
         <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 text-slate-300">

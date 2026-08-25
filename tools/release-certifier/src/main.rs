@@ -85,11 +85,11 @@ fn main() -> anyhow::Result<()> {
         "certification_signature_sha256": cert_hash
     });
 
-    let mut out_file = File::create("PAYFIX-RELEASE-CERTIFICATION-RC1.json")?;
+    let mut out_file = File::create("artifacts/PAYFIX-RELEASE-CERTIFICATION-RC1.json")?;
     out_file.write_all(serde_json::to_string_pretty(&final_report)?.as_bytes())?;
 
     println!("\n===========================================================");
-    println!(" CERTIFICATION SIGNED & ISSUED: PAYFIX-RELEASE-CERTIFICATION-RC1.json ");
+    println!(" CERTIFICATION SIGNED & ISSUED: artifacts/PAYFIX-RELEASE-CERTIFICATION-RC1.json ");
     println!(" Digest Hash: {}", cert_hash);
     println!(" Status     : PRODUCTION RELEASE 1.0 — LIVE PRODUCTION OPERATIONAL ✓");
     println!("===========================================================");
