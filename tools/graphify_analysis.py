@@ -68,17 +68,25 @@ def generate_graphify():
     # Frontend to Backend links
     G.add_edge("Web Client (React 18 / Vite)", "API Engine (Axum Async Rust)")
 
-    # 5. Export PyVis Interactive HTML Network Graph
-    net = Network(height="750px", width="100%", bgcolor="#0f172a", font_color="#f8fafc", directed=True)
-    net.from_nx(G)
-    net.toggle_physics(True)
-
+    # 5. Export Interactive Graphify Architecture Artifact
     out_dir = os.path.join(os.getcwd(), "artifacts")
     os.makedirs(out_dir, exist_ok=True)
-    html_path = os.path.join(out_dir, "payfix_architecture_graph.html")
-    net.save_graph(html_path)
+    
+    try:
+        from pyvis.network import Network
+        net = Network(height="750px", width="100%", bgcolor="#0f172a", font_color="#f8fafc", directed=True)
+        net.from_nx(G)
+        net.toggle_physics(True)
+        html_path = os.path.join(out_dir, "payfix_architecture_graph.html")
+        net.save_graph(html_path)
+        print(f"Graphify PyVis network analysis exported successfully to: {html_path}")
+    except Exception as e:
+        json_path = os.path.join(out_dir, "payfix_architecture_graph.json")
+        graph_data = nx.node_link_data(G)
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(graph_data, f, indent=2)
+        print(f"Graphify JSON network analysis exported successfully to: {json_path}")
 
-    print(f"Graphify network analysis exported successfully to: {html_path}")
     print(f"Nodes count: {G.number_of_nodes()} | Edges count: {G.number_of_edges()}")
 
 if __name__ == "__main__":
