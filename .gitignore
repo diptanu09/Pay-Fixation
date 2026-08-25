@@ -1,2 +1,60 @@
-target/
-.vscode/
+# ==============================================================================
+# PAYFIX — Government Pay Fixation & Pension System Git Ignore Rules
+# ==============================================================================
+
+# --- Rust Build Artifacts ---
+/target/
+**/target/
+**/*.rs.bk
+Cargo.lock.min
+
+# --- Node.js & Web Application Build Artifacts ---
+node_modules/
+**/node_modules/
+apps/web/dist/
+apps/web/build/
+apps/web/.vite/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Python Cache & Virtual Environments ---
+__pycache__/
+/**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --- IDE & Editor Configuration ---
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# --- OS Metadata & System Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- Docker & Local Runtime Artifacts ---
+docker/.env
+*.log
+tmp/
+temp/
+scratch/
