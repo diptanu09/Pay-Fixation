@@ -123,23 +123,27 @@ export interface Employee {
 
 export interface ServiceEvent {
   id: string;
-  from_date: string;
-  to_date: string;
+  event_type?: string;
+  effective_date?: string;
+  from_date?: string;
+  to_date?: string;
   designation: string;
-  nature_of_service: 'Regular' | 'AdHoc' | 'DRW' | 'BreakInService' | 'LWA';
-  excluded_days: number;
+  nature_of_service?: string;
+  excluded_days?: number;
   remarks?: string;
 }
 
 export interface PayHistoryEntry {
   id: string;
-  effective_date: string;
-  pay_revision: 'Rop1982' | 'Rop1988' | 'Rop1999' | 'Rop2017' | 'Rop2018';
-  pay_scale: string;
+  effective_date?: string;
+  from_date?: string;
+  to_date?: string;
+  pay_revision?: 'Rop1982' | 'Rop1988' | 'Rop1999' | 'Rop2017' | 'Rop2018';
+  pay_scale?: string;
   grade_pay: number;
   basic_pay: number;
   pay_level?: string;
-  reason: string;
+  reason?: string;
 }
 
 export interface RecoveryDetails {

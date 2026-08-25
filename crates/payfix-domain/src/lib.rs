@@ -96,22 +96,60 @@ pub struct Employee {
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ServiceEvent {
+    #[serde(default = "Uuid::new_v4")]
     pub id: Uuid,
+    #[serde(default = "default_event_type")]
     pub event_type: String, // Appointment, Regularization, Promotion, CAS-1, CAS-2, ACP-3
+    #[serde(default = "default_naive_date")]
     pub effective_date: NaiveDate,
+    #[serde(default)]
+    pub from_date: Option<NaiveDate>,
+    #[serde(default)]
+    pub to_date: Option<NaiveDate>,
+    #[serde(default = "default_designation")]
     pub designation: String,
+    #[serde(default)]
+    pub nature_of_service: Option<String>,
+    #[serde(default)]
+    pub excluded_days: Option<u32>,
+    #[serde(default)]
     pub remarks: Option<String>,
+}
+
+fn default_event_type() -> String {
+    "Regular".to_string()
+}
+fn default_designation() -> String {
+    "Staff".to_string()
+}
+fn default_naive_date() -> NaiveDate {
+    NaiveDate::from_ymd_opt(2020, 1, 1).unwrap()
+}
+fn default_pay_revision() -> PayRevisionRule {
+    PayRevisionRule::Rop2017
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct PayHistoryEntry {
+    #[serde(default = "Uuid::new_v4")]
     pub id: Uuid,
+    #[serde(default = "default_naive_date")]
     pub effective_date: NaiveDate,
+    #[serde(default)]
+    pub from_date: Option<NaiveDate>,
+    #[serde(default)]
+    pub to_date: Option<NaiveDate>,
+    #[serde(default = "default_pay_revision")]
     pub pay_revision: PayRevisionRule,
+    #[serde(default)]
     pub pay_scale: String,
+    #[serde(default)]
     pub grade_pay: Decimal,
+    #[serde(default)]
     pub basic_pay: Decimal,
+    #[serde(default)]
     pub pay_level: Option<String>,
+    #[serde(default)]
     pub reason: String,
 }
 

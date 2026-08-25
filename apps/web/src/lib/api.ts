@@ -53,23 +53,26 @@ import type {
 const API_BASE = '/api/v1';
 
 async function safeJsonFetch<T>(res: Response, defaultError = 'API request failed'): Promise<T> {
-  const contentType = res.headers.get('content-type') || '';
-  if (contentType.includes('application/json')) {
-    const json = await res.json();
-    if (!res.ok || json.success === false) {
-      throw new Error(json.error?.message || json.message || defaultError);
-    }
-    return json.data !== undefined ? json.data : json;
-  }
   const text = await res.text();
-  if (!res.ok) {
-    throw new Error(text || `${defaultError} (Status ${res.status})`);
+  let json: any = null;
+  if (text && text.trim().length > 0) {
+    try {
+      json = JSON.parse(text);
+    } catch {
+      if (!res.ok) {
+        throw new Error(text || `${defaultError} (Status ${res.status})`);
+      }
+      throw new Error(text || defaultError);
+    }
   }
-  try {
-    return JSON.parse(text);
-  } catch {
-    throw new Error(text || defaultError);
+  if (!res.ok || (json && json.success === false)) {
+    const errorMsg = json?.error?.message || json?.message || text || `${defaultError} (Status ${res.status})`;
+    throw new Error(errorMsg);
   }
+  if (json && json.data !== undefined) {
+    return json.data;
+  }
+  return json as T;
 }
 
 export async function loginApi(username: string, password: string): Promise<{ token: string; user: User }> {
@@ -739,11 +742,7 @@ export async function createCaseApi(caseData: Partial<PayFixationCase>): Promise
     body: JSON.stringify(caseData),
   });
 
-  const json: ApiResponse<PersistentCaseRecord> = await res.json();
-  if (!res.ok || !json.success) {
-    throw new Error((json as any).error?.message || 'Failed to create case');
-  }
-  return json.data;
+  return safeJsonFetch<PersistentCaseRecord>(res, 'Failed to create case');
 }
 
 export async function updateCaseApi(id: string, caseData: PayFixationCase): Promise<PersistentCaseRecord> {
@@ -757,11 +756,7 @@ export async function updateCaseApi(id: string, caseData: PayFixationCase): Prom
     body: JSON.stringify(caseData),
   });
 
-  const json: ApiResponse<PersistentCaseRecord> = await res.json();
-  if (!res.ok || !json.success) {
-    throw new Error((json as any).error?.message || 'Failed to update case');
-  }
-  return json.data;
+  return safeJsonFetch<PersistentCaseRecord>(res, 'Failed to update case');
 }
 
 export async function calculatePensionApi(caseId: string, employee: any, lastBasicPay: number): Promise<CalculationResultEnvelope<PensionCalculationResult>> {
@@ -787,11 +782,7 @@ export async function calculatePensionApi(caseId: string, employee: any, lastBas
     body: JSON.stringify(reqBody),
   });
 
-  const json: ApiResponse<CalculationResultEnvelope<PensionCalculationResult>> = await res.json();
-  if (!res.ok || !json.success) {
-    throw new Error((json as any).error?.message || 'Pension calculation failed');
-  }
-  return json.data;
+  return safeJsonFetch<CalculationResultEnvelope<PensionCalculationResult>>(res, 'Pension calculation failed');
 }
 
 export async function calculateSessionApi(caseId: string): Promise<CalculationSession> {

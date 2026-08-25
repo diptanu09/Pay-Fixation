@@ -28,7 +28,7 @@ def fetch_pensioner_from_oracle(query_term):
         return {"error": "python oracledb package not installed"}
 
     dsn = f"{ORACLE_HOST}:{ORACLE_PORT}/{ORACLE_SERVICE}"
-    clean_term = str(query_term).trim() if hasattr(query_term, 'trim') else str(query_term).strip()
+    clean_term = str(query_term).strip()
 
     try:
         conn = oracledb.connect(user=ORACLE_USER, password=ORACLE_PASS, dsn=dsn)
@@ -66,13 +66,15 @@ def fetch_pensioner_from_oracle(query_term):
               '[[:space:]]+', ' '
             )
           ) AS PENSIONER_ADDRESS,
-          d.DESG_NAME
+          d.DESG_NAME,
+          b.ADBK_ID AS REAL_DDO_CODE
         FROM T_APPLICATION_HDR h
-        INNER JOIN T_APPLN_PENSIONER p ON h.APPLN_PK = p.APEN_APPLN_PK
-        INNER JOIN M_DESIGNATION d ON d.DESG_PK = p.APEN_DESG_PK
-        INNER JOIN M_LOV q ON q.LOV_PK = p.APEN_RELATION
+        LEFT JOIN T_APPLN_PENSIONER p ON h.APPLN_PK = p.APEN_APPLN_PK
+        LEFT JOIN M_DESIGNATION d ON d.DESG_PK = p.APEN_DESG_PK
+        LEFT JOIN M_LOV q ON q.LOV_PK = p.APEN_RELATION
         LEFT JOIN M_LOV ct ON ct.LOV_PK = h.APPLN_CASE_TYPE
         LEFT JOIN T_APPLN_BENEFITS i ON i.APB_APPLN_PK = h.APPLN_PK
+        LEFT JOIN M_ADDR_BOOK b ON h.APPLN_DDO_PK = b.ADBK_PK
         WHERE TRIM(h.APPLN_NO) = :target OR h.APPLN_PK = :target
         """
 
@@ -80,7 +82,7 @@ def fetch_pensioner_from_oracle(query_term):
         row = cursor.fetchone()
 
         if not row:
-            # Fallback check if search term matches with prefix or partial APPLN_PK
+            # Fallback search by LIKE
             sql_like = """
             SELECT 
               h.APPLN_PK,
@@ -113,13 +115,15 @@ def fetch_pensioner_from_oracle(query_term):
                   '[[:space:]]+', ' '
                 )
               ) AS PENSIONER_ADDRESS,
-              d.DESG_NAME
+              d.DESG_NAME,
+              b.ADBK_ID AS REAL_DDO_CODE
             FROM T_APPLICATION_HDR h
-            INNER JOIN T_APPLN_PENSIONER p ON h.APPLN_PK = p.APEN_APPLN_PK
-            INNER JOIN M_DESIGNATION d ON d.DESG_PK = p.APEN_DESG_PK
-            INNER JOIN M_LOV q ON q.LOV_PK = p.APEN_RELATION
+            LEFT JOIN T_APPLN_PENSIONER p ON h.APPLN_PK = p.APEN_APPLN_PK
+            LEFT JOIN M_DESIGNATION d ON d.DESG_PK = p.APEN_DESG_PK
+            LEFT JOIN M_LOV q ON q.LOV_PK = p.APEN_RELATION
             LEFT JOIN M_LOV ct ON ct.LOV_PK = h.APPLN_CASE_TYPE
             LEFT JOIN T_APPLN_BENEFITS i ON i.APB_APPLN_PK = h.APPLN_PK
+            LEFT JOIN M_ADDR_BOOK b ON h.APPLN_DDO_PK = b.ADBK_PK
             WHERE TRIM(h.APPLN_NO) LIKE :like_target OR h.APPLN_PK LIKE :like_target
             """
             cursor.execute(sql_like, like_target=f"%{clean_term}%")
@@ -133,12 +137,15 @@ def fetch_pensioner_from_oracle(query_term):
         (
             appln_pk, appln_no, pnsnr_name, ddo_name, emp_no, secn_id,
             dob, doa, dor, dod, country, phone, mobile,
-            spouse, spouse_rel, case_type, pensioner_address, desg_name
+            spouse, spouse_rel, case_type, pensioner_address, desg_name, real_ddo_code
         ) = row
 
-        # Clean name formatting (strip leading dot if present)
+        # Clean name formatting
         clean_name = pnsnr_name.lstrip('.').strip() if pnsnr_name else "N/A"
         clean_pr = str(emp_no).strip() if emp_no else f"PR-{appln_pk}"
+
+        # Resolve true DDO Code from M_ADDR_BOOK.ADBK_ID
+        formatted_ddo_code = str(real_ddo_code).strip() if real_ddo_code else (f"DDO-{secn_id}" if secn_id else "DDO-STATE")
 
         record = {
             "appln_pk": str(appln_pk),
@@ -150,7 +157,7 @@ def fetch_pensioner_from_oracle(query_term):
             "dob": date_to_str(dob),
             "doj": date_to_str(doa),
             "date_retirement_or_death": date_to_str(dor or dod),
-            "ddo_code": f"DDO-{secn_id}" if secn_id else "DDO-STATE",
+            "ddo_code": formatted_ddo_code,
             "ddo_name": str(ddo_name) if ddo_name else None,
             "spouse": str(spouse) if spouse else None,
             "spouse_rel": str(spouse_rel) if spouse_rel else None,
