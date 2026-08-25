@@ -35,6 +35,7 @@ pub struct AuditLogDto {
 }
 
 #[derive(Debug, Clone, Deserialize)]
+#[allow(dead_code)]
 pub struct CaseQueryFilter {
     pub page: Option<u32>,
     pub page_size: Option<u32>,

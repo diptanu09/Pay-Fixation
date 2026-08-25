@@ -9,6 +9,10 @@ services:
       - PORT=8085
       - DATABASE_URL=postgres://postgres:root@123@host.docker.internal:5432/Pay-Fixation
       - RUST_LOG=info,payfix_api=debug
+      - ORACLE_HOST=192.168.0.140
+      - ORACLE_PORT=1521
+      - ORACLE_SERVICE=orcl
+      - ORACLE_SCHEMA=sai_agartala
     extra_hosts:
       - "host.docker.internal:host-gateway"
     restart: always
@@ -19,4 +23,7 @@ services:
       dockerfile: docker/Dockerfile.web
     ports:
       - "5173:80"
+    depends_on:
+      - payfix-api
     restart: always
+

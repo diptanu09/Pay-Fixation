@@ -6,6 +6,7 @@ use uuid::Uuid;
 use crate::errors::ApiError;
 
 #[derive(Clone, Default)]
+#[allow(dead_code)]
 pub struct MigrationRepository {
     batches: Arc<RwLock<HashMap<Uuid, MigrationBatch>>>,
     records: Arc<RwLock<HashMap<Uuid, Vec<MigrationRecord>>>>,
@@ -13,6 +14,7 @@ pub struct MigrationRepository {
 }
 
 impl MigrationRepository {
+    #[allow(dead_code)]
     pub fn new() -> Self {
         Self::default()
     }
@@ -46,6 +48,7 @@ impl MigrationRepository {
         guard.get(&batch_id).cloned().unwrap_or_default()
     }
 
+    #[allow(dead_code)]
     pub fn save_snapshot(&self, snap: MigrationSnapshot) {
         let mut guard = self.snapshots.write().unwrap();
         guard.entry(snap.batch_id).or_default().push(snap);

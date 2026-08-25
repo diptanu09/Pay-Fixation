@@ -11,6 +11,7 @@ use crate::models::auth::Claims;
 
 pub const JWT_SECRET: &[u8] = b"PAYFIX_SECRET_KEY_FOR_JWT_AUTHENTICATION_2026";
 
+#[allow(dead_code)]
 pub async fn auth_middleware(mut req: Request, next: Next) -> Result<Response, ApiError> {
     let auth_header = req
         .headers()

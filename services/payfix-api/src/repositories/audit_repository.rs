@@ -24,6 +24,7 @@ impl AuditRepository {
         log
     }
 
+    #[allow(dead_code)]
     pub fn find_by_entity(&self, entity_id: Uuid) -> Vec<AuditLogDto> {
         let store = self.logs.read().unwrap();
         store

@@ -1045,3 +1045,26 @@ export async function transitionWorkflowApi(caseId: string, action: string, vers
   }
   return json.data;
 }
+
+export interface SaiPensionRecord {
+  application_no: string;
+  name: string;
+  designation: string;
+  pr_no: string;
+  group_class: string;
+  dob: string;
+  doj: string;
+  date_retirement_or_death: string;
+  ddo_code: string;
+  source: string;
+}
+
+export async function lookupSaiPensionApi(appNo: string): Promise<SaiPensionRecord> {
+  const token = localStorage.getItem('payfix_token');
+  const headers: Record<string, string> = {};
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(`${API_BASE}/sai-pension/lookup?application_no=${encodeURIComponent(appNo)}`, { headers });
+  return safeJsonFetch<SaiPensionRecord>(res, 'Failed to fetch SAI Pension record');
+}
+

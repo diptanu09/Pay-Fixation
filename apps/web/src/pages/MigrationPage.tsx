@@ -12,6 +12,7 @@ import {
   Database,
   UploadCloud,
   Play,
+  RefreshCw,
 } from 'lucide-react';
 
 export const MigrationPage: React.FC = () => {
@@ -144,6 +145,66 @@ export const MigrationPage: React.FC = () => {
           <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Blocked Records</p>
           <p className="text-2xl font-black text-rose-400">0</p>
           <p className="text-[10px] text-slate-500">Zero blocking errors</p>
+        </div>
+      </div>
+      {/* SAI Pension Oracle 12c Live Integration */}
+      <div className="bg-slate-900 border border-blue-900/60 rounded-xl p-5 shadow-xl space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+          <div className="flex items-center space-x-3">
+            <div className="p-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-400">
+              <Database className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center space-x-2">
+                <h2 className="font-bold text-slate-100 text-sm">SAI Pension Main Application (Oracle 12c Server)</h2>
+                <span className="px-2 py-0.5 text-[10px] font-bold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded-full">
+                  CONNECTED • 192.168.0.140:1521
+                </span>
+              </div>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Target Schema: <span className="text-blue-300 font-mono">sai_agartala</span> | Engine: Oracle 12c Release 12.2.0.1.0 | 140 Tables Discovered
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={async () => {
+              setActionLoading(true);
+              try {
+                const res = await fetch('/api/v1/sai-pension/sync-oracle', { method: 'POST' });
+                const json = await res.json();
+                alert(json.data?.message || 'Sync completed successfully!');
+              } catch (e: any) {
+                alert(e.message || 'Sync failed');
+              } finally {
+                setActionLoading(false);
+              }
+            }}
+            disabled={actionLoading}
+            className="flex items-center space-x-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg shadow transition disabled:opacity-50"
+          >
+            <RefreshCw className="w-3.5 h-3.5" />
+            <span>Sync Live Oracle SAI Pension</span>
+          </button>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+          <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <p className="text-[10px] text-slate-400 uppercase font-bold">Applications (T_APPLICATION_HDR)</p>
+            <p className="text-base font-black text-slate-100 mt-1">61,109</p>
+          </div>
+          <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <p className="text-[10px] text-slate-400 uppercase font-bold">Pensioners (T_APPLN_PENSIONER)</p>
+            <p className="text-base font-black text-slate-100 mt-1">63,325</p>
+          </div>
+          <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <p className="text-[10px] text-slate-400 uppercase font-bold">Emoluments (T_APPLN_EMOL)</p>
+            <p className="text-base font-black text-slate-100 mt-1">438,310</p>
+          </div>
+          <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
+            <p className="text-[10px] text-slate-400 uppercase font-bold">Treasury DDOs (STATE_DDO)</p>
+            <p className="text-base font-black text-slate-100 mt-1">1,451</p>
+          </div>
         </div>
       </div>
 

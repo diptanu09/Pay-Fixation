@@ -26,6 +26,7 @@ pub struct CreateRuleRequest {
 }
 
 #[derive(Deserialize)]
+#[allow(dead_code)]
 pub struct CreateVersionRequest {
     pub version_tag: String,
     pub effective_from: String,

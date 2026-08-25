@@ -1,4 +1,4 @@
-use chrono::{Datelike, NaiveDate};
+use chrono::Datelike;
 use payfix_domain::{
     ArrearCalculationInput, ArrearCalculationResult, ArrearPeriod, CalculationSession,
     RevisionDifference,

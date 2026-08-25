@@ -11,6 +11,7 @@ pub struct RevisionRepository {
 }
 
 impl RevisionRepository {
+    #[allow(dead_code)]
     pub fn new() -> Self {
         Self::default()
     }

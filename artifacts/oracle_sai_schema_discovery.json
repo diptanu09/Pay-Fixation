@@ -1,0 +1,846 @@
+{
+  "host": "192.168.0.140",
+  "port": "1521",
+  "schema": "sai_agartala",
+  "service_name": "orcl",
+  "tables_count": 209,
+  "tables": [
+    {
+      "table_name": "A",
+      "estimated_rows": 3
+    },
+    {
+      "table_name": "APPLN_STATUS",
+      "estimated_rows": 25756
+    },
+    {
+      "table_name": "COMM_TABLE_CN",
+      "estimated_rows": 62
+    },
+    {
+      "table_name": "CORRES_OUTWORD",
+      "estimated_rows": 23834
+    },
+    {
+      "table_name": "CORRES_OUTWORD_DETAILS",
+      "estimated_rows": 63405
+    },
+    {
+      "table_name": "DATA_CONTENT",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "DDO_TEMP",
+      "estimated_rows": 1199
+    },
+    {
+      "table_name": "DEP_TEMP",
+      "estimated_rows": 68
+    },
+    {
+      "table_name": "DUMMY_GPO",
+      "estimated_rows": 2268
+    },
+    {
+      "table_name": "EMP",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "EMP_SAL",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "FINAL_DISPATCH",
+      "estimated_rows": 418940
+    },
+    {
+      "table_name": "H_INWARD_OUTWARD",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "H_TXN_STATUS",
+      "estimated_rows": 6
+    },
+    {
+      "table_name": "LEAVE_SALARY_CONTRIBUTION",
+      "estimated_rows": 13
+    },
+    {
+      "table_name": "MYUSER",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_ADDR_BOOK",
+      "estimated_rows": 1715
+    },
+    {
+      "table_name": "M_ADDR_BOOK_BACKUP_16_07_2011",
+      "estimated_rows": 1217
+    },
+    {
+      "table_name": "M_ADDR_BOOK_BCKUP",
+      "estimated_rows": 1345
+    },
+    {
+      "table_name": "M_ALLOC_ENGINE",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_ALLOC_ENGINE_BKUP",
+      "estimated_rows": 2
+    },
+    {
+      "table_name": "M_ALLOC_ENGINE_SATYA",
+      "estimated_rows": 20
+    },
+    {
+      "table_name": "M_CHKLST_DTL",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_CHKLST_HDR",
+      "estimated_rows": 46
+    },
+    {
+      "table_name": "M_CHKLST_VALUES",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_CLNDR_RTN",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "M_CLNDR_RTN_BKUP",
+      "estimated_rows": 22
+    },
+    {
+      "table_name": "M_DCRG_NOMINIES",
+      "estimated_rows": 9413
+    },
+    {
+      "table_name": "M_DESGNAME",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_DESG_PAYSCALE",
+      "estimated_rows": 3815
+    },
+    {
+      "table_name": "M_DESIGNATION",
+      "estimated_rows": 2244
+    },
+    {
+      "table_name": "M_EMPLOYEE",
+      "estimated_rows": 127
+    },
+    {
+      "table_name": "M_EMP_TRAINING",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "M_ERROR_MSG",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_GMT_PRIV",
+      "estimated_rows": 631
+    },
+    {
+      "table_name": "M_GM_PRIV",
+      "estimated_rows": 882
+    },
+    {
+      "table_name": "M_GOVT_DEPT_RSLN",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "M_GOVT_PREV_REF",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_GOVT_RESOLUTION",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "M_HOLIDAY",
+      "estimated_rows": 44
+    },
+    {
+      "table_name": "M_LOV",
+      "estimated_rows": 1149
+    },
+    {
+      "table_name": "M_LOV_STATE_MAP",
+      "estimated_rows": 1147
+    },
+    {
+      "table_name": "M_LOV_TMP",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_MENU",
+      "estimated_rows": 245
+    },
+    {
+      "table_name": "M_MENU_TABS",
+      "estimated_rows": 119
+    },
+    {
+      "table_name": "M_OFFICE",
+      "estimated_rows": 39
+    },
+    {
+      "table_name": "M_OFFICE_SECTION",
+      "estimated_rows": 5
+    },
+    {
+      "table_name": "M_OFFICE_SECTION_BKUP",
+      "estimated_rows": 4
+    },
+    {
+      "table_name": "M_PARAMETER",
+      "estimated_rows": 77
+    },
+    {
+      "table_name": "M_PARAMETER_151123",
+      "estimated_rows": 77
+    },
+    {
+      "table_name": "M_PARAMETER_S",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "M_PAYSCALE",
+      "estimated_rows": 137
+    },
+    {
+      "table_name": "M_PENSIONER",
+      "estimated_rows": 126685
+    },
+    {
+      "table_name": "M_PENSIONER_BACKUP_SATYA",
+      "estimated_rows": 113
+    },
+    {
+      "table_name": "M_PENSIONER_BK07042017",
+      "estimated_rows": 83565
+    },
+    {
+      "table_name": "M_PEN_ALLOCATN_AMT",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_PEN_AUTHORITY",
+      "estimated_rows": 407382
+    },
+    {
+      "table_name": "M_PEN_AUTHORITY_BACKUP_SATYA",
+      "estimated_rows": 77
+    },
+    {
+      "table_name": "M_PEN_DCRG_WITHHELD",
+      "estimated_rows": 3
+    },
+    {
+      "table_name": "M_PEN_FAMILY",
+      "estimated_rows": 283309
+    },
+    {
+      "table_name": "M_PEN_FAMILY_BACKUP_SATYA",
+      "estimated_rows": 46
+    },
+    {
+      "table_name": "M_PEN_FRGN_SERV",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_PEN_PAY_DTL",
+      "estimated_rows": 43238
+    },
+    {
+      "table_name": "M_PEN_PROVISIONAL",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_PEN_RCVRY",
+      "estimated_rows": 64501
+    },
+    {
+      "table_name": "M_PEN_RCVRY_BACKUP_SATYA",
+      "estimated_rows": 18
+    },
+    {
+      "table_name": "M_PEN_SERV_VRFY",
+      "estimated_rows": 9609
+    },
+    {
+      "table_name": "M_PEN_TREASURY",
+      "estimated_rows": 105706
+    },
+    {
+      "table_name": "M_PEN_UNDRAWN",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_PEN_WIFE",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_PROGRAM",
+      "estimated_rows": 218
+    },
+    {
+      "table_name": "M_PROGRAM_TAB",
+      "estimated_rows": 70
+    },
+    {
+      "table_name": "M_REFDOC",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_SECTION",
+      "estimated_rows": 5
+    },
+    {
+      "table_name": "M_SECTION_CLNDR",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_STATUS_DTL",
+      "estimated_rows": 109
+    },
+    {
+      "table_name": "M_STATUS_HDR",
+      "estimated_rows": 65
+    },
+    {
+      "table_name": "M_STATUS_MSG",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "M_TXNNO_COMPONENTS",
+      "estimated_rows": 7
+    },
+    {
+      "table_name": "M_TXNNO_STRUCT",
+      "estimated_rows": 7
+    },
+    {
+      "table_name": "M_TXN_CASE_DEPT",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_TXN_CHKLST",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_TXN_DOC",
+      "estimated_rows": 25
+    },
+    {
+      "table_name": "M_TXN_DOC_CASE",
+      "estimated_rows": 47
+    },
+    {
+      "table_name": "M_TXN_LOV",
+      "estimated_rows": 8
+    },
+    {
+      "table_name": "M_TXN_NO",
+      "estimated_rows": 11
+    },
+    {
+      "table_name": "M_TXN_OFFICE",
+      "estimated_rows": 10
+    },
+    {
+      "table_name": "M_TXN_REFDOC",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_TXN_TYPE",
+      "estimated_rows": 11
+    },
+    {
+      "table_name": "M_USER",
+      "estimated_rows": 147
+    },
+    {
+      "table_name": "M_USER_BACKUP",
+      "estimated_rows": 147
+    },
+    {
+      "table_name": "M_USER_BKUP",
+      "estimated_rows": 15
+    },
+    {
+      "table_name": "M_USER_GROUP",
+      "estimated_rows": 15
+    },
+    {
+      "table_name": "M_USER_OFFICE",
+      "estimated_rows": 160
+    },
+    {
+      "table_name": "M_USER_OFFICE_BKUP",
+      "estimated_rows": 14
+    },
+    {
+      "table_name": "M_USER_PRIV",
+      "estimated_rows": 19
+    },
+    {
+      "table_name": "M_USER_REQUEST",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "M_USER_SECN",
+      "estimated_rows": 193
+    },
+    {
+      "table_name": "M_USER_SECN_BKUP",
+      "estimated_rows": 16
+    },
+    {
+      "table_name": "NANDI",
+      "estimated_rows": 2
+    },
+    {
+      "table_name": "PARTY_MASTER",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "PAY_COMMISSION_S",
+      "estimated_rows": 47
+    },
+    {
+      "table_name": "PENDING_CASE",
+      "estimated_rows": 909
+    },
+    {
+      "table_name": "PENDING_CASE1",
+      "estimated_rows": 4313
+    },
+    {
+      "table_name": "PENSION_BOTH_CONT",
+      "estimated_rows": 12
+    },
+    {
+      "table_name": "PENSION_CASE_DISPATCH_SMS",
+      "estimated_rows": 3426
+    },
+    {
+      "table_name": "PENSION_CASE_RECEIVED_SMS",
+      "estimated_rows": 280
+    },
+    {
+      "table_name": "PENSION_CONTRIBUTION_CHECK",
+      "estimated_rows": 2
+    },
+    {
+      "table_name": "PENSION_CONTRIBUTION_DETAIL",
+      "estimated_rows": 16
+    },
+    {
+      "table_name": "PENSION_CONTRIBUTION_MASTER",
+      "estimated_rows": 6
+    },
+    {
+      "table_name": "PENSION_CONT_RATE",
+      "estimated_rows": 143
+    },
+    {
+      "table_name": "PENSION_CONT_REPORT",
+      "estimated_rows": 6
+    },
+    {
+      "table_name": "PNSNR_ADDR",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "PNSNR_MAST",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "PNSNR_MAST_DATA_ENTRY",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "PRINT_REPORT_S",
+      "estimated_rows": 3
+    },
+    {
+      "table_name": "PSAI_PASSWORD_HISTORY",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "P_CASE_RECEIVED_DISPATCH_SMS",
+      "estimated_rows": 9
+    },
+    {
+      "table_name": "RAM",
+      "estimated_rows": 38
+    },
+    {
+      "table_name": "REPORT_PRINTER",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "REV_PENSION",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "R_EMPLOYEE",
+      "estimated_rows": 39
+    },
+    {
+      "table_name": "SAI_FOXPRO_FAM_MEM",
+      "estimated_rows": 2363
+    },
+    {
+      "table_name": "SATYA_SAI",
+      "estimated_rows": 2361
+    },
+    {
+      "table_name": "SATYA_SAI_DUMMY",
+      "estimated_rows": 8261
+    },
+    {
+      "table_name": "SECTION_OUTWARD",
+      "estimated_rows": 147321
+    },
+    {
+      "table_name": "SECTION_OUTWARD_MASTER",
+      "estimated_rows": 19
+    },
+    {
+      "table_name": "SEPRATE_PPO_DETAIL_AIS",
+      "estimated_rows": 106
+    },
+    {
+      "table_name": "SEPRATE_PPO_MASTER_AIS",
+      "estimated_rows": 6
+    },
+    {
+      "table_name": "SR_NO_DUMMY",
+      "estimated_rows": 4
+    },
+    {
+      "table_name": "STATE_DDO",
+      "estimated_rows": 1451
+    },
+    {
+      "table_name": "STATE_DEPARTMENT",
+      "estimated_rows": 38
+    },
+    {
+      "table_name": "STATE_DISTRICT",
+      "estimated_rows": 634
+    },
+    {
+      "table_name": "STATE_ORGANIZATION",
+      "estimated_rows": 81
+    },
+    {
+      "table_name": "STATE_RELATION",
+      "estimated_rows": 16
+    },
+    {
+      "table_name": "STATE_TREASURY",
+      "estimated_rows": 20
+    },
+    {
+      "table_name": "S_MIS_DAILY",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "S_MIS_DAILY_CHGWISE",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "TEMP_ST_AG_DDO",
+      "estimated_rows": 1890
+    },
+    {
+      "table_name": "TEST_TABLE",
+      "estimated_rows": 41
+    },
+    {
+      "table_name": "TI_PENSION_DETAIL",
+      "estimated_rows": 5
+    },
+    {
+      "table_name": "TMP_ADDR_BOOK",
+      "estimated_rows": 1334
+    },
+    {
+      "table_name": "TMP_DESIGNATION",
+      "estimated_rows": 1566
+    },
+    {
+      "table_name": "TMP_EMPLOYEE",
+      "estimated_rows": 39
+    },
+    {
+      "table_name": "TMP_LOV",
+      "estimated_rows": 315
+    },
+    {
+      "table_name": "TMP_MATCHED_OUTWARD",
+      "estimated_rows": null
+    },
+    {
+      "table_name": "TMP_MIS",
+      "estimated_rows": null
+    },
+    {
+      "table_name": "TMP_PAYSCALE",
+      "estimated_rows": 42
+    },
+    {
+      "table_name": "TMP_SECTION",
+      "estimated_rows": 4
+    },
+    {
+      "table_name": "TREASURY_DATA",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "TR_XML_DATA",
+      "estimated_rows": 5
+    },
+    {
+      "table_name": "T_APPLICATION_HDR",
+      "estimated_rows": 61109
+    },
+    {
+      "table_name": "T_APPLICATION_HDR_BK07042017",
+      "estimated_rows": 15644
+    },
+    {
+      "table_name": "T_APPLN_ALLOCATN_AMT",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_APPLN_AUDIT",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_APPLN_AUTHORITY",
+      "estimated_rows": 148000
+    },
+    {
+      "table_name": "T_APPLN_BENEFITS",
+      "estimated_rows": 62748
+    },
+    {
+      "table_name": "T_APPLN_BF_ALLOCATN_AMT",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_APPLN_BF_REVISION",
+      "estimated_rows": 56
+    },
+    {
+      "table_name": "T_APPLN_CORRECTION",
+      "estimated_rows": 82
+    },
+    {
+      "table_name": "T_APPLN_DCRG_NOMINEE",
+      "estimated_rows": 10885
+    },
+    {
+      "table_name": "T_APPLN_DCRG_WITHHELD",
+      "estimated_rows": 3
+    },
+    {
+      "table_name": "T_APPLN_EMOL_MONTHWISE",
+      "estimated_rows": 438310
+    },
+    {
+      "table_name": "T_APPLN_EMOL_PERIODIC",
+      "estimated_rows": 42736
+    },
+    {
+      "table_name": "T_APPLN_FOREIGN_SRVC",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_APPLN_MLA_SPELL",
+      "estimated_rows": 29
+    },
+    {
+      "table_name": "T_APPLN_MNTHLY_EMOL",
+      "estimated_rows": 50353
+    },
+    {
+      "table_name": "T_APPLN_PENSIONER",
+      "estimated_rows": 63325
+    },
+    {
+      "table_name": "T_APPLN_PENSIONER_BK07042017",
+      "estimated_rows": 17402
+    },
+    {
+      "table_name": "T_APPLN_PNSNR_FAMILY",
+      "estimated_rows": 98507
+    },
+    {
+      "table_name": "T_APPLN_PNSNR_WIFE",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_APPLN_PROVISIONAL",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_APPLN_REASON",
+      "estimated_rows": 24
+    },
+    {
+      "table_name": "T_APPLN_RECOVERY",
+      "estimated_rows": 58884
+    },
+    {
+      "table_name": "T_APPLN_SRVC_VRFN",
+      "estimated_rows": 10891
+    },
+    {
+      "table_name": "T_APPLN_SRVC_VRFN_08_05_2012",
+      "estimated_rows": 79
+    },
+    {
+      "table_name": "T_APPLN_TRACKSHEET",
+      "estimated_rows": 22
+    },
+    {
+      "table_name": "T_APP_VIEW_LOG",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_ATTACHED_DOC",
+      "estimated_rows": 2139307
+    },
+    {
+      "table_name": "T_AUDIT_DTL",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_AUDIT_HDR",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_CLNDR_RTN",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_COURSE_HDR",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "T_DIFF_DCRG_DTL",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_DIFF_DCRG_HDR",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_DSC_AUTH_LOG",
+      "estimated_rows": 29569
+    },
+    {
+      "table_name": "T_GIST_CORR",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_GIST_HDR",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "T_INWARD_OUTWARD",
+      "estimated_rows": 249324
+    },
+    {
+      "table_name": "T_LOGIN_INFO",
+      "estimated_rows": 436178
+    },
+    {
+      "table_name": "T_LOGIN_INFO_BACKUP",
+      "estimated_rows": 436117
+    },
+    {
+      "table_name": "T_MESSAGE_DTL",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_MESSAGE_HDR",
+      "estimated_rows": 838
+    },
+    {
+      "table_name": "T_MIS",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_MIS_TEMP",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_NOTE_SHEET",
+      "estimated_rows": 222
+    },
+    {
+      "table_name": "T_PP_EXTENSION",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_PP_INTIMATION",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_PRINT_BATCH_HDR",
+      "estimated_rows": 297326
+    },
+    {
+      "table_name": "T_PRINT_BATCH_HDR_BCKUP",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "T_TXN_CHKLST",
+      "estimated_rows": 4
+    },
+    {
+      "table_name": "T_VOUCHER_HDR",
+      "estimated_rows": 376
+    },
+    {
+      "table_name": "T_VOUCHER_RCVY",
+      "estimated_rows": 45
+    },
+    {
+      "table_name": "Temp_ AGLST",
+      "estimated_rows": 33
+    },
+    {
+      "table_name": "Temp_P2004_05",
+      "estimated_rows": 7683
+    },
+    {
+      "table_name": "USERS_DATA",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "VOUCHER_DATA",
+      "estimated_rows": 0
+    },
+    {
+      "table_name": "V_MAPP_SAI",
+      "estimated_rows": 1
+    },
+    {
+      "table_name": "V_MIS_LETTER",
+      "estimated_rows": 0
+    }
+  ],
+  "timestamp": "2026-08-25T05:51:09.488852Z"
+}

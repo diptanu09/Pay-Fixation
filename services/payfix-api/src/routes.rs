@@ -65,6 +65,7 @@ use crate::handlers::{
         approve_case_handler, authorize_case_handler, reject_case_handler,
         submit_verification_handler, verify_case_handler,
     },
+    sai_pension::{get_sai_oracle_info_handler, lookup_sai_pension_handler, sync_sai_oracle_handler},
 };
 use crate::middleware::request_id::request_id_middleware;
 use crate::middleware::security::security_headers_middleware;
@@ -81,6 +82,11 @@ pub fn create_router(state: AppState) -> Router {
         .route("/health", get(health_check))
         .route("/health/live", get(health_live))
         .route("/health/ready", get(health_ready))
+
+        // SAI Pension Oracle 12c Integration Endpoints
+        .route("/api/v1/sai-pension/oracle-info", get(get_sai_oracle_info_handler))
+        .route("/api/v1/sai-pension/sync-oracle", post(sync_sai_oracle_handler))
+        .route("/api/v1/sai-pension/lookup", get(lookup_sai_pension_handler))
 
         // OpenAPI Specification Endpoint
         .route("/api/openapi.json", get(|| async {

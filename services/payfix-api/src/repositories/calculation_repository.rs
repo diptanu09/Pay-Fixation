@@ -23,6 +23,7 @@ impl CalculationRepository {
         store.get(&case_id).cloned().unwrap_or_default()
     }
 
+    #[allow(dead_code)]
     pub fn lock_as_approved(&self, case_id: Uuid, snapshot_id: Uuid) -> Result<(), ApiError> {
         let mut store = self.snapshots.write().unwrap();
         let list = store

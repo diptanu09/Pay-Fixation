@@ -4,7 +4,6 @@ use axum::{
     Json,
 };
 use payfix_domain::PayFixationCase;
-use uuid::Uuid;
 
 use crate::errors::ApiError;
 use crate::models::dto::CaseQueryFilter;

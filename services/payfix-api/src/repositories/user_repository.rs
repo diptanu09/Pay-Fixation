@@ -75,6 +75,7 @@ impl UserRepository {
         store.get(username).cloned()
     }
 
+    #[allow(dead_code)]
     pub fn find_by_id(&self, id: Uuid) -> Option<User> {
         let store = self.users.read().ok()?;
         store.values().find(|(u, _)| u.id == id).map(|(u, _)| u.clone())
