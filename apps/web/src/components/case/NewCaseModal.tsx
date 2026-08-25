@@ -32,10 +32,10 @@ export const NewCaseModal: React.FC<NewCaseModalProps> = ({ isOpen, onClose, onC
   const [designation, setDesignation] = useState('');
   const [prNo, setPrNo] = useState('');
   const [groupClass, setGroupClass] = useState('Group C');
-  const [dob, setDob] = useState('1966-03-05');
-  const [doj, setDoj] = useState('1997-03-05');
-  const [dateRetirement, setDateRetirement] = useState('2026-03-31');
-  const [ddoCode, setDdoCode] = useState('DDO-08122');
+  const [dob, setDob] = useState('');
+  const [doj, setDoj] = useState('');
+  const [dateRetirement, setDateRetirement] = useState('');
+  const [ddoCode, setDdoCode] = useState('');
   
   const [fetchingSai, setFetchingSai] = useState(false);
   const [saiRecord, setSaiRecord] = useState<SaiPensionRecord | null>(null);

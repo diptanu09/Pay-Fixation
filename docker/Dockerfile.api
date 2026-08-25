@@ -1,6 +1,30 @@
 FROM rust:latest as builder
 WORKDIR /app
-COPY . .
+
+# Copy Cargo workspace manifests
+COPY Cargo.toml Cargo.lock ./
+COPY crates/payfix-domain/Cargo.toml crates/payfix-domain/
+COPY crates/payfix-rules/Cargo.toml crates/payfix-rules/
+COPY crates/payfix-service/Cargo.toml crates/payfix-service/
+COPY crates/payfix-reports/Cargo.toml crates/payfix-reports/
+COPY crates/payfix-revision/Cargo.toml crates/payfix-revision/
+COPY crates/payfix-pension/Cargo.toml crates/payfix-pension/
+COPY crates/payfix-dcrg/Cargo.toml crates/payfix-dcrg/
+COPY crates/payfix-commutation/Cargo.toml crates/payfix-commutation/
+COPY crates/payfix-calculation/Cargo.toml crates/payfix-calculation/
+COPY crates/payfix-pay-fixation/Cargo.toml crates/payfix-pay-fixation/
+COPY tools/excel-importer/Cargo.toml tools/excel-importer/
+COPY tools/payfix-excel-forensics/Cargo.toml tools/payfix-excel-forensics/
+COPY tools/release-certifier/Cargo.toml tools/release-certifier/
+COPY services/payfix-api/Cargo.toml services/payfix-api/
+
+# Copy workspace crates and pre-compile dependencies & core libraries
+COPY crates/ crates/
+COPY tools/ tools/
+RUN mkdir -p services/payfix-api/src && echo "fn main() {}" > services/payfix-api/src/main.rs && cargo build --release --lib
+
+# Copy API service code and build binary
+COPY services/payfix-api/src services/payfix-api/src
 RUN cargo build --release --bin payfix-api
 
 FROM debian:bookworm-slim

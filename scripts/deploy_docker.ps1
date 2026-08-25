@@ -10,14 +10,16 @@ if (-not (Test-Path $ComposeFile)) {
     $ComposeFile = "docker-compose.yml"
 }
 
-Write-Host "`n[1/3] Building & Launching Containers..." -ForegroundColor Yellow
+Write-Host "`n[1/3] Stopping existing containers..." -ForegroundColor Yellow
+docker compose -f $ComposeFile down --remove-orphans
+
+Write-Host "`n[2/3] Building & Launching Updated Containers (Layer Cached)..." -ForegroundColor Yellow
 docker compose -f $ComposeFile up -d --build
 
-Write-Host "`n[2/3] Checking Running Containers..." -ForegroundColor Yellow
+Write-Host "`n[3/3] Checking Container Status & Endpoint..." -ForegroundColor Yellow
 Start-Sleep -Seconds 3
 docker compose -f $ComposeFile ps
 
-Write-Host "`n[3/3] Verifying SAI Pension Oracle 12c Lookup Endpoint..." -ForegroundColor Yellow
 try {
     $res = Invoke-RestMethod -Uri "http://localhost:8085/api/v1/sai-pension/lookup?application_no=APP-2026-8812" -Method Get
     if ($res.success -eq $true) {
@@ -26,7 +28,7 @@ try {
         Write-Host "  [-] Lookup response invalid." -ForegroundColor Red
     }
 } catch {
-    Write-Host "  [!] Endpoint verification pending. Check logs: docker compose -f $ComposeFile logs -f" -ForegroundColor Yellow
+    Write-Host "  [!] Endpoint verification pending (container starting up). Check logs: docker compose -f $ComposeFile logs -f" -ForegroundColor Yellow
 }
 
 Write-Host "`n==========================================================" -ForegroundColor Cyan

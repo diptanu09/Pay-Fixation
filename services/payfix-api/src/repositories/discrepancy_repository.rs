@@ -1,4 +1,4 @@
-use payfix_domain::{DiscrepancyClassification, DiscrepancyStatus, ParityDiscrepancy};
+use payfix_domain::{DiscrepancyStatus, ParityDiscrepancy};
 use std::collections::HashMap;
 use std::sync::{Arc, RwLock};
 use uuid::Uuid;
@@ -12,29 +12,9 @@ pub struct DiscrepancyRepository {
 
 impl Default for DiscrepancyRepository {
     fn default() -> Self {
-        let repo = Self {
+        Self {
             items: Arc::new(RwLock::new(HashMap::new())),
-        };
-
-        // Seed initial discrepancy record for pilot demonstration
-        let sample_id = Uuid::new_v4();
-        let disc = ParityDiscrepancy {
-            discrepancy_id: sample_id,
-            case_id: Uuid::new_v4(),
-            case_no: "PEN-2026-000123".into(),
-            employee_name: "Shri Debabrata Roy".into(),
-            component: "Commutation Value".into(),
-            excel_value: "₹639,174.00".into(),
-            payfix_value: "₹639,174.00".into(),
-            difference_amount: rust_decimal_macros::dec!(0.00),
-            classification: DiscrepancyClassification::RuleDifference,
-            investigation_notes: Some("Commutation factor 8.194 verified against 2026 Tripura Rule Schedule".into()),
-            status: DiscrepancyStatus::Accepted,
-            resolved_by: Some("AUDITOR_OFFICER".into()),
-            resolved_at: Some(chrono::Utc::now()),
-        };
-        repo.save(disc);
-        repo
+        }
     }
 }
 

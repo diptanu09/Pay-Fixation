@@ -11,14 +11,16 @@ if [ ! -f "$COMPOSE_FILE" ]; then
     COMPOSE_FILE="docker-compose.yml"
 fi
 
-echo -e "\n[1/3] Building & Launching Containers..."
+echo -e "\n[1/3] Stopping existing containers..."
+docker compose -f "$COMPOSE_FILE" down --remove-orphans
+
+echo -e "\n[2/3] Building & Launching Updated Containers (Layer Cached)..."
 docker compose -f "$COMPOSE_FILE" up -d --build
 
-echo -e "\n[2/3] Checking Running Containers..."
+echo -e "\n[3/3] Checking Container Status & Endpoint..."
 sleep 3
 docker compose -f "$COMPOSE_FILE" ps
 
-echo -e "\n[3/3] Verifying SAI Pension Oracle 12c Lookup Endpoint..."
 curl -s http://localhost:8085/api/v1/sai-pension/lookup?application_no=APP-2026-8812 || echo "Waiting for service startup..."
 
 echo -e "\n=========================================================="
