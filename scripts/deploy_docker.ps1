@@ -29,6 +29,11 @@ try {
     }
 } catch {
     Write-Host "  [!] Endpoint verification pending (container starting up). Check logs: docker compose -f $ComposeFile logs -f" -ForegroundColor Yellow
+try {
+    Write-Host "`n[*] Updating Graphify Architecture Knowledge Graph..." -ForegroundColor Cyan
+    python tools/graphify_analysis.py
+} catch {
+    Write-Host "  [!] Graphify update skipped." -ForegroundColor Yellow
 }
 
 Write-Host "`n==========================================================" -ForegroundColor Cyan
