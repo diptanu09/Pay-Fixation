@@ -7,6 +7,7 @@ use std::fs;
 use std::path::Path;
 use uuid::Uuid;
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize)]
 struct RealCaseFixture {
     case_id: String,
@@ -19,6 +20,7 @@ struct RealCaseFixture {
     expected_output: ExpectedOutputFixture,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize)]
 struct EmployeeFixture {
     name: String,
@@ -32,6 +34,7 @@ struct EmployeeFixture {
     ddo_code: String,
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Deserialize)]
 struct ExpectedOutputFixture {
     half_year_periods: u32,

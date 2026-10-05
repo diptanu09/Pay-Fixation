@@ -153,6 +153,7 @@ impl ArrearEngine {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use chrono::NaiveDate;
 
     #[test]
     fn test_arrear_calculation() {

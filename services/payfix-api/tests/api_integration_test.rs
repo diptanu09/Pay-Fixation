@@ -33,23 +33,23 @@ fn create_sample_case() -> PayFixationCase {
         service_history: vec![],
         pay_history: vec![],
         family_details: None,
-        recovery_details: RecoveryDetails {
+        recovery_details: Some(RecoveryDetails {
             house_building_advance: Decimal::ZERO,
             motor_car_advance: Decimal::ZERO,
             overpayment_recovery: Decimal::ZERO,
             other_deductions: Decimal::ZERO,
-        },
+        }),
         non_qualifying_days: 0,
         commutation_percentage: Decimal::new(4000, 2),
         age_next_birthday: 61,
-        calculation_context: payfix_domain::CalculationContext {
+        calculation_context: Some(payfix_domain::CalculationContext {
             case_id: Uuid::new_v4(),
             employee_id: emp_id,
             calculation_date: chrono::Utc::now().naive_utc().date(),
             rule_version: "TRIPURA-PENSION-2026.01".to_string(),
             engine_version: "1.0.0".to_string(),
             rop_version: payfix_domain::PayRevisionRule::Rop2017,
-        },
+        }),
     }
 }
 

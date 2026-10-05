@@ -1,0 +1,1761 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "kind": "system",
+      "color": "#3b82f6",
+      "size": 25,
+      "id": "Web UI (React 18 / Vite)"
+    },
+    {
+      "kind": "system",
+      "color": "#10b981",
+      "size": 25,
+      "id": "API Server (Axum Async Rust)"
+    },
+    {
+      "kind": "system",
+      "color": "#f59e0b",
+      "size": 25,
+      "id": "Oracle 12c DB (sai_agartala)"
+    },
+    {
+      "kind": "rust_crate",
+      "color": "#8b5cf6",
+      "size": 18,
+      "id": "crate:payfix-calculation"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-calculation/src/lib.rs"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:CalculationOrchestrator"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-calculation/tests/excel_real_cases_test.rs"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-calculation/tests/golden_20.rs"
+    },
+    {
+      "kind": "rust_crate",
+      "color": "#8b5cf6",
+      "size": 18,
+      "id": "crate:payfix-commutation"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-commutation/src/lib.rs"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:CommutationEngine"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:CommutationResult"
+    },
+    {
+      "kind": "rust_crate",
+      "color": "#8b5cf6",
+      "size": 18,
+      "id": "crate:payfix-dcrg"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-dcrg/src/lib.rs"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:DcrgEngine"
+    },
+    {
+      "kind": "rust_crate",
+      "color": "#8b5cf6",
+      "size": 18,
+      "id": "crate:payfix-domain"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-domain/src/lib.rs"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PayFixationInput"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PayFixationResult"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:Employee"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ServiceEvent"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PayHistoryEntry"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:FamilyDetails"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RecoveryDetails"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PayFixationCase"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:QualifyingService"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:CalculationContext"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:CalculationStep"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:CalculationWarning"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:CalculationResult"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PensionCalculationInput"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PensionCalculationRequest"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PensionCalculationResult"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:FamilyMember"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:DcrgCalculationInput"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:DcrgCalculationResult"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:CommutationCalculationResult"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:CalculationSession"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RevisionCase"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RevisionDifference"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ArrearPeriod"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ArrearCalculationInput"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ArrearCalculationResult"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:WorkflowHistoryEntry"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ChecklistItem"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:VerificationChecklist"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:OfficialCaseSnapshot"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:WorkQueueItem"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:GeneratedDocument"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:OfficialPackageManifest"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:DocumentVerificationResult"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:MigrationBatch"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:MigrationComparison"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:MigrationRecord"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:MigrationSnapshot"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:SystemHealthStatus"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:BackupRecord"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:IntegrityReport"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:FeatureFlags"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ParityDiscrepancy"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PilotMetrics"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PilotIncident"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:GoNoGoItem"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:GoNoGoEvaluation"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PilotOperationsSummary"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ProductionReleaseManifest"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ProductionCutoverRecord"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ProductionSmokeTestResult"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:OperationalAlert"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:DailyOperationsReport"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:UserAccessRecord"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ContinuousMonitoringSummary"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RuleRegistryEntry"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RuleVersionDetail"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RuleImpactAnalysis"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RuleRegressionReport"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RuleSimulationRequest"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RuleSimulationResult"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:MisOverviewMetrics"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:WorkflowPipelineStage"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:AgingBucket"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:FinancialLiabilitySummary"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RevisionAnalyticsSummary"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:MigrationAnalyticsSummary"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ReportExportRecord"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:CaseStatus"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:CaseType"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:PayRevisionRule"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:PayFixationReason"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:RevisionReason"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:WorkflowActionType"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:DocumentType"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:MigrationStatus"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:DiscrepancyClassification"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:DiscrepancyStatus"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:IncidentSeverity"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:IncidentStatus"
+    },
+    {
+      "kind": "rust_enum",
+      "color": "#ddd6fe",
+      "size": 8,
+      "id": "enum:GoNoGoDecision"
+    },
+    {
+      "kind": "rust_crate",
+      "color": "#8b5cf6",
+      "size": 18,
+      "id": "crate:payfix-pay-fixation"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-pay-fixation/src/lib.rs"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PayFixationEngine"
+    },
+    {
+      "kind": "rust_crate",
+      "color": "#8b5cf6",
+      "size": 18,
+      "id": "crate:payfix-pension"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-pension/src/lib.rs"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PensionEngine"
+    },
+    {
+      "kind": "rust_crate",
+      "color": "#8b5cf6",
+      "size": 18,
+      "id": "crate:payfix-reports"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-reports/src/lib.rs"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:PensionReportData"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ReportGenerator"
+    },
+    {
+      "kind": "rust_crate",
+      "color": "#8b5cf6",
+      "size": 18,
+      "id": "crate:payfix-revision"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-revision/src/lib.rs"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RevisionDifferential"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RevisionEngine"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ArrearEngine"
+    },
+    {
+      "kind": "rust_crate",
+      "color": "#8b5cf6",
+      "size": 18,
+      "id": "crate:payfix-rules"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-rules/src/lib.rs"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RuleValue"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:RuleSet"
+    },
+    {
+      "kind": "rust_crate",
+      "color": "#8b5cf6",
+      "size": 18,
+      "id": "crate:payfix-service"
+    },
+    {
+      "kind": "rust_file",
+      "color": "#a78bfa",
+      "size": 12,
+      "id": "file:crates/payfix-service/src/lib.rs"
+    },
+    {
+      "kind": "rust_struct",
+      "color": "#c4b5fd",
+      "size": 8,
+      "id": "struct:ServiceEngine"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/App.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/main.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/benefits/BenefitsCenter.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/benefits/CommutationWorkspace.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/benefits/DcrgWorkspace.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/benefits/FamilyPensionWorkspace.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/case/EmployeeForm.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/case/NewCaseModal.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/case/PayHistory.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/case/RejectionModal.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/case/ServiceHistory.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/case/ValidationPanel.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/documents/DocumentCenter.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/documents/DocumentPreviewModal.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/documents/QrVerificationModal.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/layout/Shell.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/migration/BatchReviewModal.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/payfix/PayFixationWorkspace.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/payfix/PayMatrixGrid.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/pension/CalculationCenter.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/pension/EligibilityPanel.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/pension/PensionWorkspace.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/pension/QualifyingServiceVisualizer.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/revision/ArrearsWorkspace.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/revision/NewRevisionModal.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/revision/RevisionComparison.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/revision/RevisionHistory.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/ui/Badge.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/ui/Stepper.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/workflow/DecisionPanel.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/workflow/EvidencePanel.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/workflow/VerificationChecklistPanel.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/components/workflow/WorkflowHistoryLog.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/lib/api.ts"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/CaseSearch.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/CaseWorkspace.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/Login.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/MigrationPage.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/MISDashboardPage.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/OperationsDashboardPage.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/PilotDashboardPage.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/PilotOperationsPage.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/ProductionOperationsPage.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/PublicVerifyPage.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/RuleRegistryPage.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/SystemDiagnosticsPage.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/pages/WorkQueuesPage.tsx"
+    },
+    {
+      "kind": "ts_file",
+      "color": "#06b6d4",
+      "size": 12,
+      "id": "ts_file:apps/web/src/types/api.ts"
+    },
+    {
+      "kind": "bridge",
+      "color": "#eab308",
+      "size": 18,
+      "id": "file:tools/oracle_fetch.py"
+    },
+    {
+      "kind": "oracle_table",
+      "color": "#ec4899",
+      "size": 12,
+      "id": "table:T_APPLICATION_HDR"
+    },
+    {
+      "kind": "oracle_table",
+      "color": "#ec4899",
+      "size": 12,
+      "id": "table:T_APPLN_PENSIONER"
+    },
+    {
+      "kind": "oracle_table",
+      "color": "#ec4899",
+      "size": 12,
+      "id": "table:M_DESIGNATION"
+    },
+    {
+      "kind": "oracle_table",
+      "color": "#ec4899",
+      "size": 12,
+      "id": "table:M_LOV"
+    },
+    {
+      "kind": "oracle_table",
+      "color": "#ec4899",
+      "size": 12,
+      "id": "table:M_ADDR_BOOK"
+    },
+    {
+      "kind": "oracle_table",
+      "color": "#ec4899",
+      "size": 12,
+      "id": "table:T_APPLN_BENEFITS"
+    },
+    {
+      "kind": "oracle_table",
+      "color": "#ec4899",
+      "size": 12,
+      "id": "table:T_APPLN_RECOVERY"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/App.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/main.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/benefits/BenefitsCenter.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/benefits/CommutationWorkspace.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/benefits/DcrgWorkspace.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/benefits/FamilyPensionWorkspace.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/case/EmployeeForm.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/case/NewCaseModal.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/case/PayHistory.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/case/RejectionModal.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/case/ServiceHistory.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/case/ValidationPanel.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/documents/DocumentCenter.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/documents/DocumentPreviewModal.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/documents/QrVerificationModal.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/layout/Shell.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/migration/BatchReviewModal.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/payfix/PayFixationWorkspace.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/payfix/PayMatrixGrid.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/pension/CalculationCenter.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/pension/EligibilityPanel.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/pension/PensionWorkspace.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/pension/QualifyingServiceVisualizer.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/revision/ArrearsWorkspace.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/revision/NewRevisionModal.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/revision/RevisionComparison.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/revision/RevisionHistory.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/ui/Badge.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/ui/Stepper.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/workflow/DecisionPanel.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/workflow/EvidencePanel.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/workflow/VerificationChecklistPanel.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/components/workflow/WorkflowHistoryLog.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/lib/api.ts"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/CaseSearch.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/CaseWorkspace.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/Login.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/MigrationPage.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/MISDashboardPage.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/OperationsDashboardPage.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/PilotDashboardPage.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/PilotOperationsPage.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/ProductionOperationsPage.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/PublicVerifyPage.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/RuleRegistryPage.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/SystemDiagnosticsPage.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/pages/WorkQueuesPage.tsx"
+    },
+    {
+      "source": "Web UI (React 18 / Vite)",
+      "target": "ts_file:apps/web/src/types/api.ts"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "crate:payfix-calculation"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "crate:payfix-commutation"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "crate:payfix-dcrg"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "crate:payfix-domain"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "crate:payfix-pay-fixation"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "crate:payfix-pension"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "crate:payfix-reports"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "crate:payfix-revision"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "crate:payfix-rules"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "crate:payfix-service"
+    },
+    {
+      "source": "API Server (Axum Async Rust)",
+      "target": "file:tools/oracle_fetch.py"
+    },
+    {
+      "source": "Oracle 12c DB (sai_agartala)",
+      "target": "table:T_APPLICATION_HDR"
+    },
+    {
+      "source": "Oracle 12c DB (sai_agartala)",
+      "target": "table:T_APPLN_PENSIONER"
+    },
+    {
+      "source": "Oracle 12c DB (sai_agartala)",
+      "target": "table:M_DESIGNATION"
+    },
+    {
+      "source": "Oracle 12c DB (sai_agartala)",
+      "target": "table:M_LOV"
+    },
+    {
+      "source": "Oracle 12c DB (sai_agartala)",
+      "target": "table:M_ADDR_BOOK"
+    },
+    {
+      "source": "Oracle 12c DB (sai_agartala)",
+      "target": "table:T_APPLN_BENEFITS"
+    },
+    {
+      "source": "Oracle 12c DB (sai_agartala)",
+      "target": "table:T_APPLN_RECOVERY"
+    },
+    {
+      "source": "crate:payfix-calculation",
+      "target": "file:crates/payfix-calculation/src/lib.rs"
+    },
+    {
+      "source": "crate:payfix-calculation",
+      "target": "file:crates/payfix-calculation/tests/excel_real_cases_test.rs"
+    },
+    {
+      "source": "crate:payfix-calculation",
+      "target": "file:crates/payfix-calculation/tests/golden_20.rs"
+    },
+    {
+      "source": "file:crates/payfix-calculation/src/lib.rs",
+      "target": "struct:CalculationOrchestrator"
+    },
+    {
+      "source": "crate:payfix-commutation",
+      "target": "file:crates/payfix-commutation/src/lib.rs"
+    },
+    {
+      "source": "file:crates/payfix-commutation/src/lib.rs",
+      "target": "struct:CommutationEngine"
+    },
+    {
+      "source": "file:crates/payfix-commutation/src/lib.rs",
+      "target": "struct:CommutationResult"
+    },
+    {
+      "source": "crate:payfix-dcrg",
+      "target": "file:crates/payfix-dcrg/src/lib.rs"
+    },
+    {
+      "source": "file:crates/payfix-dcrg/src/lib.rs",
+      "target": "struct:DcrgEngine"
+    },
+    {
+      "source": "crate:payfix-domain",
+      "target": "file:crates/payfix-domain/src/lib.rs"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:PayFixationInput"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:PayFixationResult"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:Employee"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ServiceEvent"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:PayHistoryEntry"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:FamilyDetails"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:RecoveryDetails"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:PayFixationCase"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:QualifyingService"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:CalculationContext"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:CalculationStep"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:CalculationWarning"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:CalculationResult"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:PensionCalculationInput"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:PensionCalculationRequest"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:PensionCalculationResult"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:FamilyMember"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:DcrgCalculationInput"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:DcrgCalculationResult"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:CommutationCalculationResult"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:CalculationSession"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:RevisionCase"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:RevisionDifference"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ArrearPeriod"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ArrearCalculationInput"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ArrearCalculationResult"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:WorkflowHistoryEntry"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ChecklistItem"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:VerificationChecklist"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:OfficialCaseSnapshot"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:WorkQueueItem"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:GeneratedDocument"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:OfficialPackageManifest"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:DocumentVerificationResult"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:MigrationBatch"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:MigrationComparison"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:MigrationRecord"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:MigrationSnapshot"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:SystemHealthStatus"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:BackupRecord"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:IntegrityReport"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:FeatureFlags"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ParityDiscrepancy"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:PilotMetrics"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:PilotIncident"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:GoNoGoItem"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:GoNoGoEvaluation"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:PilotOperationsSummary"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ProductionReleaseManifest"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ProductionCutoverRecord"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ProductionSmokeTestResult"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:OperationalAlert"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:DailyOperationsReport"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:UserAccessRecord"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ContinuousMonitoringSummary"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:RuleRegistryEntry"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:RuleVersionDetail"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:RuleImpactAnalysis"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:RuleRegressionReport"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:RuleSimulationRequest"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:RuleSimulationResult"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:MisOverviewMetrics"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:WorkflowPipelineStage"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:AgingBucket"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:FinancialLiabilitySummary"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:RevisionAnalyticsSummary"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:MigrationAnalyticsSummary"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "struct:ReportExportRecord"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:CaseStatus"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:CaseType"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:PayRevisionRule"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:PayFixationReason"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:RevisionReason"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:WorkflowActionType"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:DocumentType"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:MigrationStatus"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:DiscrepancyClassification"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:DiscrepancyStatus"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:IncidentSeverity"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:IncidentStatus"
+    },
+    {
+      "source": "file:crates/payfix-domain/src/lib.rs",
+      "target": "enum:GoNoGoDecision"
+    },
+    {
+      "source": "crate:payfix-pay-fixation",
+      "target": "file:crates/payfix-pay-fixation/src/lib.rs"
+    },
+    {
+      "source": "file:crates/payfix-pay-fixation/src/lib.rs",
+      "target": "struct:PayFixationEngine"
+    },
+    {
+      "source": "crate:payfix-pension",
+      "target": "file:crates/payfix-pension/src/lib.rs"
+    },
+    {
+      "source": "file:crates/payfix-pension/src/lib.rs",
+      "target": "struct:PensionEngine"
+    },
+    {
+      "source": "crate:payfix-reports",
+      "target": "file:crates/payfix-reports/src/lib.rs"
+    },
+    {
+      "source": "file:crates/payfix-reports/src/lib.rs",
+      "target": "struct:PensionReportData"
+    },
+    {
+      "source": "file:crates/payfix-reports/src/lib.rs",
+      "target": "struct:ReportGenerator"
+    },
+    {
+      "source": "crate:payfix-revision",
+      "target": "file:crates/payfix-revision/src/lib.rs"
+    },
+    {
+      "source": "file:crates/payfix-revision/src/lib.rs",
+      "target": "struct:RevisionDifferential"
+    },
+    {
+      "source": "file:crates/payfix-revision/src/lib.rs",
+      "target": "struct:RevisionEngine"
+    },
+    {
+      "source": "file:crates/payfix-revision/src/lib.rs",
+      "target": "struct:ArrearEngine"
+    },
+    {
+      "source": "crate:payfix-rules",
+      "target": "file:crates/payfix-rules/src/lib.rs"
+    },
+    {
+      "source": "file:crates/payfix-rules/src/lib.rs",
+      "target": "struct:RuleValue"
+    },
+    {
+      "source": "file:crates/payfix-rules/src/lib.rs",
+      "target": "struct:RuleSet"
+    },
+    {
+      "source": "crate:payfix-service",
+      "target": "file:crates/payfix-service/src/lib.rs"
+    },
+    {
+      "source": "file:crates/payfix-service/src/lib.rs",
+      "target": "struct:ServiceEngine"
+    },
+    {
+      "source": "file:tools/oracle_fetch.py",
+      "target": "Oracle 12c DB (sai_agartala)"
+    }
+  ]
+}

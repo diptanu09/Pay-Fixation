@@ -1,12 +1,11 @@
 use calamine::{open_workbook, Reader, Xlsx};
 use payfix_calculation::CalculationOrchestrator;
 use payfix_domain::{
-    CaseType, Employee, MigrationComparison, MigrationRecord, MigrationStatus,
+    CaseType, Employee, MigrationComparison, MigrationStatus,
     PensionCalculationRequest,
 };
 use rust_decimal::Decimal;
 use rust_decimal_macros::dec;
-use std::collections::HashMap;
 use std::path::Path;
 use uuid::Uuid;
 
@@ -163,7 +162,7 @@ fn main() -> anyhow::Result<()> {
         return Ok(());
     }
 
-    let mut workbook: Xlsx<_> = open_workbook(path)?;
+    let workbook: Xlsx<_> = open_workbook(path)?;
     let sheet_names = workbook.sheet_names().to_vec();
     println!("Successfully parsed workbook containing {} sheets:", sheet_names.len());
     for name in &sheet_names {
